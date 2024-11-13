@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\Admin\NotificationController;
+use App\Http\Controllers\admin\RoomsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function () {
+    Route::get('/rooms/show', [RoomsController::class, 'show'])->name('rooms_show');
+    Route::get('/rooms/create', [RoomsController::class, 'create'])->name('rooms_create');
+    Route::post('/rooms/store', [RoomsController::class, 'store'])->name('rooms_store');
 });
