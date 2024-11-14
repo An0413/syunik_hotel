@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\admin\RoomsController;
+use App\Http\Controllers\site\AboutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/about', [AboutController::class, 'about'])->name('about');
 
 Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('/rooms/show', [RoomsController::class, 'show'])->name('rooms_show');
