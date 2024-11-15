@@ -70,55 +70,54 @@
 </footer>
 <!-- JavaScript Libraries -->
 
-<script src="{{asset('js/js/vendor/jquery-3.3.1.min.js')}}"></script>
-<script src="{{asset('js/js/vendor/popper.min.js')}}"></script>
-<script src="{{asset('js/js/vendor/bootstrap.min.js')}}"></script>
+<script src="{{asset('/site/js/js/vendor/jquery-3.3.1.min.js')}}"></script>
+<script src="{{asset('/site/js/js/vendor/popper.min.js')}}"></script>
+<script src="{{asset('/site/js/js/vendor/bootstrap.min.js')}}"></script>
 
-<script src="{{asset('js/js/vendor/owl.carousel.min.js')}}"></script>
+<script src="{{asset('/site/js/js/vendor/owl.carousel.min.js')}}"></script>
 
-<script src="{{asset('js/js/vendor/jarallax.min.js')}}"></script>
-<script src="{{asset('js/js/vendor/jarallax-element.min.js')}}"></script>
-<script src="{{asset('js/js/vendor/ofi.min.js')}}"></script>
+<script src="{{asset('/site/js/js/vendor/jarallax.min.js')}}"></script>
+<script src="{{asset('/site/js/js/vendor/jarallax-element.min.js')}}"></script>
+<script src="{{asset('/site/js/js/vendor/ofi.min.js')}}"></script>
 
-<script src="{{asset('js/js/vendor/aos.js')}}"></script>
+<script src="{{asset('/site/js/js/vendor/aos.js')}}"></script>
 
-<script src="{{asset('js/js/vendor/jquery.lettering.js')}}"></script>
-<script src="{{asset('js/js/vendor/jquery.sticky.js')}}"></script>
+<script src="{{asset('/site/js/js/vendor/jquery.lettering.js')}}"></script>
+<script src="{{asset('/site/js/js/vendor/jquery.sticky.js')}}"></script>
 
-<script src="{{asset('js/js/vendor/TweenMax.min.js')}}"></script>
-<script src="{{asset('js/js/vendor/ScrollMagic.min.js')}}"></script>
-<script src="{{asset('js/js/vendor/scrollmagic.animation.gsap.min.js')}}"></script>
-<script src="{{asset('js/js/vendor/debug.addIndicators.min.js')}}"></script>
+<script src="{{asset('/site/js/js/vendor/TweenMax.min.js')}}"></script>
+<script src="{{asset('/site/js/js/vendor/ScrollMagic.min.js')}}"></script>
+<script src="{{asset('/site/js/js/vendor/scrollmagic.animation.gsap.min.js')}}"></script>
+<script src="{{asset('/site/js/js/vendor/debug.addIndicators.min.js')}}"></script>
 
 
-<script src="{{asset('js/js/main.js')}}"></script>
+<script src="{{asset('/site/js/js/main.js')}}"></script>
 
 <!-- Js sona -->
 
 
-<script src="{{asset('js/sonJs/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{asset('js/sonJs/jquery.nice-select.min.js')}}"></script>
-<script src="{{asset('js/sonJs/jquery-ui.min.js')}}"></script>
-<script src="{{asset('js/sonJs/jquery.slicknav.js')}}"></script>
+<script src="{{asset('/site/js/sonJs/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('/site/js/sonJs/jquery.nice-select.min.js')}}"></script>
+{{--<script src="{{asset('/site/js/sonJs/jquery-ui.min.js')}}"></script>--}}
+<script src="{{asset('/site/js/sonJs/jquery.slicknav.js')}}"></script>
 <!-- <script src="sonJs/owl.carousel.min.js"></script> -->
-<script src="{{asset('js/sonJs/main.js')}}"></script>
+<script src="{{asset('/site/js/sonJs/main.js')}}"></script>
 
 <!--deluxe -->
 
 
-<script src="{{asset('js/deluxejs/jquery-migrate-3.0.1.min.js')}}"></script>
-<script src="{{asset('js/deluxejs/popper.min.js')}}"></script>
-<script src="{{asset('js/deluxejs/bootstrap.min.js')}}"></script>
-<script src="{{asset('js/deluxejs/jquery.easing.1.3.js')}}"></script>
-<script src="{{asset('js/deluxejs/jquery.waypoints.min.js')}}"></script>
-<script src="{{asset('js/deluxejs/jquery.stellar.min.js')}}"></script>
-<script src="{{asset('js/deluxejs/owl.carousel.min.js')}}"></script>
-<script src="{{asset('js/deluxejs/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{asset('js/deluxejs/aos.js')}}"></script>
-<script src="{{asset('js/deluxejs/jquery.animateNumber.min.js')}}"></script>
-<script src="{{asset('js/deluxejs/bootstrap-datepicker.js')}}"></script>
-
-<script src="{{asset('js/deluxejs/scrollax.min.js')}}"></script>
+{{--<script src="{{asset('/site/js/deluxejs/jquery-migrate-3.0.1.min.js')}}"></script>--}}
+{{--<script src="{{asset('/site/js/deluxejs/popper.min.js')}}"></script>--}}
+{{--<script src="{{asset('/site/js/deluxejs/bootstrap.min.js')}}"></script>--}}
+<script src="{{asset('/site/js/deluxejs/jquery.easing.1.3.js')}}"></script>
+<script src="{{asset('/site/js/deluxejs/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('/site/js/deluxejs/jquery.stellar.min.js')}}"></script>
+{{--<script src="{{asset('/site/js/deluxejs/owl.carousel.min.js')}}"></script>--}}
+{{--<script src="{{asset('/site/js/deluxejs/jquery.magnific-popup.min.js')}}"></script>--}}
+{{--<script src="{{asset('/site/js/deluxejs/aos.js')}}"></script>--}}
+<script src="{{asset('/site/js/deluxejs/jquery.animateNumber.min.js')}}"></script>
+<script src="{{asset('/site/js/deluxejs/bootstrap-datepicker.js')}}"></script>
+<script src="{{asset('/site/js/deluxejs/scrollax.min.js')}}"></script>
 <script src="{{asset('https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false')}}"></script>
-<script src="{{asset('js/deluxejs/google-map.js')}}"></script>
-<script src="{{asset('js/deluxejs/main.js')}}"></script>
+<script src="{{asset('/site/js/deluxejs/google-map.js')}}"></script>
+<script src="{{asset('/site/js/deluxejs/main.js')}}"></script>

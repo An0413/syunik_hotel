@@ -13,26 +13,25 @@
     <link href="{{asset('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i,700|Roboto:300,400,500,700&display=swap')}}"
           rel="stylesheet">
 
-    <link rel="stylesheet" href="{{asset('css/css/vendor/icomoon/style.css')}}">
-    <!--   -->
-    <link rel="stylesheet" href="{{asset('css/css/vendor/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{asset('css/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('css/css/scss/style.scss')}}">
-    <link rel="stylesheet" href="{{asset('css/sonCss/style.css type="text/css"')}}">
-    <link rel="stylesheet" href="{{asset('css/sonCss/flaticon.css type="text/css"')}}" >
+    <link rel="stylesheet" href="{{asset('/site/css/css/vendor/icomoon/style.css')}}">
+    <link rel="stylesheet" href="{{asset('/site/css/css/vendor/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('/site/css/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('/site/css/css/scss/style.scss')}}">
+    <link rel="stylesheet" href="{{asset('/site/css/sonCss/style.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('/site/css/sonCss/flaticon.css')}}" type="text/css">
 
-    <link rel="stylesheet" href="{{asset('css/sonCss/font-awesome.min.css" type="text/css"')}}">
-    <link rel="stylesheet" href="{{asset('css/sonCss/elegant-icons.css" type="text/css"')}}">
-    <link rel="stylesheet" href="{{asset('css/sonCss/flaticon.css type="text/css"')}}">
-    <link rel="stylesheet" href="{{asset('css/sonCss/owl.carousel.min.css" type="text/css"')}}">
-    <link rel="stylesheet" href="{{asset('css/sonCss/nice-select.css type="text/css"')}}">
-    <link rel="stylesheet" href="{{asset('css/sonCss/jquery-ui.min.css type="text/css"')}}">
-    <link rel="stylesheet" href="{{asset('css/sonCss/magnific-popup.css type="text/css"')}}">
-    <link rel="stylesheet" href="{{asset('css/sonCss/slicknav.min.css type="text/css"')}}">
+    <link rel="stylesheet" href="{{asset('/site/css/sonCss/font-awesome.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('/site/css/sonCss/elegant-icons.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('/site/css/sonCss/flaticon.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('/site/css/sonCss/owl.carousel.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('/site/css/sonCss/nice-select.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('/site/css/sonCss/jquery-ui.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('/site/css/sonCss/magnific-popup.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('/site/css/sonCss/slicknav.min.css')}}" type="text/css">
 
 
     <!-- deluxe -->
-    <link rel="stylesheet" href="{{asset('css/deluxeCss/style.css')}}">
+    <link rel="stylesheet" href="{{asset('/site/css/deluxeCss/style.css')}}">
 
     <!--    <link rel="stylesheet" href="deluxeCss/open-iconic-bootstrap.min.css">-->
     <!--    <link rel="stylesheet" href="deluxeCss/animate.css">-->
@@ -45,8 +44,8 @@
 
     <!--    <link rel="stylesheet" href="deluxeCss/ionicons.min.css">-->
 
-    <link rel="stylesheet" href="{{asset('css/deluxeCss/bootstrap-datepicker.css')}}">
-    <link rel="stylesheet" href="{{asset('css/deluxeCss/jquery.timepicker.css')}}">
+    <link rel="stylesheet" href="{{asset('/site/css/deluxeCss/bootstrap-datepicker.css')}}">
+    <link rel="stylesheet" href="{{asset('/site/css/deluxeCss/jquery.timepicker.css')}}">
 
 
     <!--    <link rel="stylesheet" href="deluxeCss/flaticon.css">-->
