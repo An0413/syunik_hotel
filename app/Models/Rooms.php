@@ -11,4 +11,8 @@ class Rooms extends Model
 
     protected $table = 'rooms';
     protected $guarded = [];
+
+    public function roomType(){
+        return $this->hasOne(RoomType::class,  'id', 'type_id');
+    }
 }
