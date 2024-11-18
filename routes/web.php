@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\admin\RoomsController;
+use App\Http\Controllers\admin\RoomsGalleryController;
 use App\Http\Controllers\site;
 use App\Http\Controllers\site\AboutController;
 use App\Http\Controllers\site\BlogController;
@@ -36,4 +37,10 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
     Route::get('/rooms/edit/{id}', [RoomsController::class, 'edit'])->where('id', '[0-9]+')->name('rooms_edit');
     Route::post('/rooms/update/{id}', [RoomsController::class, 'update'])->where('id', '[0-9]+')->name('rooms_update');
     Route::delete('/rooms/delete/{id}', [RoomsController::class, 'destroy'])->where('id', '[0-9]+')->name('rooms_delete');
+    Route::get('/rooms/images/show/{id}', [RoomsGalleryController::class, 'show'])->where('id', '[0-9]+')->name('rooms_images_show');
+    Route::get('/rooms/images/create/{id}', [RoomsGalleryController::class, 'create'])->where('id', '[0-9]+')->name('rooms_images_create');
+    Route::post('/rooms/images/store{id}', [RoomsGalleryController::class, 'store'])->where('id', '[0-9]+')->name('rooms_images_store');
+    Route::get('/rooms/images/edit/{id}', [RoomsGalleryController::class, 'edit'])->where('id', '[0-9]+')->name('rooms_images_edit');
+    Route::post('/rooms/images/update/{id}', [RoomsGalleryController::class, 'update'])->where('id', '[0-9]+')->name('rooms_images_update');
+    Route::delete('/rooms/images/delete/{id}', [RoomsGalleryController::class, 'destroy'])->where('id', '[0-9]+')->name('rooms_images_delete');
 });
