@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin\Rooms;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreRequest extends FormRequest
+class UpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,7 +22,6 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-
             'seq' => 'numeric|required',
             'info_am' => 'string|nullable',
             'info_ru' => 'string|nullable',
@@ -34,7 +33,7 @@ class StoreRequest extends FormRequest
             'discount' => 'numeric|required',
             'number' => 'numeric|required',
             'surface' => 'numeric|required',
-            'image' => 'required|image|mimes:jpeg,jpg,png,gif',
+            'image' => 'nullable|image|mimes:jpeg,jpg,png,gif',
         ];
     }
 }
