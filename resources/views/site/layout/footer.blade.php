@@ -1,49 +1,48 @@
 <footer class="untree_co--site-footer">
 
     <div class="container">
-        <div class="row">
+{{--        <div class="row">--}}
+{{--            <div class="col-md-8">--}}
+{{--                <div class="row">--}}
+{{--                    <div class="col-md-3">--}}
+{{--                        <h3>Navigation</h3>--}}
+{{--                        <ul class="list-unstyled">--}}
+{{--                            <li><a href="#">Home</a></li>--}}
+{{--                            <li><a href="#">Rooms</a></li>--}}
+{{--                            <li><a href="#">Amenities</a></li>--}}
+{{--                            <li><a href="#">Gallery</a></li>--}}
+{{--                            <li><a href="#">About Us</a></li>--}}
+{{--                            <li><a href="#">Contact</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-md-9 ml-auto">--}}
+{{--                        <div class="row mb-3">--}}
+{{--                            <div class="col-md-6">--}}
+{{--                                <h3>Address</h3>--}}
+{{--                                <address>273 South Riverview Rd. <br> New York, NY 10011</address>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-md-6">--}}
+{{--                                <h3>Telephone</h3>--}}
+{{--                                <p>--}}
+{{--                                    <a href="#">+1 234 5678 910</a> <br>--}}
+{{--                                    <a href="#">+2 234 5678 910</a>--}}
+{{--                                </p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-3">
-                        <h3>Navigation</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Rooms</a></li>
-                            <li><a href="#">Amenities</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-9 ml-auto">
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <h3>Address</h3>
-                                <address>273 South Riverview Rd. <br> New York, NY 10011</address>
-                            </div>
-                            <div class="col-md-6">
-                                <h3>Telephone</h3>
-                                <p>
-                                    <a href="#">+1 234 5678 910</a> <br>
-                                    <a href="#">+2 234 5678 910</a>
-                                </p>
-                            </div>
-                        </div>
+{{--                    </div>--}}
 
-                    </div>
-
-                </div>
-            </div>
-        </div>
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
         <div class="row mt-5 pt-5 align-items-center">
             <div class="col-md-6 text-md-left">
                 <!-- Link back to Untree.co can't be removed. Template is licensed under CC BY 3.0. If you purchased a license you can remove this. -->
                 <p>
                     Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                    <a href="index.html">Untree.co</a>. All Rights Reserved. Design by <a href="https://untree.co/"
+                    <a href="index.html">Untree.co</a>. All Rights Reserved. Design by <a href="https://itok.am/"
                                                                                           target="_blank"
-                                                                                          class="text-primary">Untree.co</a>
+                                                                                          class="text-primary">IT OK LLC</a>
                 </p>
                 <!-- Link back to Untree.co can't be removed. Template is licensed under CC BY 3.0. If you purchased a license you can remove this. -->
             </div>
@@ -98,7 +97,7 @@
 
 <script src="{{asset('/site/js/sonJs/jquery.magnific-popup.min.js')}}"></script>
 <script src="{{asset('/site/js/sonJs/jquery.nice-select.min.js')}}"></script>
-{{--<script src="{{asset('/site/js/sonJs/jquery-ui.min.js')}}"></script>--}}
+<script src="{{asset('/site/js/sonJs/jquery-ui.min.js')}}"></script>
 <script src="{{asset('/site/js/sonJs/jquery.slicknav.js')}}"></script>
 <!-- <script src="sonJs/owl.carousel.min.js"></script> -->
 <script src="{{asset('/site/js/sonJs/main.js')}}"></script>
@@ -108,7 +107,7 @@
 
 {{--<script src="{{asset('/site/js/deluxejs/jquery-migrate-3.0.1.min.js')}}"></script>--}}
 {{--<script src="{{asset('/site/js/deluxejs/popper.min.js')}}"></script>--}}
-{{--<script src="{{asset('/site/js/deluxejs/bootstrap.min.js')}}"></script>--}}
+<script src="{{asset('/site/js/deluxejs/bootstrap.min.js')}}"></script>
 <script src="{{asset('/site/js/deluxejs/jquery.easing.1.3.js')}}"></script>
 <script src="{{asset('/site/js/deluxejs/jquery.waypoints.min.js')}}"></script>
 <script src="{{asset('/site/js/deluxejs/jquery.stellar.min.js')}}"></script>

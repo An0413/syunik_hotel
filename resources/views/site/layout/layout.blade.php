@@ -8,16 +8,16 @@
             </div>
             <div class="site-nav-ul-wrap text-center d-none d-lg-block">
                 <ul class="site-nav-ul js-clone-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a href="">Home</a></li>
                     <li class="has-children">
-                        <a href="rooms.html">Rooms</a>
+                        <a href="{{ route('site_rooms') }}">Rooms</a>
                     </li>
                     <li class="has-children">
-                        <a href="services.html">Services</a>
+                        <a href="{{ route('site_services') }}">Services</a>
                     </li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{{ route('site_blog') }}">Blog</a></li>
+                    <li><a href="{{ route('site_about') }}">About Us</a></li>
+                    <li><a href="{{ route('site_contact') }}">Contact</a></li>
                 </ul>
             </div>
             <div class="icons-wrap text-md-right">
