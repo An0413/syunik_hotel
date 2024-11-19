@@ -22,12 +22,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/about', [AboutController::class, 'about'])->name('about');
+Route::get('/about', [AboutController::class, 'about'])->name('site_about');
 
-Route::get('/rooms', [site\RoomsController::class, 'rooms'])->name('rooms');
+Route::get('/rooms', [site\RoomsController::class, 'rooms'])->name('site_rooms');
 
-Route::get('/blog', [BlogController::class, 'blog'])->name('blog');
+Route::get('rooms_details/{id}', [site\RoomsController::class, 'rooms_details'])->name('site_rooms_details');
 
+Route::get('/blog', [BlogController::class, 'blog'])->name('site_blog');
+
+Route::get('/services', [site\ServicesController::class, 'services'])->name('site_services');
+
+Route::get('/contact', [site\ContactController::class, 'contact'])->name('site_contact');
 
 Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('/rooms/show', [RoomsController::class, 'show'])->name('rooms_show');
