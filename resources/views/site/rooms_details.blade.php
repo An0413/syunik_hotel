@@ -54,7 +54,7 @@
                                 </tr>
                                 <tr>
                                     <td class="r-o">Capacity:</td>
-                                    <td>{{$room->capacity}} adult</td>
+                                    <td>{{$room->capacity}}</td>
                                 </tr>
                                 <tr>
                                     <td class="r-o">Childs:</td>
@@ -62,7 +62,7 @@
                                 </tr>
                                 <tr>
                                     <td class="r-o">Bed:</td>
-                                    <td>{{$room->childs + $room->capacity - 1}}</td>
+                                    <td>{{$room->capacity}}</td>
                                 </tr>
                                 <tr>
                                     <td class="r-o">Floor:</td>

@@ -14,40 +14,58 @@
                             <tbody>
                             <tr>
                                 <td class="c-o">Address:</td>
-                                <td>856 Cordia Extension Apt. 356, Lake, US</td>
+                                <td>{{$contact->location}}</td>
                             </tr>
                             <tr>
                                 <td class="c-o">Phone:</td>
-                                <td>(12) 345 67890</td>
+                                <td>{{$contact->phone}}</td>
                             </tr>
                             <tr>
                                 <td class="c-o">Email:</td>
-                                <td>info.colorlib@gmail.com</td>
+                                <td>{{$contact->email}}</td>
                             </tr>
                             <tr>
                                 <td class="c-o">Fax:</td>
-                                <td>+(12) 345 67890</td>
+                                <td>{{$contact->phone}}</td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
                 <div class="col-lg-7 offset-lg-1">
-                    <form action="#" class="contact-form">
+                    <form action="{{route('site_contact_data')}}" class="contact-form" method="post">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-6">
-                                <input type="text" placeholder="Your Name">
+                                <input type="text" name="user_name" placeholder="Your Name" required>
                             </div>
                             <div class="col-lg-6">
-                                <input type="text" placeholder="Your Email">
+                                <input type="text" name="user_email" placeholder="Your Email" required>
                             </div>
                             <div class="col-lg-12">
-                                <textarea placeholder="Your Message"></textarea>
+                                <textarea name="user_message" placeholder="Your Message" required></textarea>
                                 <button type="submit">Submit Now</button>
                             </div>
                         </div>
+                        <div class="alert">
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            @if(Session::has('success'))
+                                <div class="alert-success p-2" role="alert">
+                                    {{ Session::get('success') }}
+                                </div>
+                            @endif
+                        </div>
                     </form>
                 </div>
+
             </div>
             <div class="map">
                 <iframe
