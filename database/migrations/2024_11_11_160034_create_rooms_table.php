@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('star');
             $table->integer('price');
             $table->integer('discount');
-            $table->integer('stage');
+            $table->integer('floor');
             $table->integer('number');
             $table->integer('type_id');
             $table->integer('surface');

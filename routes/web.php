@@ -23,6 +23,8 @@ Route::get('/', function () {
 });
 Route::get('/about', [AboutController::class, 'about'])->name('about');
 Route::get('/blog', [BlogController::class, 'blog'])->name('blog');
+Route::get('/blog_details', [BlogController::class, 'blog_details'])->name('blog_details');
+Route::post('/comment', [BlogController::class, 'comment'])->name('comment');
 
 Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('/rooms/show', [RoomsController::class, 'show'])->name('rooms_show');
