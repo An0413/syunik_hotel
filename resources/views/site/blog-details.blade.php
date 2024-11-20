@@ -126,81 +126,171 @@
         </div>
     </nav>
 
-    <!-- Breadcrumb Section Begin -->
-    <div class="breadcrumb-section">
+    <!-- Blog Details Hero Section Begin -->
+    <section class="blog-details-hero set-bg"
+             data-setbg="{{asset('site/images/sonImg/blog/blog-details/blog-details-hero.jpg')}}">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb-text">
-                        <h2>About Us</h2>
-                        <div class="bt-option">
-                            <a href="./index.html">Home</a>
-                            <span>About Us</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Breadcrumb Section End -->
-
-    <!-- About Us Page Section Begin -->
-    <section class="aboutus-page-section spad">
-        <div class="container">
-            <div class="about-page-text">
-                <div class="row">
-                    <div class="col-lg-6">
-                        @foreach($info as $value)
-                            <div class="ap-title">
-                                <h2>{{$value->title_en}}</h2>
-                                <p>{{$value->info_en}}</p>
-                            </div>
-                        @endforeach
-                    </div>
-                    <div class="col-lg-5 offset-lg-1">
-                        <ul class="ap-services">
-                            @foreach($detail as $value)
-                                <li><i class="icon_check"></i>{{$value->detail_en}}</li>
-                            @endforeach
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="bd-hero-text">
+                        <span>Travel Trip & Camping</span>
+                        <h2>Cdc Issues Health Alert Notice For Travelers To Usa From Hon</h2>
+                        <ul>
+                            <li class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</li>
+                            <li><i class="icon_profile"></i> Kerry Jones</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="about-page-services">
-                <div class="row">
-                    @foreach($about_image as $value)
-                        <div class="col-md-4">
-                            <div class="ap-service-item set-bg"
-                                 data-setbg="{{asset('site/images/sonImg/about/'. $value->image)}}">
-                                <div class="api-text">
-                                    <h3>{{$value->title_en}}</h3>
+        </div>
+    </section>
+    <!-- Blog Details Hero End -->
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="blog-details-text">
+                        @foreach($blog_details as $value)
+                            <div class="bd-title">
+                                <p>{{$value->info_en}}</p>
+                            </div>
+                        @endforeach
+                        <div class="bd-pic">
+                            <div class="bp-item">
+                                <img src="{{asset('site/images/sonImg/blog/blog-details/blog-details-1.jpg')}}" alt="">
+                            </div>
+                            <div class="bp-item">
+                                <img src="{{asset('site/images/sonImg/blog/blog-details/blog-details-2.jpg')}}" alt="">
+                            </div>
+                            <div class="bp-item">
+                                <img src="{{asset('site/images/sonImg/blog/blog-details/blog-details-3.jpg')}}" alt="">
+                            </div>
+                        </div>
+                        <div class="tag-share">
+                            <div class="tags">
+                                <a href="#">Travel Trip</a>
+                                <a href="#">Camping</a>
+                                <a href="#">Event</a>
+                            </div>
+                            <div class="social-share">
+                                <span>Share:</span>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-tripadvisor"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                        <div class="comment-option">
+                            <h4>2 Comments</h4>
+                            <div class="single-comment-item first-comment">
+                                <div class="sc-author">
+                                    <img src="{{asset('site/images/sonImg/blog/blog-details/avatar/avatar-1.jpg')}}"
+                                         alt="">
+                                </div>
+                                <div class="sc-text">
+                                    <span>27 Aug 2019</span>
+                                    <h5>Brandon Kelley</h5>
+                                    <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                        adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et
+                                        dolore magnam.</p>
+                                    <a href="#" class="comment-btn">Like</a>
+                                    <a href="#" class="comment-btn">Reply</a>
+                                </div>
+                            </div>
+                            <div class="single-comment-item reply-comment">
+                                <div class="sc-author">
+                                    <img src="{{asset('site/images/sonImg/blog/blog-details/avatar/avatar-2.jpg')}}"
+                                         alt="">
+                                </div>
+                                <div class="sc-text">
+                                    <span>27 Aug 2019</span>
+                                    <h5>Brandon Kelley</h5>
+                                    <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                        adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et
+                                        dolore magnam.</p>
+                                    <a href="#" class="comment-btn like-btn">Like</a>
+                                    <a href="#" class="comment-btn reply-btn">Reply</a>
+                                </div>
+                            </div>
+                            <div class="single-comment-item second-comment ">
+                                <div class="sc-author">
+                                    <img src="{{asset('site/images/sonImg/blog/blog-details/avatar/avatar-3.jpg')}}"
+                                         alt="">
+                                </div>
+                                <div class="sc-text">
+                                    <span>27 Aug 2019</span>
+                                    <h5>Brandon Kelley</h5>
+                                    <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                        adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et
+                                        dolore magnam.</p>
+                                    <a href="#" class="comment-btn">Like</a>
+                                    <a href="#" class="comment-btn">Reply</a>
                                 </div>
                             </div>
                         </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Us Page Section End -->
-
-    <!-- Video Section Begin -->
-    <section class="video-section set-bg" data-setbg="{{asset('site/images/sonImg/video-bg.jpg')}}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="video-text">
-                        <h2>Discover Our Hotel & Services.</h2>
-                        <p>It S Hurricane Season But We Are Visiting Hilton Head Island</p>
-                        <a href="https://www.youtube.com/watch?v=EzKkl64rRbM" class="play-btn video-popup"><img
-                                src="{{asset('site/images/sonImg/play.png')}}" alt=""></a>
+                        <div class="leave-comment">
+                            <h4>Leave A Comment</h4>
+                            <form action="{{route('comment')}}" method="post" role="form" class="comment-form">
+                                @csrf
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="Name" name="name" id="name">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="Email" name="email" id="comment">
+                                    </div>
+                                    <div class="col-lg-12 text-center">
+                                        <textarea placeholder="Messages" name="comment" id="comment"></textarea>
+                                    </div>
+{{--                                    <div class="my-3">--}}
+{{--                                        <div class="loading">Loading</div>--}}
+{{--                                        <div class="error-message"></div>--}}
+{{--                                        <div class="sent-message">Ձեր հաղորդագրությունն ուղարկված է։ Շնորհակալություն։</div>--}}
+{{--                                    </div>--}}
+                                    <div class="col-lg-12 text-center">
+                                        <button type="submit" class="site-btn">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Video Section End -->
-    <!-- Gallery Section End -->
+    <!-- Blog Details Section End -->
+
+    <!-- Recommend Blog Section Begin -->
+    <section class="recommend-blog-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Recommended</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @foreach($blog as $value)
+                <div class="col-md-4">
+                    <div class="blog-item set-bg" data-setbg="{{asset('site/images/sonImg/blog/'. $value->image)}}">
+                        <div class="bi-text">
+                            <span class="b-tag">Travel Trip</span>
+                            <h4><a href="#">{{$value->name_en}}</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    <!-- Recommend Blog Section End -->
+
+
     <footer class="untree_co--site-footer">
 
         <div class="container">
@@ -239,7 +329,9 @@
     </footer>
 </div>
 
+
 <!-- Search -->
+
 <script src="{{asset('site/js/js/vendor/jquery-3.3.1.min.js')}}"></script>
 <script src="{{asset('site/js/js/vendor/popper.min.js')}}"></script>
 <script src="{{asset('site/js/js/vendor/bootstrap.min.js')}}"></script>
@@ -272,6 +364,7 @@
 <script src="{{asset('site/js/sonJs/jquery.slicknav.js')}}"></script>
 <!-- <script src="sonJs/owl.carousel.min.js"></script> -->
 <script src="{{asset('site/js/sonJs/main.js')}}"></script>
+
 
 <!--deluxe -->
 
