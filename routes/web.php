@@ -35,6 +35,9 @@ Route::get('/services', [site\ServicesController::class, 'services'])->name('sit
 
 Route::get('/contact', [site\ContactController::class, 'contact'])->name('site_contact');
 
+Route::post('/contact_message', [site\ContactController::class, 'contact_message'])->name('site_contact_data');
+
+
 Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('/rooms/show', [RoomsController::class, 'show'])->name('rooms_show');
     Route::get('/rooms/create', [RoomsController::class, 'create'])->name('rooms_create');
