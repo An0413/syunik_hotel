@@ -16,7 +16,7 @@
         <div class="navbar-nav w-100">
             <a href="{{route('rooms_show')}}" class="nav-item nav-link active"><i class="fa fa-solid fa-hotel me-2"></i>Սենյակներ</a>
             <a href="{{route('blog_show')}}" class="nav-item nav-link"><i class="fa fa-solid fa-blog"></i>Բլոգ</a>
-            <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
+            <a href="{{route('about_show')}}" class="nav-item nav-link"><i class="fa fa-solid fa-address-card"></i>Մեր մասին</a>
             <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
             <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
             <div class="nav-item dropdown">

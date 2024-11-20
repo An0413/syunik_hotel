@@ -61,4 +61,11 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
     Route::post('/blog/update/{id}', [admin\BlogController::class, 'update'])->where('id', '[0-9]+')->name('blog_update');
     Route::delete('/blog/delete/{id}', [admin\BlogController::class, 'destroy'])->where('id', '[0-9]+')->name('blog_delete');
 
+
+    Route::get('/about/show', [admin\AboutController::class, 'show'])->name('about_show');
+    Route::get('/about/create', [admin\AboutController::class, 'create'])->name('about_create');
+    Route::post('/about/store', [admin\AboutController::class, 'store'])->name('about_store');
+    Route::get('/about/edit/{id}', [admin\AboutController::class, 'edit'])->where('id', '[0-9]+')->name('about_edit');
+    Route::post('/about/update/{id}', [admin\AboutController::class, 'update'])->where('id', '[0-9]+')->name('about_update');
+    Route::delete('/about/delete/{id}', [admin\AboutController::class, 'destroy'])->where('id', '[0-9]+')->name('about_delete');
 });
