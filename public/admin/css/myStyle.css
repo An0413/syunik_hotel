@@ -19,3 +19,14 @@
     background-color: #67696a;
     color: white;
 }
+
+.blog_video{
+    width: 300px;
+    height: auto;
+    visibility: hidden;
+}
+
+.blog_show_video{
+    width: 300px;
+    height: auto;
+}

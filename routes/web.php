@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\admin\RoomsController;
@@ -43,4 +44,13 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
     Route::get('/rooms/images/edit/{id}', [RoomsGalleryController::class, 'edit'])->where('id', '[0-9]+')->name('rooms_images_edit');
     Route::post('/rooms/images/update/{id}', [RoomsGalleryController::class, 'update'])->where('id', '[0-9]+')->name('rooms_images_update');
     Route::delete('/rooms/images/delete/{id}', [RoomsGalleryController::class, 'destroy'])->where('id', '[0-9]+')->name('rooms_images_delete');
+
+
+    Route::get('/blog/show', [admin\BlogController::class, 'show'])->name('blog_show');
+    Route::get('/blog/create', [admin\BlogController::class, 'create'])->name('blog_create');
+    Route::post('/blog/store', [admin\BlogController::class, 'store'])->name('blog_store');
+    Route::get('/blog/edit/{id}', [admin\BlogController::class, 'edit'])->where('id', '[0-9]+')->name('blog_edit');
+    Route::post('/blog/update/{id}', [admin\BlogController::class, 'update'])->where('id', '[0-9]+')->name('blog_update');
+    Route::delete('/blog/delete/{id}', [admin\BlogController::class, 'destroy'])->where('id', '[0-9]+')->name('blog_delete');
+
 });
