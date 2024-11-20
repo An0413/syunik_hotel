@@ -1,3 +1,32 @@
 .form_margin{
     margin: auto;
 }
+
+.create_img{
+    visibility: hidden;
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.show_img{
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+}
+
+.create_button{
+    background-color: #67696a;
+    color: white;
+}
+
+.blog_video{
+    width: 300px;
+    height: auto;
+    visibility: hidden;
+}
+
+.blog_show_video{
+    width: 300px;
+    height: auto;
+}
