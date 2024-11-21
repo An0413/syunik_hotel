@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin\Rooms;
+namespace App\Http\Requests\Admin\Services;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateGalleryRequest extends FormRequest
+class UpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,10 +22,14 @@ class UpdateGalleryRequest extends FormRequest
     public function rules(): array
     {
         return [
-
             'seq' => 'numeric|nullable',
-            'image' => 'nullable|image|mimes:jpeg,jpg,png,gif',
-
+            'name_am' => 'string|nullable',
+            'name_ru' => 'string|nullable',
+            'name_en' => 'string|nullable',
+            'info_am' => 'string|nullable',
+            'info_ru' => 'string|nullable',
+            'info_en' => 'string|nullable',
+            'icon' => 'string|nullable',
         ];
     }
 }
