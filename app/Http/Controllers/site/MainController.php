@@ -13,5 +13,8 @@ use App\Models\Comments;
 
 class MainController
 {
-
+public function main(){
+    $blog = Blog::where('status', 1)->get();
+    return view('site.layout.layout', compact('blog'));
+}
 }
