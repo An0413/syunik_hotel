@@ -1,10 +1,5 @@
 @extends('site.layout.layout')
 @section('content')
-{{--<div class="untree_co--site-wrap">--}}
-
-
-{{--    <div class="untree_co--site-main">--}}
-
         <!-- Breadcrumb Section Begin -->
         <div class="breadcrumb-section">
             <div class="container">
@@ -47,8 +42,6 @@
                 </div>
             </div>
         </section>
-        <!-- Blog Section End -->
-{{--    </div>--}}
-{{--</div>--}}
+
 @endsection
 
