@@ -32,13 +32,13 @@ Route::get('/blog', [BlogController::class, 'blog'])->name('blog');
 Route::get('/blog_details', [BlogController::class, 'blog_details'])->name('blog_details');
 Route::post('/comment', [BlogController::class, 'comment'])->name('comment');
 
-Route::get('/about', [AboutController::class, 'about'])->name('site_about');
+//Route::get('/about', [AboutController::class, 'about'])->name('site_about');
 
 Route::get('/rooms', [site\RoomsController::class, 'rooms'])->name('site_rooms');
 
 Route::get('rooms_details/{id}', [site\RoomsController::class, 'rooms_details'])->name('site_rooms_details');
 
-Route::get('/blog', [BlogController::class, 'blog'])->name('site_blog');
+//Route::get('/blog', [BlogController::class, 'blog'])->name('site_blog');
 
 Route::get('/services', [site\ServicesController::class, 'services'])->name('site_services');
 
