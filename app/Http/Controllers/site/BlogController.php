@@ -15,14 +15,14 @@ class BlogController
 {
     public function blog(){
 
-        $blog = Blog::where('status', 1)->get();
+        $blog = Blog::orderBy('seq', 'ASC')->get();
         return view('site.blog', compact('blog'));
     }
     public function blog_details(){
 
-        $comment = Comments::where('status', 1)->orderBy('seq', 'ASC')->get();
-        $blog_details = Blog::where('status', 1)->get();
-        $blog = Blog::where('status', 1)->orderBy('seq', 'DESC')->get();
+        $comment = Comments::orderBy('seq', 'ASC')->get();
+        $blog_details = Blog::orderBy('seq', 'DESC')->get();
+        $blog = Blog::orderBy('seq', 'DESC')->get();
         return view('site.blog-details', compact('comment', 'blog_details', 'blog'));
     }
 

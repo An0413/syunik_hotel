@@ -75,7 +75,7 @@
                     <div class="blog-details-text">
                         @foreach($blog_details as $value)
                             <div class="bd-title">
-                                <p>{{$value->info_en}}</p>
+                                <p>{{$value->info}}</p>
                             </div>
                         @endforeach
                         <div class="bd-pic">
@@ -200,7 +200,7 @@
                     <div class="blog-item set-bg" data-setbg="{{asset('site/images/sonImg/blog/'. $value->image)}}">
                         <div class="bi-text">
                             <span class="b-tag">Travel Trip</span>
-                            <h4><a href="#">{{$value->name_en}}</a></h4>
+                            <h4><a href="#">{{$value->name}}</a></h4>
                             <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
                         </div>
                     </div>
