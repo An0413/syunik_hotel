@@ -425,18 +425,18 @@
         <section class="blog-section blog-page spad">
             <div class="container">
                 <div class="row">
-                    @foreach($blog as $value)
+{{--                    @foreach($blog as $value)--}}
                         <div class="col-lg-4 col-md-6">
                             <div class="blog-item set-bg"
-                                 data-setbg="{{asset('site/images/sonImg/blog/'. $value->image)}}">
+                                 data-setbg="{{asset('site/images/sonImg/blog/blog1.jpg')}}">
                                 <div class="bi-text">
                                     <span class="b-tag">Travel Trip</span>
-                                    <h4><a href="./blog-details.html">{{$value->name}}</a></h4>
+                                    <h4><a href="#">Tremblant In Canada</a></h4>
                                     <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+{{--                    @endforeach--}}
 
                     <div class="col-lg-12">
                         <div class="load-more">
@@ -531,8 +531,6 @@
     </section>
     <!-- FAQ end -->
 </div>
-</body>
-</html>
 @yield('content')
 
 @include('site.layout.footer')
