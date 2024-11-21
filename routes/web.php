@@ -75,4 +75,11 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
     Route::get('/about/edit/{id}', [admin\AboutController::class, 'edit'])->where('id', '[0-9]+')->name('about_edit');
     Route::post('/about/update/{id}', [admin\AboutController::class, 'update'])->where('id', '[0-9]+')->name('about_update');
     Route::delete('/about/delete/{id}', [admin\AboutController::class, 'destroy'])->where('id', '[0-9]+')->name('about_delete');
+
+    Route::get('/services/show', [admin\ServicesController::class, 'show'])->name('services_show');
+    Route::get('/services/create', [admin\ServicesController::class, 'create'])->name('services_create');
+    Route::post('/services/store', [admin\ServicesController::class, 'store'])->name('services_store');
+    Route::get('/services/edit/{id}', [admin\ServicesController::class, 'edit'])->where('id', '[0-9]+')->name('services_edit');
+    Route::post('/services/update/{id}', [admin\ServicesController::class, 'update'])->where('id', '[0-9]+')->name('services_update');
+    Route::delete('/services/delete/{id}', [admin\ServicesController::class, 'destroy'])->where('id', '[0-9]+')->name('services_delete');
 });
