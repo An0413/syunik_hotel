@@ -9,6 +9,9 @@ use App\Models\AboutDetail;
 use App\Models\AboutImages;
 use App\Models\Blog;
 use App\Models\Comments;
+use App\Models\Rooms;
+use App\Models\RoomType;
+use App\Models\Services;
 
 
 class MainController
@@ -17,6 +20,10 @@ class MainController
     {
 
         $blog = Blog::all();
-        return view('site.main', compact('blog'));
+        $rooms = Rooms::all();
+        $services = Services::orderBy('seq', 'ASC')->get();
+        $about = About::all();
+        $room_type = RoomType::all();
+        return view('site.main', compact('blog', 'rooms', 'services', 'about', 'room_type'));
     }
 }

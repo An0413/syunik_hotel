@@ -27,7 +27,7 @@
                             <div class="blog-item set-bg" data-setbg="{{asset('site/images/sonImg/blog/'. $value->image)}}">
                                 <div class="bi-text">
                                     <span class="b-tag">Travel Trip</span>
-                                    <h4><a href="blog-details.html">{{$value->name}}</a></h4>
+                                    <h4><a href="#">{{$value->name}}</a></h4>
                                     <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
                                 </div>
                             </div>
