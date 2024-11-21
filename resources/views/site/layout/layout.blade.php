@@ -20,32 +20,31 @@
             </ul>
         </div>
         <div class="icons-wrap text-md-right">
+                <ul class="icons-top d-none d-lg-block">
+                    <li class="mr-4">
+                        <a href="#" class="js-search-toggle"><span class="icon-search2"></span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="icon-facebook"></span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="icon-twitter"></span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="icon-instagram"></span></a>
+                    </li>
+                </ul>
 
-            <ul class="icons-top d-none d-lg-block">
-                <li class="mr-4">
-                    <a href="#" class="js-search-toggle"><span class="icon-search2"></span></a>
-                </li>
-                <li>
-                    <a href="#"><span class="icon-facebook"></span></a>
-                </li>
-                <li>
-                    <a href="#"><span class="icon-twitter"></span></a>
-                </li>
-                <li>
-                    <a href="#"><span class="icon-instagram"></span></a>
-                </li>
-            </ul>
-
-            <!-- Mobile Toggle -->
-            <a href="#" class="d-block d-lg-none burger js-menu-toggle" data-toggle="collapse"
-               data-target="#main-navbar">
-                <span></span>
-            </a>
+                <!-- Mobile Toggle -->
+                <a href="#" class="d-block d-lg-none burger js-menu-toggle" data-toggle="collapse"
+                   data-target="#main-navbar">
+                    <span></span>
+                </a>
+            </div>
         </div>
-    </div>
-</nav>
-@yield('content')
-@include('site.layout.footer')
+    </nav>
+    @yield('content')
+    @include('site.layout.footer')
 </div>
 </body>
 </html>

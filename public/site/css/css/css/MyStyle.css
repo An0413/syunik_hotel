@@ -13,3 +13,55 @@
 /*    padding: 15px;*/
 /*    font-weight: 600;*/
 /*}*/
+
+
+div.c{
+    position: relative;
+    margin:2em;
+}
+div.c input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity:0;
+    visibility: 0;
+}
+div.c h4{
+    background:steelblue;
+    color:white;
+    padding:1em;
+    position: relative;
+}
+div.c label::before{
+    content:"";
+    display: inline-block;
+    border: 15px solid transparent;
+    border-left:20px solid white;
+}
+div.c label{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+div.p{
+    max-height:0px;
+    overflow: hidden;
+    transition:max-height 0.5s;
+    background-color: white;
+    box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+div.p p {
+    padding:2em;
+}
+div.c input:checked ~ h4 label::before{
+    border-left:15px solid transparent;
+    border-top:20px solid white;
+    margin-top:12px;
+    margin-right:10px;
+}
+div.c input:checked ~ h4 ~ div.p{
+    max-height:100px;
+}

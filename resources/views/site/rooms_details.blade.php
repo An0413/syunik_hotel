@@ -23,10 +23,10 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="room-details-item">
-                        <img src="{{$room->image}}" alt="">
+                        <img src="{{asset('site/images/SonImg/room/'.$room->image)}}" alt="">
                         <div class="rd-text">
                             <div class="rd-title">
-                                <h3>Premium King Room</h3>
+                                <h3>{{$room->info_en}}</h3>
                                 <div class="rdt-right">
                                     <div class="rating">
                                         <i class="icon_star"></i>

@@ -103,10 +103,8 @@
 <script src="{{asset('/site/js/sonJs/main.js')}}"></script>
 
 <!--deluxe -->
-
-
-{{--<script src="{{asset('/site/js/deluxejs/jquery-migrate-3.0.1.min.js')}}"></script>--}}
-{{--<script src="{{asset('/site/js/deluxejs/popper.min.js')}}"></script>--}}
+<script src="{{asset('/site/js/deluxejs/jquery-migrate-3.0.1.min.js')}}"></script>
+<script src="{{asset('/site/js/deluxejs/popper.min.js')}}"></script>
 <script src="{{asset('/site/js/deluxejs/bootstrap.min.js')}}"></script>
 <script src="{{asset('/site/js/deluxejs/jquery.easing.1.3.js')}}"></script>
 <script src="{{asset('/site/js/deluxejs/jquery.waypoints.min.js')}}"></script>

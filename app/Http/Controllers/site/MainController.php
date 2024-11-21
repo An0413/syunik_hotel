@@ -18,7 +18,6 @@ class MainController
 {
     public function main()
     {
-
         $blog = Blog::all();
         $rooms = Rooms::all();
         $services = Services::orderBy('seq', 'ASC')->get();
