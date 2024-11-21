@@ -47,7 +47,7 @@
                                 <button type="submit">Submit Now</button>
                             </div>
                         </div>
-                        <div class="alert">
+                        <div class="alert  px-0 mx-0">
                             @if ($errors->any())
                                 <div class="alert alert-danger">
                                     <ul>
@@ -58,7 +58,7 @@
                                 </div>
                             @endif
                             @if(Session::has('success'))
-                                <div class="alert-success p-2" role="alert">
+                                <div class="alert-success p-3" role="alert">
                                     {{ Session::get('success') }}
                                 </div>
                             @endif
@@ -68,9 +68,7 @@
 
             </div>
             <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0606825994123!2d-72.8735845851828!3d40.760690042573295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e85b24c9274c91%3A0xf310d41b791bcb71!2sWilliam%20Floyd%20Pkwy%2C%20Mastic%20Beach%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1578582744646!5m2!1sen!2sbd"
-                    height="470" style="border:0;" allowfullscreen=""></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6155.40048674635!2d46.32694248317092!3d39.52125462755632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403e00e3af71aded%3A0x126cd3448dc8c82c!2z1Y3VtdW41oLVttWr1a8g1YDVtdW41oLWgNWh1bbVuNaB!5e0!3m2!1sru!2sam!4v1732180043314!5m2!1sru!2sam" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
