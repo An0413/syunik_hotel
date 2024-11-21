@@ -21,6 +21,9 @@
                                     <thead>
                                     <tr>
                                         <th scope="col">Հ/հ</th>
+                                        <th scope="col">Անուն հայերեն</th>
+                                        <th scope="col">Անուն ռուսերեն</th>
+                                        <th scope="col">Անուն անգլերեն</th>
                                         <th scope="col">Ինֆո հայերեն</th>
                                         <th scope="col">Ինֆո ռուսերեն</th>
                                         <th scope="col">Ինֆո անգլերեն</th>
@@ -32,6 +35,9 @@
                                     @foreach($about as $key=>$value)
                                         <tr>
                                             <th scope="row">{{$key+1}}</th>
+                                            <td>{{$value->name_am}}</td>
+                                            <td>{{$value->name_ru}}</td>
+                                            <td>{{$value->name_en}}</td>
                                             <td>{{$value->info_am}}</td>
                                             <td>{{$value->info_ru}}</td>
                                             <td>{{$value->info_en}}</td>

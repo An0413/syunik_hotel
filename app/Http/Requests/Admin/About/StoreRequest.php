@@ -22,6 +22,9 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'name_am' => 'string|nullable',
+            'name_ru' => 'string|nullable',
+            'name_en' => 'string|nullable',
             'info_am' => 'string|nullable',
             'info_ru' => 'string|nullable',
             'info_en' => 'string|nullable',

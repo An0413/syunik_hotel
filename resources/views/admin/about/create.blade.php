@@ -8,6 +8,18 @@
                     <form action="{{ route('about_store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
+                            <label for="name_am" class="form-label">Անուն հայերեն</label>
+                            <input class="form-control" type="text" name="name_am">
+                        </div>
+                        <div class="mb-3">
+                            <label for="name_ru" class="form-label">Անուն ռուսերեն</label>
+                            <input class="form-control" type="text" name="name_ru">
+                        </div>
+                        <div class="mb-3">
+                            <label for="name_en" class="form-label">Անուն անգլերեն</label>
+                            <input class="form-control" type="text" name="name_en">
+                        </div>
+                        <div class="mb-3">
                             <label for="info_am" class="form-label">Տեղեկություն հայերեն</label>
                             <textarea class="form-control" placeholder="Սենյակի նկարագիր"
                                       style="height: 150px;" name="info_am"></textarea>
