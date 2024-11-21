@@ -24,7 +24,7 @@
                                     <div class="form-group p-4 align-self-stretch d-flex align-items-end">
                                         <div class="wrap">
                                             <label for="">Check-in Date</label>
-                                            <input type="date" class="form-control checkin_date"
+                                            <input type="text" class="form-control checkin_date"
                                                    placeholder="Check-in date">
                                         </div>
                                     </div>
@@ -33,7 +33,7 @@
                                     <div class="form-group p-4 align-self-stretch d-flex align-items-end">
                                         <div class="wrap">
                                             <label for="">Check-out Date</label>
-                                            <input type="date" class="form-control checkout_date"
+                                            <input type="text" class="form-control checkout_date"
                                                    placeholder="Check-out date">
                                         </div>
                                     </div>
@@ -150,7 +150,11 @@
                                             </tr>
                                             <tr>
                                                 <td class="r-o">Capacity:</td>
-                                                <td>Max persion</td>
+                                                <td>{{$value->capacity}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="r-o">Childs:</td>
+                                                <td>{{$value->childs}}</td>
                                             </tr>
                                             <tr>
                                                 <td class="r-o">Bed:</td>
@@ -187,7 +191,7 @@
                         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
                             <div class="media-29191 text-center h-100">
                                 <div class="media-29191-icon">
-                                    <img src="{{asset($value->icon)}}" alt="Image" class="img-fluid">
+                                    <img src="{{asset('site/images/images/svg/'.$value->icon)}}" alt="Image" class="img-fluid">
                                 </div>
                                 <h3>{{$value->name_en}}</h3>
                                 <p>{{$value->info_en}}</p>
@@ -253,19 +257,6 @@
     </div>
     <!-- FAQ begin -->
     <section class="container">
-        <div id="accordion" class="accordion-container">
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
-                            Lorem Item #1
-                        </button>
-                    </h5>
-                </div>
-            </section>
-            <!-- Map Section End -->
-        </div>
         <!-- FAQ begin -->
 
         <section class="container">
@@ -293,7 +284,7 @@
                 </div>
                 <div class="c">
                     <input type="checkbox" id="faq-3">
-                    <h4><label for="faq-3">ՈՒնե՞ք հանդիպումների կազմակերպման համար նաղատեսված դահլիճներ  </label></h4>
+                    <h4><label for="faq-3">ՈՒնե՞ք հանդիպումների կազմակերպման համար նախատեսված դահլիճներ  </label></h4>
                     <div class="p">
                         <p>I was inpired by an article on css-tricks. <a href="https://css-tricks.com/the-checkbox-hack/">link to article</a>
                         </p>
