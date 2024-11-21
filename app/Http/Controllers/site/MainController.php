@@ -15,6 +15,7 @@ class MainController
 {
     public function main()
     {
+
         $blog = Blog::all();
         return view('site.main', compact('blog'));
     }
