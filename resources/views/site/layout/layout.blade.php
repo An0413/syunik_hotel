@@ -15,8 +15,8 @@
                     <li class="has-children">
                         <a href="{{ route('site_services') }}">Services</a>
                     </li>
-                    <li><a href="{{ route('site_blog') }}">Blog</a></li>
-                    <li><a href="{{ route('site_about') }}">About Us</a></li>
+                    <li><a href="{{ route('blog') }}">Blog</a></li>
+                    <li><a href="{{ route('about') }}">About Us</a></li>
                     <li><a href="{{ route('site_contact') }}">Contact</a></li>
                 </ul>
             </div>

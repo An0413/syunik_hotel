@@ -30,9 +30,8 @@
                         <div class="media-29191-icon">
                             <img src="{{asset($value->icon)}}" alt="Image" class="img-fluid">
                         </div>
-                        <h3>{{$value->name_am}}</h3>
-                        <p>{{$value->info_am}}</p>
-                        <p><p><a href="#" class="readmore reverse">Read More</a></p></p>
+                        <h3>{{$value->name_en}}</h3>
+                        <p>{{$value->info_en}}</p>
                     </div>
                 </div>
                 @endforeach
