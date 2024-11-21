@@ -50,6 +50,7 @@
 
     <!--    <link rel="stylesheet" href="deluxeCss/flaticon.css">-->
     <!--    <link rel="stylesheet" href="deluxeCss/icomoon.css">-->
+    <link rel="stylesheet" href="{{asset('/site/css/css/css/MyStyle.css')}}">
     <title>LuxuryHotel Free HTML Template by Untree.co</title>
 </head>
 

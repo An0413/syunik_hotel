@@ -28,10 +28,10 @@
                 <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
                     <div class="media-29191 text-center h-100">
                         <div class="media-29191-icon">
-                            <img src="{{asset($value->icon)}}" alt="Image" class="img-fluid">
+                            <img src="{{asset('site/images/images/svg/'.$value->icon)}}" alt="Image" class="img-fluid">
                         </div>
-                        <h3>{{$value->name_en}}</h3>
-                        <p>{{$value->info_en}}</p>
+                        <h3>{{$value->name_am}}</h3>
+                        <p>{{$value->info_am}}</p>
                     </div>
                 </div>
                 @endforeach

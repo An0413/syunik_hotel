@@ -24,9 +24,9 @@
                 @foreach($rooms as $value)
                     <div class="col-lg-4 col-md-6">
                         <div class="room-item">
-                            <img src="{{asset($value->image)}}" alt="">
+                            <img src="{{asset('site/images/SonImg/room/'.$value->image)}}" alt="">
                             <div class="ri-text">
-                                <h4>Premium King Room</h4>
+                                <h4>{{$value->info_en}}</h4>
                                 @if($value->discount > 0)
                                     <h3>
                                         <del style="color: red">{{$value->price}}$
