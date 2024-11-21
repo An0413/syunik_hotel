@@ -1661,7 +1661,7 @@ footer .form-subscribe .form-control:active, footer .form-subscribe .form-contro
 }
 
 .form-control, .btn:not(.bigHeight) { //avelacrac
-  height: 45px;
+  height: 40px;
   border-radius: 0;
 }
 
