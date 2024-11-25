@@ -31,6 +31,14 @@ class ServicesController extends Controller
     {
         $data = $request->validated();
 
+        if ($request->hasFile('icon') && $request->file('icon')->isValid()) {
+            $image = $request->file('icon');
+            $ext = explode('.', $image->getClientOriginalName());
+            $imageName = uniqid() . '.' . end($ext);
+            $image->move(public_path('images/services'), $imageName);
+            $data['icon'] = $imageName;
+        }
+
         Services::create($data);
         return redirect()->route('services_show');
     }
@@ -43,8 +51,19 @@ class ServicesController extends Controller
 
     public function update(UpdateRequest $request, $id)
     {
+        $services = Services::find($id);
         $data = $request->validated();
         $up_data = $data;
+        if ($request->hasFile('icon') && $request->file('icon')->isValid()) {
+            $image = $request->file('icon');
+            $ext = explode('.', $image->getClientOriginalName());
+            $imageName = uniqid() . '.' . end($ext);
+            $image->move(public_path('images/services'), $imageName);
+            $up_data['icon'] = $imageName;
+
+            File::delete(public_path('images/services') . '/' . $services->icon);
+        }
+
 
         Services::where('id', $id)->update($up_data);
 
@@ -55,6 +74,9 @@ class ServicesController extends Controller
     {
         $services = Services::find($id);
 
+        if (File::exists(public_path('images/services') . '/' . $services->icon)) {
+            File::delete(public_path('images/services') . '/' . $services->icon);
+        }
         Services::where('id', $id)->delete();
 
         return redirect()->route('services_show');

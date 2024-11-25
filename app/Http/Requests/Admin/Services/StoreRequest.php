@@ -29,7 +29,7 @@ class StoreRequest extends FormRequest
             'info_am' => 'string|nullable',
             'info_ru' => 'string|nullable',
             'info_en' => 'string|nullable',
-            'icon' => 'string|required',
+            'icon' => 'required|image|mimes:jpeg,jpg,png,gif',
         ];
     }
 }

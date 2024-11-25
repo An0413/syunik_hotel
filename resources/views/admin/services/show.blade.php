@@ -4,7 +4,7 @@
         <div class="row g-4">
             <div class="col-sm-12 col-xl-12 col-lg-12 col-md-12">
                 <div class="bg-light rounded h-100 p-4">
-                    <h6 class="mb-4">Մեր մասին</h6>
+                    <h6 class="mb-4">Ծառայություններ</h6>
                     <div class="row">
                         <div class="col-10"></div>
                         <div class="col-2">
@@ -44,7 +44,9 @@
                                             <td>{{$value->info_am}}</td>
                                             <td>{{$value->info_ru}}</td>
                                             <td>{{$value->info_en}}</td>
-                                            <td>{{$value->icon}}</td>
+                                            <td>
+                                                <img src="{{asset('images/services/'.$value->icon)}}" class="show_img">
+                                            </td>
                                             <td>
                                                 <a href="{{route('services_edit', $value->id)}}">
                                                     <i class="nav-icon fas fa-edit text-primary"></i>

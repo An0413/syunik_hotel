@@ -57,6 +57,8 @@ class BlogController extends Controller
 
     public function update(UpdateRequest $request, $id)
     {
+        $blog = Blog::find($id);
+
         $data = $request->validated();
         $up_data = $data;
         if (isset($data['image'])) {
@@ -65,6 +67,8 @@ class BlogController extends Controller
             $imageName = uniqid() . '.' . end($ext);
             $image->move(public_path('images/rooms'), $imageName);
             $up_data['image'] = $imageName;
+
+            File::delete(public_path('images/rooms') . '/' . $blog->image);
         }
         if (isset($data['video'])) {
             $image = $request->file('video');
@@ -72,6 +76,8 @@ class BlogController extends Controller
             $videoName = uniqid() . '.' . end($ext);
             $image->move(public_path('video/blog'), $videoName);
             $up_data['video'] = $videoName;
+
+            File::delete(public_path('video/blog') . '/' . $blog->video);
         }
 
         Blog::where('id', $id)->update($up_data);

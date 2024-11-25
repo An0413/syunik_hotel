@@ -40,7 +40,10 @@
                         </div>
                         <div class="mb-3">
                             <label for="icon" class="form-label">Լոգո</label>
-                            <input class="form-control" type="text" name="icon" {{$services->icon}}>
+                            <input class="form-control" type="file" name="icon" id="logo">
+                        </div>
+                        <div class="mb-3">
+                            <img src="{{asset('images/services/'.$services->icon)}}" alt="" class="show_img" id="img">
                         </div>
                         <button type="submit" class="btn btn-primary">Խմբագրել</button>
                     </form>
@@ -48,7 +51,7 @@
             </div>
         </div>
         <script>
-            let logo = document.querySelector('#image');
+            let logo = document.querySelector('#logo');
             let myImg = document.querySelector('#img');
             logo.onchange = evt => {
                 const [file] = logo.files

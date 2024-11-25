@@ -22,8 +22,6 @@
                             </button>
                         </li>
                     </ul>
-
-
                     <div class="tab-content" id="languageTabsContent">
                         <div class="tab-pane fade show active" id="armenian" role="tabpanel"
                              aria-labelledby="armenian-tab">
