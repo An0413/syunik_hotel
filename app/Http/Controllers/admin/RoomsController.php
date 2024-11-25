@@ -9,6 +9,7 @@ use App\Models\Rooms;
 use App\Models\RoomType;
 use http\Env\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
 
 
 class RoomsController extends Controller

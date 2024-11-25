@@ -81,8 +81,11 @@
                         <span class="d-none d-lg-inline-flex">Hotel admin</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                        <a href="#" class="dropdown-item">Իմ պռոֆիլը</a>
-                        <a href="#" class="dropdown-item">Դուրս գալ</a>
+                        <a href="#" class="dropdown-item">Իմ պրոֆիլը</a>
+                        <form id="logoutForm" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                        <a href="#" class="dropdown-item" onclick="document.getElementById('logoutForm').submit();">Logout</a>
                     </div>
                 </div>
             </div>

@@ -10,6 +10,7 @@ use App\Http\Controllers\site\AboutController;
 use App\Http\Controllers\site\BlogController;
 use App\Http\Controllers\site\MainController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [MainController::class, 'main'])->name('site');
+
+
+Route::get('login', [AuthController::class, 'showLogin'])->name('login');
+Route::get('register', [AuthController::class, 'showRegister'])->middleware('auth')->name('register');
+
+Route::post('login', [AuthController::class, 'login']);
+Route::post('register', [AuthController::class, 'register'])->middleware('auth');
+Route::post('logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
 
 Route::get('/about', [AboutController::class, 'about'])->name('about');
 Route::get('/blog', [BlogController::class, 'blog'])->name('blog');
@@ -51,7 +60,7 @@ Route::get('/lang/{locale}', function ($locale) {
     return redirect()->back();
 })->name('switchLang');
 
-Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function () {
+Route::middleware('auth')->prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('/', [RoomsController::class, 'show'])->name('rooms_show');
     Route::get('/rooms/show', [RoomsController::class, 'show'])->name('rooms_show');
     Route::get('/rooms/create', [RoomsController::class, 'create'])->name('rooms_create');
