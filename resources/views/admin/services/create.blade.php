@@ -40,11 +40,25 @@
                         </div>
                         <div class="mb-3">
                             <label for="icon" class="form-label">Լոգո</label>
-                            <input class="form-control" type="text" name="icon" >
+                            <input class="form-control" type="file" name="icon" id="logo">
+                        </div>
+                        <div class="mb-3">
+                            <img src="" alt="" class="create_img" id="img">
                         </div>
                         <button type="submit" class="btn btn-primary">Ավելացնել</button>
                     </form>
                 </div>
             </div>
         </div>
+        <script>
+            let logo = document.querySelector('#logo');
+            let myImg = document.querySelector('#img');
+            logo.onchange = evt => {
+                const [file] = logo.files
+                if (file) {
+                    myImg.src = URL.createObjectURL(file);
+                    myImg.style.visibility = 'visible';
+                }
+            }
+        </script>
 @endsection

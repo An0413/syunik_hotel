@@ -52,6 +52,8 @@ class RoomsController extends Controller
 
     public function update(UpdateRequest $request, $id)
     {
+        $room = Rooms::find($id);
+
         $data = $request->validated();
         $up_data = $data;
         if (isset($data['image'])) {
@@ -60,6 +62,8 @@ class RoomsController extends Controller
             $imageName = uniqid() . '.' . end($ext);
             $image->move(public_path('images/rooms'), $imageName);
             $up_data['image'] = $imageName;
+
+            File::delete(public_path('images/rooms') . '/' . $room->image);
         }
 
         Rooms::where('id', $id)->update($up_data);
