@@ -207,7 +207,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="breadcrumb-text">
-                            <h2>Blog</h2>
+                            <h2>{{__('messages.blog')}}</h2>
                             {{--                            <div class="bt-option">--}}
                             {{--                                <a href="{{route('site')}}">Home</a>--}}
                             {{--                                <span>Blog Grid</span>--}}

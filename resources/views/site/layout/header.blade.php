@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{app()->getLocale()}}">
 
 <head>
     <meta charset="utf-8">
@@ -51,7 +51,7 @@
     <!--    <link rel="stylesheet" href="deluxeCss/flaticon.css">-->
     <!--    <link rel="stylesheet" href="deluxeCss/icomoon.css">-->
     <link rel="stylesheet" href="{{asset('/site/css/css/css/MyStyle.css')}}">
-    <title>LuxuryHotel Free HTML Template by Untree.co</title>
+    <title>{{__('messages.title')}}</title>
 </head>
 
 <body>

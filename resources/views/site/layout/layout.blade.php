@@ -8,22 +8,44 @@
         <div class="site-nav-ul-wrap text-center d-none d-lg-block">
             <ul class="site-nav-ul js-clone-nav">
                 <li class="active"><a href="{{route('site')}}">Home</a></li>
-                <li class="has-children">
+                <li class="">
                     <a href="{{route('site_rooms')}}">Rooms</a>
                 </li>
-                <li class="has-children">
+                <li class="">
                     <a href="{{route('site_services')}}">Services</a>
                 </li>
                 <li><a href="{{route('blog')}}">Blog</a></li>
                 <li><a href="{{route('about')}}">About Us</a></li>
                 <li><a href="{{route('site_contact')}}">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="{{ asset('images/flags/' . app()->getLocale() . '.png') }}" width="20" height="15">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{{ route('switchLang', 'am') }}">
+                                <img src="{{ asset('images/flags/am.png') }}" alt="Հայերեն" width="20" height="15">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('switchLang', 'ru') }}">
+                                <img src="{{ asset('images/flags/ru.png') }}" alt="Русский" width="20" height="15">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('switchLang', 'en') }}">
+                                <img src="{{ asset('images/flags/en.png') }}" alt="English" width="20" height="15">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <div class="icons-wrap text-md-right">
                 <ul class="icons-top d-none d-lg-block">
-                    <li class="mr-4">
-                        <a href="#" class="js-search-toggle"><span class="icon-search2"></span></a>
-                    </li>
+{{--                    <li class="mr-4">--}}
+{{--                        <a href="#" class="js-search-toggle"><span class="icon-search2"></span></a>--}}
+{{--                    </li>--}}
                     <li>
                         <a href="#"><span class="icon-facebook"></span></a>
                     </li>
