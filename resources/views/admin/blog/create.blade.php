@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <video controls class="blog_video" id="blog_video_am">
-                                        <source src="" type="video/mp4">
+                                        <source src="" type="video/*">
                                         Ձեր բրաուզերը չի աջակցում վիդեոներին։
                                     </video>
                                 </div>
@@ -127,7 +127,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <video controls class="blog_video" id="blog_video_ru">
-                                        <source src="" type="video/mp4">
+                                        <source src="" type="video/*">
                                         Ваш браузер не поддерживает видео
                                     </video>
                                 </div>

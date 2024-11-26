@@ -31,6 +31,28 @@
     height: auto;
 }
 
+.dropdown-menu {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.message-container {
+    max-height: 150px;
+    overflow: auto;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.message-content {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
 @media (min-width: 576px) {
     .container, .container-sm {
         max-width: 540px
