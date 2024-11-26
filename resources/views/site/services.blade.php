@@ -16,7 +16,6 @@
 
     <div class="untree_co--site-section">
         <div class="container">
-
             <div class="row justify-content-center text-center pt-0 pb-5">
                 <div class="col-lg-6 section-heading" data-aos="fade-up">
                     <h3 class="text-center">Hotel Amenities</h3>

@@ -879,7 +879,7 @@ a, a:hover {
 .sticky-wrapper .untree_co--site-nav .site-nav-ul > li > a {
   padding: 10px 20px;
   display: block;
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   letter-spacing: .05rem;
   font-size: 12px;
@@ -1660,7 +1660,7 @@ footer .form-subscribe .form-control:active, footer .form-subscribe .form-contro
   box-shadow: none;
 }
 
-.form-control, .btn:not(.bigHeight) { //avelacrac
+.form-control { //avelacrac
   height: 40px;
   border-radius: 0;
 }
