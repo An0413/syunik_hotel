@@ -180,7 +180,7 @@
                 <div class="container pt-0 pb-5">
                     <div class="row justify-content-center text-center">
                         <div class="col-lg-6 section-heading" data-aos="fade-up">
-                            <h3 class="text-center">Hotel Amenities</h3>
+                            <h3 class="text-center">{{__('messages.amenities')}}</h3>
                         </div>
                     </div>
                 </div>
