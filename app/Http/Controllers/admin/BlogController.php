@@ -58,7 +58,6 @@ class BlogController extends Controller
     public function update(UpdateRequest $request, $id)
     {
         $blog = Blog::find($id);
-
         $data = $request->validated();
         $up_data = $data;
         if (isset($data['image'])) {

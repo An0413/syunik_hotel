@@ -35,7 +35,8 @@
 <body>
 <div class="container-xxl position-relative bg-white d-flex p-0">
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -47,9 +48,9 @@
     <div class="content">
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-{{--            <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">--}}
-{{--                <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>--}}
-{{--            </a>--}}
+            {{--            <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">--}}
+            {{--                <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>--}}
+            {{--            </a>--}}
             <a href="#" class="sidebar-toggler flex-shrink-0">
                 <i class="fa fa-bars"></i>
             </a>
@@ -59,19 +60,22 @@
                         <i class="fa fa-envelope me-lg-2"></i>
                         <span class="d-none d-lg-inline-flex">Նամակներ</span>
                     </a>
+                    @php
+                        $messages = \App\Models\Messages::orderBy('id', 'desc')->get();
+                    @endphp
                     <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                        <a href="#" class="dropdown-item">
-                            <div class="d-flex align-items-center">
-                                <img class="rounded-circle" src="img/user.jpg" alt=""
-                                     style="width: 40px; height: 40px;">
-                                <div class="ms-2">
-                                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                    <small>15 minutes ago</small>
+                        @foreach($messages as $key=>$value)
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center dropdown_item_div">
+                                    <div class="ms-2  message-container">
+                                        <h4 class="fw-normal mb-0">{{$value->name}}</h4>
+                                        <small>{{$value->email}}</small>
+                                        <hr class="dropdown-divider">
+                                        <p  class="message-content">{{$value->message}}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                        <hr class="dropdown-divider">
-                        <a href="#" class="dropdown-item text-center">See all message</a>
+                            </a>
+                        @endforeach
                     </div>
                 </div>
                 <div class="nav-item dropdown">
