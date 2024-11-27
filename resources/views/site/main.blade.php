@@ -137,7 +137,7 @@
                     <div class="row">
                         @foreach($rooms as $value)
                             <div class="col-lg-3 col-md-6">
-                                <div class="hp-room-item set-bg"
+                                <div class="hp-room-item set-bg room_item" data-href="{{route('site_rooms_details', $value->id)}}"
                                      data-setbg="{{asset('site/images/SonImg/room/' . $value->image)}}">
                                     <div class="hr-text">
                                         <h3>{{$value->roomType->type_en}}</h3>
@@ -224,11 +224,11 @@
                 <div class="row">
                     @foreach($blog as $value)
                         <div class="col-lg-4 col-md-6">
-                            <div class="blog-item set-bg"
+                            <div class="blog-item set-bg blog_item" data-href="{{route('blog_details', $value->id)}}"
                                  data-setbg="{{asset('site/images/sonImg/blog/'. $value->image)}}">
                                 <div class="bi-text">
                                     <span class="b-tag">Travel Trip</span>
-                                    <h4><a href="#">{{$value->name}}</a></h4>
+                                    <h4><a href="javascript:void(0)">{{$value->name}}</a></h4>
                                     <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
                                 </div>
                             </div>

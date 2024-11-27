@@ -49,13 +49,13 @@
             <div class="col-md-6 text-md-right">
                 <ul class="icons-top icons-dark">
                     <li>
-                        <a href="#"><span class="icon-facebook"></span></a>
+                        <a href="https://www.facebook.com/Syunikhotel" target="_blank"><span class="icon-facebook"></span></a>
                     </li>
                     <li>
-                        <a href="#"><span class="icon-twitter"></span></a>
+                        <a href="#"><span class="icon-twitter" target="_blank"></span></a>
                     </li>
                     <li>
-                        <a href="#"><span class="icon-instagram"></span></a>
+                        <a href="https://www.instagram.com/syunikhotel/?hl=am-et" target="_blank"><span class="icon-instagram"></span></a>
                     </li>
                     <li>
                         <a href="#"><span class="icon-tripadvisor"></span></a>
@@ -118,3 +118,4 @@
 <script src="{{asset('https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false')}}"></script>
 <script src="{{asset('/site/js/deluxejs/google-map.js')}}"></script>
 <script src="{{asset('/site/js/deluxejs/main.js')}}"></script>
+<script src="{{asset('/site/js/js/custom.js')}}"></script>

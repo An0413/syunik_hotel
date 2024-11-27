@@ -27,7 +27,7 @@ Route::get('/', [MainController::class, 'main'])->name('site');
 
 Route::get('/about', [AboutController::class, 'about'])->name('about');
 Route::get('/blog', [BlogController::class, 'blog'])->name('blog');
-Route::get('/blog_details', [BlogController::class, 'blog_details'])->name('blog_details');
+Route::get('/blog_details/{id}', [BlogController::class, 'blog_details'])->where('id', '[0-9]+')->name('blog_details');
 Route::post('/comment', [BlogController::class, 'comment'])->name('comment');
 
 //Route::get('/about', [AboutController::class, 'about'])->name('site_about');

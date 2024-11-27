@@ -65,3 +65,9 @@ div.c input:checked ~ h4 label::before{
 div.c input:checked ~ h4 ~ div.p{
     max-height:100px;
 }
+.blog_item{
+    cursor: pointer;
+}
+.room_item{
+    cursor: pointer;
+}
