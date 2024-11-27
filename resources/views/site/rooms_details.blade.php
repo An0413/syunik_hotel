@@ -9,7 +9,7 @@
                         <h2>Our Rooms</h2>
                         <div class="bt-option">
                             <a href="./home.html">Home</a>
-                            <span>Rooms</span>
+                            <span>{{__('messages.room')}}</span>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                         <img src="{{asset('site/images/SonImg/room/'.$room->image)}}" alt="">
                         <div class="rd-text">
                             <div class="rd-title">
-                                <h3>{{$room->info_en}}</h3>
+                                <h3>{{$room->roomType->type_en}}</h3>
                                 <div class="rdt-right">
                                     <div class="rating">
                                         <i class="icon_star"></i>
@@ -35,42 +35,42 @@
                                         <i class="icon_star"></i>
                                         <i class="icon_star-half_alt"></i>
                                     </div>
-                                    <a href="#">Booking Now</a>
+                                    <a href="#">{{__('messages.booking')}}</a>
                                 </div>
                             </div>
                             @if($room->discount > 0)
                                 <h3>
                                     <del style="color: red">{{$room->price}}$
-                                    </del> &nbsp;&nbsp;{{ $room->price - $room->price * $room->discount/100}}$<span>/Pernight</span>
+                                    </del> &nbsp;&nbsp;{{ $room->price - $room->price * $room->discount/100}}$<span>/{{__('messages.price')}}</span>
                                 </h3>
                             @else
-                                <h3>{{$room->price}}$<span>/Pernight</span></h3>
+                                <h3>{{$room->price}}$<span>/{{__('messages.price')}}</span></h3>
                             @endif
                             <table>
                                 <tbody>
                                 <tr>
-                                    <td class="r-o">Size:</td>
+                                    <td class="r-o">{{__('messages.size')}}:</td>
                                     <td>{{$room->surface}} ft</td>
                                 </tr>
                                 <tr>
-                                    <td class="r-o">Capacity:</td>
+                                    <td class="r-o">{{__('messages.capacity')}}:</td>
                                     <td>{{$room->capacity}}</td>
                                 </tr>
                                 <tr>
-                                    <td class="r-o">Childs:</td>
+                                    <td class="r-o">{{__('messages.child')}}:</td>
                                     <td>{{$room->childs}}</td>
                                 </tr>
                                 <tr>
-                                    <td class="r-o">Bed:</td>
+                                    <td class="r-o">{{__('messages.bed')}}:</td>
                                     <td>{{$room->capacity}}</td>
                                 </tr>
                                 <tr>
-                                    <td class="r-o">Floor:</td>
+                                    <td class="r-o">{{__('messages.floor')}}:</td>
                                     <td>{{$room->floor}}</td>
                                 </tr>
                                 <tr>
-                                    <td class="r-o">Services:</td>
-                                    <td>Wifi, Television, Bathroom,...</td>
+                                    <td class="r-o">{{__('messages.amenities')}}:</td>
+                                    <td>{{__('messages.services')}}</td>
                                 </tr>
                                 </tbody>
                             </table>
