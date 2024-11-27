@@ -18,11 +18,11 @@ class BlogController
         $blog = Blog::orderBy('seq', 'ASC')->get();
         return view('site.blog', compact('blog'));
     }
-    public function blog_details(){
+    public function blog_details($id){
 
         $comment = Comments::orderBy('seq', 'ASC')->get();
-        $blog_details = Blog::orderBy('seq', 'DESC')->get();
-        $blog = Blog::orderBy('seq', 'DESC')->get();
+        $blog_details = Blog::where('id', $id)->get();
+        $blog = Blog::orderBy('seq', 'DESC')->limit(3)->get();
         return view('site.blog-details', compact('comment', 'blog_details', 'blog'));
     }
 

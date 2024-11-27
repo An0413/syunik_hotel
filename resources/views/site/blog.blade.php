@@ -8,8 +8,10 @@
                         <div class="breadcrumb-text">
                             <h2>{{__('messages.travel')}}</h2>
                             <div class="bt-option">
-                                <a href="#">Home</a>
-                                <span>{{__('messages.blog')}}</span>
+
+                                <a href="{{route('site')}}">Home</a>
+                                <span>Blog Grid</span>
+
                             </div>
                         </div>
                     </div>
@@ -24,10 +26,12 @@
                 <div class="row">
                     @foreach($blog as $value)
                         <div class="col-lg-4 col-md-6">
-                            <div class="blog-item set-bg" data-setbg="{{asset('site/images/sonImg/blog/'. $value->image)}}">
+                            <div class="blog-item set-bg blog_item" data-setbg="{{asset('images/blog/'. $value->image)}}"
+                                 data-href="{{route('blog_details', $value->id)}}">
                                 <div class="bi-text">
-                                    <span class="b-tag">{{__('messages.travel')}}</span>
-                                    <h4><a href="#">{{$value->name}}</a></h4>
+                                    <span class="b-tag">Travel Trip</span>
+                                    <h4><a href="javascript:void(0)">{{$value->name}}</a></h4>
+
                                     <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
                                 </div>
                             </div>

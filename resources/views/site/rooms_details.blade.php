@@ -8,8 +8,9 @@
                     <div class="breadcrumb-text">
                         <h2>Our Rooms</h2>
                         <div class="bt-option">
-                            <a href="./home.html">Home</a>
-                            <span>{{__('messages.room')}}</span>
+                            <a href="{{route('site')}}">Home</a>
+                            <span>Rooms</span>
+
                         </div>
                     </div>
                 </div>
