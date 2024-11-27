@@ -5,7 +5,7 @@ return [
     'amenities' => 'Hotel Amenities',
     'conditions' => 'Amenities',
     'rooms' => 'Rooms',
-    'price' => 'Pernight',
+    'pernight' => 'Pernight',
     'size' => 'Size',
     'capacity' => 'Capacity',
     'child' => 'Childs',
@@ -15,5 +15,7 @@ return [
     'booking' =>'Booking Now',
     'king' => 'King Beds',
     'more' => 'More Details',
+    'travel' => 'Travel Trip',
+    'camping' => 'Camping',
 
 ];
