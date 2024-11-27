@@ -2,6 +2,7 @@
 @section('content')
     <div class="untree_co--site-wrap">
 
+
         <!-- Blog Details Hero Section Begin -->
         <section class="blog-details-hero set-bg"
                  data-setbg="{{asset('site/images/sonImg/blog/blog-details/blog-details-hero.jpg')}}">

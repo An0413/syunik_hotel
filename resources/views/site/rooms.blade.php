@@ -29,43 +29,43 @@
                                 <h4>{{$value->roomType->type_en}}</h4>
                                 @if($value->discount > 0)
                                     <h3>
-                                        <del style="color: red">{{$value->price}}$
-                                        </del> &nbsp;&nbsp;{{ $value->price - $value->price * $value->discount/100}}$
-                                        <span>/Pernight</span>
+                                        <del style="color: red">{{$value->price}}AMD
+                                        </del> &nbsp;&nbsp;{{ $value->price - $value->price * $value->discount/100}}AMD
+                                        <span>/{{__('messages.pernight')}}</span>
                                     </h3>
                                 @else
-                                    <h3>{{$value->price}}$<span>/Pernight</span></h3>
+                                    <h3>{{$value->price}}AMD<span>/{{__('messages.pernight')}}</span></h3>
                                 @endif
 
                                 <table>
                                     <tbody>
                                     <tr>
-                                        <td class="r-o">Size:</td>
+                                        <td class="r-o">{{__('messages.size')}}:</td>
                                         <td>{{$value->surface}} ft</td>
                                     </tr>
                                     <tr>
-                                        <td class="r-o">Capacity:</td>
+                                        <td class="r-o">{{__('messages.capacity')}}:</td>
                                         <td>{{$value->capacity}}</td>
                                     </tr>
                                     <tr>
-                                        <td class="r-o">Childs:</td>
+                                        <td class="r-o">{{__('messages.child')}}:</td>
                                         <td>{{$value->childs}}</td>
                                     </tr>
                                     <tr>
-                                        <td class="r-o">Bed:</td>
+                                        <td class="r-o">{{__('messages.bed')}}:</td>
                                         <td>{{$value->capacity}}</td>
                                     </tr>
                                     <tr>
                                     <tr>
-                                        <td class="r-o">Floor:</td>
+                                        <td class="r-o">{{__('messages.floor')}}:</td>
                                         <td>{{$value->floor}}</td>
                                     </tr>
-                                    <td class="r-o">Services:</td>
-                                    <td>Wifi, Television, Bathroom,...</td>
+                                    <td class="r-o">{{__('messages.conditions')}}:</td>
+                                    <td>{{__('messages.services')}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
-                                <a href="{{asset('/rooms_details/'.$value->id)}}" class="primary-btn">More Details</a>
+                                <a href="{{asset('/rooms_details/'.$value->id)}}" class="primary-btn">{{__('messages.more')}}</a>
                             </div>
                         </div>
                     </div>

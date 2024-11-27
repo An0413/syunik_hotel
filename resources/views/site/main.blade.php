@@ -3,95 +3,95 @@
     <!-- Navbar End -->
     <div class="untree_co--site-main">
         <div class="">
-            <div class="">
+            <div class="position-relative">
                 <div class="container-fluid">
                     <video width="100%" height="auto" autoplay muted loop=1>
                         <source src="{{asset('site/video/hotel.mp4')}}" type="video/mp4">
                         {{--                        <source src="hotel.ogg" type="video/ogg">--}}
                         Your browser does not support the video tag.
                     </video>
+                    <!-- SERVICES LIST & BOOKING FORM -->
+                    <section class="ftco-booking" id="form_overlay">
+                        <div class="container mb-3">
+                            <div class="bg-white">
+                                <form action="#" class="booking-form">
+                                    <div class="row">
+                                        <div class="col-md col-sm-6">
+                                            <div class="form-group py-2 px-3">
+                                                <div class="wrap">
+                                                    <label for="">Check-in Date</label>
+                                                    <input type="text" class="form-control checkin_date"
+                                                           placeholder="Check-in date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md col-sm-6">
+                                            <div class="form-group py-2 px-3">
+                                                <div class="wrap">
+                                                    <label for="">Check-out Date</label>
+                                                    <input type="text" class="form-control checkout_date"
+                                                           placeholder="Check-out date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md col-sm-6">
+                                            <div class="form-group py-2 px-3">
+                                                <div class="wrap">
+                                                    <label for="">Room</label>
+                                                    <div class="form-field">
+                                                        <div class="select-wrap">
+                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
+                                                            </div>
+                                                            <select name="type" id="type" class="form-control w-100">
+                                                                @foreach($room_type as $value)
+                                                                    <option value="">{{$value->type_en}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md col-sm-6">
+                                            <div class="form-group py-2 px-3">
+                                                <div class="wrap">
+                                                    <label for="">Customer</label>
+                                                    <div class="form-field">
+                                                        <div class="select-wrap">
+                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
+                                                            </div>
+                                                            <select name="" id="" class="form-control w-100">
+                                                                <option value="">1 Adult</option>
+                                                                <option value="">2 Adult</option>
+                                                                <option value="">3 Adult</option>
+                                                                <option value="">4 Adult</option>
+                                                                <option value="">5 Adult</option>
+                                                                <option value="">6 Adult</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md col-sm-6 text-center mb-0">
+                                            <div class="form-group mb-0">
+                                                <input type="submit" value="Check Availability"
+                                                       class="btn btn-primary bigHeight">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- SERVICES LIST & BOOKING FORM END -->
                 </div>
             </div>
         </div>
-        <!-- SERVICES LIST & BOOKING FORM -->
-        <section class="ftco-booking">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <form action="#" class="booking-form">
-                            <div class="row">
-                                <div class="col-md-3 d-flex">
-                                    <div class="form-group p-4 align-self-stretch d-flex align-items-end">
-                                        <div class="wrap">
-                                            <label for="">Check-in Date</label>
-                                            <input type="text" class="form-control checkin_date"
-                                                   placeholder="Check-in date">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 d-flex">
-                                    <div class="form-group p-4 align-self-stretch d-flex align-items-end">
-                                        <div class="wrap">
-                                            <label for="">Check-out Date</label>
-                                            <input type="text" class="form-control checkout_date"
-                                                   placeholder="Check-out date">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md d-flex">
-                                    <div class="form-group p-4 align-self-stretch d-flex align-items-end">
-                                        <div class="wrap">
-                                            <label for="">Room</label>
-                                            <div class="form-field">
-                                                <div class="select-wrap">
-                                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                                    <select name="type" id="type" class="form-control">
-                                                        @foreach($room_type as $value)
-                                                            <option value="">{{$value->type_en}}</option>
-                                                        @endforeach
 
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md d-flex">
-                                    <div class="form-group p-4 align-self-stretch d-flex align-items-end">
-                                        <div class="wrap">
-                                            <label for="">Customer</label>
-                                            <div class="form-field">
-                                                <div class="select-wrap">
-                                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="">1 Adult</option>
-                                                        <option value="">2 Adult</option>
-                                                        <option value="">3 Adult</option>
-                                                        <option value="">4 Adult</option>
-                                                        <option value="">5 Adult</option>
-                                                        <option value="">6 Adult</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md d-flex">
-                                    <div class="form-group d-flex align-self-stretch">
-                                        <input type="submit" value="Check Availability"
-                                               class="btn btn-primary py-2 px-3 align-self-stretch bigHeight">
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- SERVICES LIST & BOOKING FORM END -->
         <!-- About Us Section Begin -->
-        <section class="aboutus-section spad">
-            <div class="container">
+        <section class="aboutus-section spad ">
+            <div class="container ">
                 <div class="row">
                     <div class="col-lg-6">
                         @foreach($about as $value)
@@ -102,7 +102,7 @@
                                 </div>
                                 <p class="f-para">{{$value->info_en}}</p>
 
-                                <a href="{{route('about')}}" class="primary-btn about-btn">Read More</a>
+                                <a href="{{route('about')}}" class="primary-btn about-btn">{{__('messages.more')}}</a>
                             </div>
                         @endforeach
                     </div>
@@ -129,7 +129,7 @@
                     <div class="col-lg-12">
                         <div class="section-title">
                             <span>Proposed </span>
-                            <h2>Rooms</h2>
+                            <h2>{{__('messages.rooms')}}</h2>
                         </div>
                     </div>
                 </div>
@@ -141,33 +141,33 @@
                                      data-setbg="{{asset('site/images/SonImg/room/' . $value->image)}}">
                                     <div class="hr-text">
                                         <h3>{{$value->roomType->type_en}}</h3>
-                                        <h2>{{$value->price . 'AMD'}}<span>/Pernight</span></h2>
+                                        <h2>{{$value->price . 'AMD'}}<span>/{{__('messages.pernight')}}</span></h2>
                                         <table>
                                             <tbody>
                                             <tr>
-                                                <td class="r-o">Size:</td>
+                                                <td class="r-o">{{__('messages.size')}}:</td>
                                                 <td>{{$value->surface}}</td>
                                             </tr>
                                             <tr>
-                                                <td class="r-o">Capacity:</td>
+                                                <td class="r-o">{{__('messages.capacity')}}:</td>
                                                 <td>{{$value->capacity}}</td>
                                             </tr>
                                             <tr>
-                                                <td class="r-o">Childs:</td>
+                                                <td class="r-o">{{__('messages.child')}}:</td>
                                                 <td>{{$value->childs}}</td>
                                             </tr>
                                             <tr>
-                                                <td class="r-o">Bed:</td>
-                                                <td>King Beds</td>
+                                                <td class="r-o">{{__('messages.bed')}}:</td>
+                                                <td>{{__('messages.king')}}</td>
                                             </tr>
                                             <tr>
-                                                <td class="r-o">Services:</td>
-                                                <td>Wifi, Television, Bathroom,...</td>
+                                                <td class="r-o">{{__('messages.conditions')}}:</td>
+                                                <td>{{__('messages.services')}}</td>
                                             </tr>
                                             </tbody>
                                         </table>
-                                        <a href="{{route('site_rooms_details', $value->id)}}" class="primary-btn">More
-                                            Details</a>
+                                        <a href="{{route('site_rooms_details', $value->id)}}"
+                                           class="primary-btn">{{__('messages.more')}}</a>
                                     </div>
                                 </div>
                             </div>
@@ -182,7 +182,7 @@
                 <div class="container pt-0 pb-5">
                     <div class="row justify-content-center text-center">
                         <div class="col-lg-6 section-heading" data-aos="fade-up">
-                            <h3 class="text-center">Hotel Amenities</h3>
+                            <h3 class="text-center">{{__('messages.amenities')}}</h3>
                         </div>
                     </div>
                 </div>
@@ -191,7 +191,8 @@
                         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
                             <div class="media-29191 text-center h-100">
                                 <div class="media-29191-icon">
-                                    <img src="{{asset('site/images/images/svg/'.$value->icon)}}" alt="Image" class="img-fluid">
+                                    <img src="{{asset('site/images/images/svg/'.$value->icon)}}" alt="Image"
+                                         class="img-fluid">
                                 </div>
                                 <h3>{{$value->name_en}}</h3>
                                 <p>{{$value->info_en}}</p>
@@ -236,7 +237,7 @@
                     @endforeach
                     <div class="col-lg-12">
                         <div class="load-more">
-                            <a href="{{route('blog')}}" class="primary-btn">Load More</a>
+                            <a href="{{route('blog')}}" class="primary-btn">{{__('messages.more')}}</a>
                         </div>
                     </div>
                 </div>
@@ -284,14 +285,15 @@
                 </div>
                 <div class="c">
                     <input type="checkbox" id="faq-3">
-                    <h4><label for="faq-3">ՈՒնե՞ք հանդիպումների կազմակերպման համար նախատեսված դահլիճներ  </label></h4>
+                    <h4><label for="faq-3">ՈՒնե՞ք հանդիպումների կազմակերպման համար նախատեսված դահլիճներ </label></h4>
                     <div class="p">
-                        <p>I was inpired by an article on css-tricks. <a href="https://css-tricks.com/the-checkbox-hack/">link to article</a>
+                        <p>I was inpired by an article on css-tricks. <a
+                                href="https://css-tricks.com/the-checkbox-hack/">link to article</a>
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+            </div>
+        </section>
 @endsection
 

@@ -6,10 +6,12 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="breadcrumb-text">
-                            <h2>Blog</h2>
+                            <h2>{{__('messages.travel')}}</h2>
                             <div class="bt-option">
+
                                 <a href="{{route('site')}}">Home</a>
                                 <span>Blog Grid</span>
+
                             </div>
                         </div>
                     </div>
@@ -29,6 +31,7 @@
                                 <div class="bi-text">
                                     <span class="b-tag">Travel Trip</span>
                                     <h4><a href="javascript:void(0)">{{$value->name}}</a></h4>
+
                                     <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
                                 </div>
                             </div>
@@ -37,7 +40,7 @@
 
                     <div class="col-lg-12">
                         <div class="load-more">
-                            <a href="#" class="primary-btn">Load More</a>
+                            <a href="#" class="primary-btn">{{__('messages.more')}}</a>
                         </div>
                     </div>
                 </div>

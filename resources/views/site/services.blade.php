@@ -7,7 +7,7 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-7 text-center">
                     <div class="site-hero-contents" data-aos="fade-up">
-                        <h1 class="hero-heading text-white">Amenities</h1>
+                        <h1 class="hero-heading text-white">{{__('messages.conditions')}}</h1>
                     </div>
                 </div>
             </div>
@@ -16,10 +16,9 @@
 
     <div class="untree_co--site-section">
         <div class="container">
-
             <div class="row justify-content-center text-center pt-0 pb-5">
                 <div class="col-lg-6 section-heading" data-aos="fade-up">
-                    <h3 class="text-center">Hotel Amenities</h3>
+                    <h3 class="text-center">{{__('messages.amenities')}}</h3>
                 </div>
             </div>
 

@@ -107,7 +107,7 @@
                         </div>
                         <div class="mb-3">
                             <video controls class="blog_show_video" id="blog_video">
-                                <source src="{{asset('video/blog/'.$blog->video)}}" type="video/*">
+                                <source src="{{asset('video/blog/'.$blog->video)}}" type="video/{{ pathinfo($blog->video, PATHINFO_EXTENSION) }}">
                                 @if($blog->lang_id == 1)
                                     Ձեր բրաուզերը չի աջակցում վիդեոներին։
                                 @elseif($blog->lang_id == 2)
