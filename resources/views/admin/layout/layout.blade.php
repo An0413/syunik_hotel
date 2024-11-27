@@ -80,16 +80,19 @@
                 </div>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                        <img class="rounded-circle me-lg-2" src="{{asset('admin/img/user.jpg')}}" alt=""
+                        @php
+                            $admin = Auth::user();
+                        @endphp
+                        <img class="rounded-circle me-lg-2" src="{{asset('images/profile/'. $admin->image)}}" alt=""
                              style="width: 40px; height: 40px;">
                         <span class="d-none d-lg-inline-flex">Hotel admin</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                        <a href="#" class="dropdown-item">Իմ պրոֆիլը</a>
+                        <a href="{{route('profile')}}" class="dropdown-item">Իմ պրոֆիլը</a>
                         <form id="logoutForm" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
-                        <a href="#" class="dropdown-item" onclick="document.getElementById('logoutForm').submit();">Logout</a>
+                        <a href="#" class="dropdown-item" onclick="document.getElementById('logoutForm').submit();">Դուրս գալ</a>
                     </div>
                 </div>
             </div>
