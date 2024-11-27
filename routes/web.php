@@ -97,4 +97,9 @@ Route::middleware('auth')->prefix('/admin')->namespace('App\Http\Controllers\Adm
     Route::get('/services/edit/{id}', [admin\ServicesController::class, 'edit'])->where('id', '[0-9]+')->name('services_edit');
     Route::post('/services/update/{id}', [admin\ServicesController::class, 'update'])->where('id', '[0-9]+')->name('services_update');
     Route::delete('/services/delete/{id}', [admin\ServicesController::class, 'destroy'])->where('id', '[0-9]+')->name('services_delete');
+
+    Route::get('/profile/show', [admin\ProfileController::class, 'show'])->name('profile');
+    Route::get('/profile/edit/{id}', [admin\ProfileController::class, 'edit'])->where('id', '[0-9]+')->name('profile_edit');
+    Route::post('/profile/update/{id}', [admin\ProfileController::class, 'update'])->where('id', '[0-9]+')->name('profile_update');
+
 });
