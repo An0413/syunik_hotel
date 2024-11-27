@@ -102,7 +102,7 @@
                                 </div>
                                 <p class="f-para">{{$value->info_en}}</p>
 
-                                <a href="{{route('about')}}" class="primary-btn about-btn">Read More</a>
+                                <a href="{{route('about')}}" class="primary-btn about-btn">{{__('messages.more')}}</a>
                             </div>
                         @endforeach
                     </div>
@@ -141,7 +141,7 @@
                                      data-setbg="{{asset('site/images/SonImg/room/' . $value->image)}}">
                                     <div class="hr-text">
                                         <h3>{{$value->roomType->type_en}}</h3>
-                                        <h2>{{$value->price . 'AMD'}}<span>/{{__('messages.price')}}</span></h2>
+                                        <h2>{{$value->price . 'AMD'}}<span>/{{__('messages.pernight')}}</span></h2>
                                         <table>
                                             <tbody>
                                             <tr>
@@ -228,7 +228,7 @@
                             <div class="blog-item set-bg"
                                  data-setbg="{{asset('site/images/sonImg/blog/'. $value->image)}}">
                                 <div class="bi-text">
-                                    <span class="b-tag">Travel Trip</span>
+                                    <span class="b-tag">{{__('messages.travel')}}</span>
                                     <h4><a href="#">{{$value->name}}</a></h4>
                                     <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
                                 </div>
@@ -237,7 +237,7 @@
                     @endforeach
                     <div class="col-lg-12">
                         <div class="load-more">
-                            <a href="{{route('blog')}}" class="primary-btn">Load More</a>
+                            <a href="{{route('blog')}}" class="primary-btn">{{__('messages.more')}}</a>
                         </div>
                     </div>
                 </div>
