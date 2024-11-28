@@ -3,8 +3,8 @@
 
     <!-- Contact Section Begin -->
     <section class="contact-section spad">
-        <div class="container">
-            <div class="row">
+        <div class="container mt-5">
+            <div class="row mt-3">
                 <div class="col-lg-4">
                     <div class="contact-text">
                         <h2>{{__('messages.contact')}}</h2>
@@ -32,7 +32,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-lg-7 offset-lg-1">
+                <div class="col-lg-7 offset-lg-1 mt-3">
                     <form action="{{route('site_contact_data')}}" class="contact-form" method="post">
                         @csrf
                         <div class="row">
