@@ -892,7 +892,7 @@ a, a:hover {
   content: "";
   position: absolute;
   height: 1px;
-  background: #fff;
+  background: #FF9800;
   bottom: 0;
   width: 0%;
   -webkit-transition: .2s width ease-in-out;
@@ -901,7 +901,7 @@ a, a:hover {
 }
 
 .sticky-wrapper .untree_co--site-nav .site-nav-ul > li > a:hover {
-  color: #fff;
+  color: black;
 }
 
 .sticky-wrapper .untree_co--site-nav .site-nav-ul > li > a:hover:before {

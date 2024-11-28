@@ -4,7 +4,7 @@
         <div class="container d-flex align-items-center">
             <div class="logo-wrap">
                 <a href="{{route('site')}}" class="untree_co--site-logo">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" height="60"></a>
+                    <img src="{{ asset('images/main_logo.svg') }}" alt="Logo" height="60"></a>
             </div>
             <div class="site-nav-ul-wrap text-center d-none d-lg-block">
                 <ul class="site-nav-ul js-clone-nav">
