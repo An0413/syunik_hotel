@@ -20,10 +20,10 @@ class BlogController
     }
     public function blog_details($id){
 
-        $comment = Comments::orderBy('seq', 'ASC')->get();
+        $comments = Comments::orderBy('seq', 'ASC')->get();
         $blog_details = Blog::where('id', $id)->get();
         $blog = Blog::orderBy('seq', 'DESC')->limit(3)->get();
-        return view('site.blog-details', compact('comment', 'blog_details', 'blog'));
+        return view('site.blog-details', compact('comments', 'blog_details', 'blog'));
     }
 
     public function comment(CommentRequest $request){

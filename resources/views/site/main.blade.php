@@ -139,7 +139,7 @@
                             <div class="col-lg-3 col-md-6">
                                 <div class="hp-room-item set-bg room_item"
                                      data-href="{{route('site_rooms_details', $value->id)}}"
-                                     data-setbg="{{asset('site/rooms/' . $value->image)}}">
+                                     data-setbg="{{asset('images/rooms/' . $value->image)}}">
                                     <div class="hr-text">
                                         <h3>{{$value->roomType->type_en}}</h3>
                                         <h2>{{$value->price . 'AMD'}}<span>/{{__('messages.pernight')}}</span></h2>

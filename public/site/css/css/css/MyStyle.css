@@ -166,4 +166,13 @@ div.c input:checked ~ h4 ~ div.p {
 .content_p{
     color: black!important;
 }
-
+.details_section{
+    margin-top: 80px;
+}
+.blog_name{
+    margin-bottom: 75px;
+    text-align: center;
+}
+.b_name{
+    font-size: 35px;
+}
