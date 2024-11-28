@@ -82,3 +82,8 @@
         max-width: 100% !important;
     }
 }
+
+.bg-light.rounded-top {
+    margin-top: auto;
+}
+

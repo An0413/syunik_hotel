@@ -9,7 +9,7 @@
                     <div class="breadcrumb-text">
                         <h2>{{__('messages.about')}}</h2>
                         <div class="bt-option">
-                            <a href="./index.html">Home</a>
+                            <a href="{{route('site')}}">Home</a>
                             <span>{{__('messages.about')}}</span>
                         </div>
                     </div>
