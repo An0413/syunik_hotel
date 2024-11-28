@@ -110,3 +110,60 @@ div.c input:checked ~ h4 ~ div.p {
 .room_item{
     cursor: pointer;
 }
+.accordion {
+    max-width: 1500px;
+    margin: auto;
+    /*border: 1px solid #ccc;*/
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+.accordion-item {
+    border-bottom: 1px solid #ccc;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.icon {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content p {
+    padding: 15px;
+    /*margin: 0;*/
+    margin-bottom: 18px;
+}
+.card_border{
+    border: none!important;
+}
+.card_bg{
+    background-color: white!important;
+}
+.content_p{
+    color: black!important;
+}
+

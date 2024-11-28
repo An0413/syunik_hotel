@@ -137,8 +137,9 @@
                     <div class="row">
                         @foreach($rooms as $value)
                             <div class="col-lg-3 col-md-6">
-                                <div class="hp-room-item set-bg room_item" data-href="{{route('site_rooms_details', $value->id)}}"
-                                     data-setbg="{{asset('site/images/SonImg/room/' . $value->image)}}">
+                                <div class="hp-room-item set-bg room_item"
+                                     data-href="{{route('site_rooms_details', $value->id)}}"
+                                     data-setbg="{{asset('site/rooms/' . $value->image)}}">
                                     <div class="hr-text">
                                         <h3>{{$value->roomType->type_en}}</h3>
                                         <h2>{{$value->price . 'AMD'}}<span>/{{__('messages.pernight')}}</span></h2>
@@ -226,7 +227,7 @@
                     @foreach($blog as $value)
                         <div class="col-lg-4 col-md-6">
                             <div class="blog-item set-bg blog_item" data-href="{{route('blog_details', $value->id)}}"
-                                 data-setbg="{{asset('site/images/sonImg/blog/'. $value->image)}}">
+                                 data-setbg="{{asset('/images/blog/'. $value->image)}}">
                                 <div class="bi-text">
                                     <span class="b-tag">Travel Trip</span>
                                     <h4><a href="javascript:void(0)">{{$value->name}}</a></h4>
@@ -259,41 +260,49 @@
     <!-- FAQ begin -->
     <section class="container">
         <!-- FAQ begin -->
+        <div class="card card_border">
+            <div class="card-header text-center card_bg">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="card-body">
+                <div class="accordion">
+                    @foreach($questions as $value)
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-toggle>
+                                <span>{{$value->question_en}}</span>
+                                <span class="icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="content_p">{{$value->answer_en}}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.querySelectorAll('[data-toggle]').forEach((button) => {
+            button.addEventListener('click', function () {
+                const accordionItem = this.parentElement;
+                const content = accordionItem.querySelector('.accordion-content');
+                const icon = this.querySelector('.icon');
 
-        <section class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb-text">
-                        <h2>Հաճախ տրվող հարցեր</h2>
-                    </div>
-                </div>
-            </div>
-            <div id="accordion" class="accordion-container">
-                <div class="c">
-                    <input type="checkbox" id="faq-1">
-                    <h4><label for="faq-1">Ի՞նչ տեսարժան վայրեր կան մոտակայքում</label></h4>
-                    <div class="p">
-                        <p>This a very very simple accordion.</p>
-                    </div>
-                </div>
-                <div class="c">
-                    <input type="checkbox" id="faq-2">
-                    <h4><label for="faq-2">Կազմակերպու՞մ եք արդյոք տուրեր դեպի տեսարժան վայրեր</label></h4>
-                    <div class="p">
-                        <p>Yes with pure CSS and HTML.</p>
-                    </div>
-                </div>
-                <div class="c">
-                    <input type="checkbox" id="faq-3">
-                    <h4><label for="faq-3">ՈՒնե՞ք հանդիպումների կազմակերպման համար նախատեսված դահլիճներ </label></h4>
-                    <div class="p">
-                        <p>I was inpired by an article on css-tricks. <a
-                                href="https://css-tricks.com/the-checkbox-hack/">link to article</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
+                // Toggle active class
+                accordionItem.classList.toggle('active');
+
+                // Expand or collapse content
+                if (accordionItem.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    content.style.padding = '15px';
+                    icon.textContent = '-';
+                } else {
+                    content.style.maxHeight = '0';
+                    content.style.padding = '0 15px';
+                    icon.textContent = '+';
+                }
+            });
+        });
+    </script>
 @endsection
 
