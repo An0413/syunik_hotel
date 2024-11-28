@@ -20,6 +20,7 @@
             <a href="{{route('blog_show')}}" class="nav-item nav-link {{ Request::routeIs('blog_show') ? 'active' : '' }}"><i class="fa fa-solid fa-blog"></i>Բլոգ</a>
             <a href="{{route('about_show')}}" class="nav-item nav-link {{ Request::routeIs('about_show') ? 'active' : '' }}"><i class="fa fa-solid fa-address-card"></i>Մեր մասին</a>
             <a href="{{route('services_show')}}" class="nav-item nav-link {{ Request::routeIs('services_show') ? 'active' : '' }}"><i class="fa fa-chart-bar me-2"></i>Ծառայություններ</a>
+            <a href="{{route('questions_show')}}" class="nav-item nav-link {{ Request::routeIs('questions_show') ? 'active' : '' }}"><i class="fa fa-solid fa-question"></i> FAC</a>
         </div>
     </nav>
 </div>
