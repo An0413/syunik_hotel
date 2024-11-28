@@ -17,5 +17,17 @@ return [
     'more' => 'More Details',
     'travel' => 'Travel Trip',
     'camping' => 'Camping',
+    'about' => 'About Us',
+    'discover' => 'Discover Our Hotel & Services.',
+    'contact' => 'Contact Info',
+    'address' => 'Address',
+    'phone' => 'Phone',
+    'email' => 'Email',
+    'fax' => 'Fax',
+    'fname' => 'Your Name',
+    'femail' => 'Your Email',
+    'fmessage' => 'Your message',
+    'submit' => 'Submit',
+
 
 ];

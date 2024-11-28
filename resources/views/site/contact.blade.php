@@ -7,25 +7,25 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="contact-text">
-                        <h2>Contact Info</h2>
+                        <h2>{{__('messages.contact')}}</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua.</p>
                         <table>
                             <tbody>
                             <tr>
-                                <td class="c-o">Address:</td>
+                                <td class="c-o">{{__('messages.address')}}: </td>
                                 <td>{{$contact->location}}</td>
                             </tr>
                             <tr>
-                                <td class="c-o">Phone:</td>
+                                <td class="c-o">{{__('messages.phone')}}: </td>
                                 <td>{{$contact->phone}}</td>
                             </tr>
                             <tr>
-                                <td class="c-o">Email:</td>
+                                <td class="c-o">{{__('messages.email')}}: </td>
                                 <td>{{$contact->email}}</td>
                             </tr>
                             <tr>
-                                <td class="c-o">Fax:</td>
+                                <td class="c-o">{{__('messages.fax')}}: </td>
                                 <td>{{$contact->phone}}</td>
                             </tr>
                             </tbody>
@@ -37,14 +37,14 @@
                         @csrf
                         <div class="row">
                             <div class="col-lg-6">
-                                <input type="text" name="user_name" placeholder="Your Name" required>
+                                <input type="text" name="user_name" placeholder="{{__('messages.fname')}}" required>
                             </div>
                             <div class="col-lg-6">
-                                <input type="text" name="user_email" placeholder="Your Email" required>
+                                <input type="text" name="user_email" placeholder="{{__('messages.femail')}}" required>
                             </div>
                             <div class="col-lg-12">
-                                <textarea name="user_message" placeholder="Your Message" required></textarea>
-                                <button type="submit">Submit Now</button>
+                                <textarea name="user_message" placeholder="{{__('messages.fmessage')}}" required></textarea>
+                                <button type="submit">{{__('messages.submit')}}</button>
                             </div>
                         </div>
                         <div class="alert  px-0 mx-0">

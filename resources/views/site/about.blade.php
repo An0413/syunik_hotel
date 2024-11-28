@@ -7,10 +7,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text">
-                        <h2>About Us</h2>
+                        <h2>{{__('messages.about')}}</h2>
                         <div class="bt-option">
                             <a href="{{route('site')}}">Home</a>
-                            <span>About Us</span>
+                            <span>{{__('messages.about')}}</span>
                         </div>
                     </div>
                 </div>
@@ -65,8 +65,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="video-text">
-                        <h2>Discover Our Hotel & Services.</h2>
-                        <p>It S Hurricane Season But We Are Visiting Hilton Head Island</p>
+                        <h2>{{__('messages.discover')}}</h2>
                         <a href="https://www.youtube.com/watch?v=EzKkl64rRbM" class="play-btn video-popup"><img
                                 src="{{asset('site/images/sonImg/play.png')}}" alt=""></a>
                     </div>
