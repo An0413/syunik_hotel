@@ -87,8 +87,3 @@
     margin-top: auto;
 }
 
-.container_footer{
-    min-height: calc(100vh - 56px);
-    display: flex;
-    flex-direction: column;
-}
