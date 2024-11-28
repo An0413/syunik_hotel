@@ -6,8 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Questions\StoreRequest;
 use App\Http\Requests\Admin\Questions\UpdateRequest;
 use App\Models\About;
-use App\Models\Rooms;
-use App\Models\RoomType;
+use App\Models\Questions;
 use http\Env\Request;
 use Illuminate\Support\Facades\File;
 
@@ -16,28 +15,26 @@ class QuestionsController extends Controller
 {
     public function show()
     {
-        $about = About::all();
-        return view('admin.about.show', compact('about'));
+        $questions = Questions::orderBy('seq','ASC')->get();
+        return view('admin.questions.show', compact('questions'));
     }
 
     public function create()
     {
-
-        return view('admin.about.create');
+        return view('admin.questions.create');
     }
 
     public function store(StoreRequest $request)
     {
         $data = $request->validated();
-
-        About::create($data);
-        return redirect()->route('about_show');
+        Questions::create($data);
+        return redirect()->route('questions_show');
     }
 
     public function edit($id)
     {
-        $about = About::where('id', $id)->first();
-        return view('admin.about.edit', compact('about'));
+        $questions = Questions::where('id', $id)->first();
+        return view('admin.questions.edit', compact('questions'));
     }
 
     public function update(UpdateRequest $request, $id)
@@ -45,18 +42,18 @@ class QuestionsController extends Controller
         $data = $request->validated();
         $up_data = $data;
 
-        About::where('id', $id)->update($up_data);
+        Questions::where('id', $id)->update($up_data);
 
-        return redirect()->route('about_show');
+        return redirect()->route('questions_show');
     }
 
     public function destroy($id)
     {
-        $about = About::find($id);
+        $questions = Questions::find($id);
 
-        About::where('id', $id)->delete();
+        Questions::where('id', $id)->delete();
 
-        return redirect()->route('about_show');
+        return redirect()->route('questions_show');
 
     }
 
