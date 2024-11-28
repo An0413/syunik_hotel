@@ -4,53 +4,46 @@
 
 
         <!-- Blog Details Hero Section Begin -->
-        <div class="bd-hero-text">
-            @foreach($blog_details as $value)
-                <section class="blog-details-hero set-bg"
-                         data-setbg="{{asset('/images/blog/' . $value->image)}}">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-10 offset-lg-1">
+    {{--        <div class="bd-hero-text">--}}
+    {{--            @foreach($blog_details as $value)--}}
+    {{--                <section class="blog-details-hero set-bg"--}}
+    {{--                         data-setbg="{{asset('/images/blog/' . $value->image)}}">--}}
+    {{--                    <div class="container">--}}
+    {{--                        <div class="row">--}}
+    {{--                            <div class="col-lg-10 offset-lg-1">--}}
 
-                                {{--                                <span>Travel Trip & Camping</span>--}}
-                                <h2>{{$value->name}}</h2>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            @endforeach
-        </div>
-        <!-- Blog Details Hero End -->
+    {{--                                --}}{{--                                <span>Travel Trip & Camping</span>--}}
+    {{--                                <h2>{{$value->name}}</h2>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                </section>--}}
+    {{--            @endforeach--}}
+    {{--        </div>--}}
+    <!-- Blog Details Hero End -->
 
         <!-- Blog Details Section Begin -->
-        <section class="blog-details-section">
+        <section class="blog-details-section details_section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="blog-details-text">
-                            <div class="row">
-                                @foreach($blog_details as $value)
+                            @foreach($blog_details as $value)
+                                <div class="blog_name">
+                                    <p class="b_name">{{$value->name}}</p>
+                                </div>
+                                <div class="row">
                                     <div class="bd-title col-12 col-md-6 mb-4">
                                         <p>{{$value->info}}</p>
                                     </div>
                                     <div class="col-12 col-md-6 mb-4">
                                         <video controls autoplay muted class="w-100">
-                                            <source src="{{asset('/video/blog/'. $value->video)}}" type="video/{{ pathinfo($value->video, PATHINFO_EXTENSION) }}">
+                                            <source src="{{asset('/video/blog/'. $value->video)}}"
+                                                    type="video/{{ pathinfo($value->video, PATHINFO_EXTENSION) }}">
                                         </video>
                                     </div>
-                                @endforeach
-                            </div>
-                            {{--                        <div class="bd-pic">--}}
-                            {{--                            <div class="bp-item">--}}
-                            {{--                                <img src="{{asset('site/images/sonImg/blog/blog-details/blog-details-1.jpg')}}" alt="">--}}
-                            {{--                            </div>--}}
-                            {{--                            <div class="bp-item">--}}
-                            {{--                                <img src="{{asset('site/images/sonImg/blog/blog-details/blog-details-2.jpg')}}" alt="">--}}
-                            {{--                            </div>--}}
-                            {{--                            <div class="bp-item">--}}
-                            {{--                                <img src="{{asset('site/images/sonImg/blog/blog-details/blog-details-3.jpg')}}" alt="">--}}
-                            {{--                            </div>--}}
-                            {{--                        </div>--}}
+                                </div>
+                            @endforeach
                             <div class="tag-share">
                                 <div class="tags">
                                     <a href="#">Travel Trip</a>
@@ -190,14 +183,15 @@
         <!-- Recommend Blog Section End -->
 
     </div>
-<script>
-    document.querySelectorAll('[data-setbg]').forEach(function (el) {
-        const bg = el.getAttribute('data-setbg'); // Get the value of data-setbg
-        // el.style.backgroundImage = `url(${bg})`; // Set the background image
-        el.style.backgroundSize = "cover";    // Make the image fit inside the element
-        el.style.backgroundPosition = "center"; // Center the image within the element
-        el.style.backgroundRepeat = "no-repeat"; // Prevent tiling
-    });
 
-</script>
+    <script>
+        document.querySelectorAll('[data-setbg]').forEach(function (el) {
+            const bg = el.getAttribute('data-setbg'); // Get the value of data-setbg
+            // el.style.backgroundImage = `url(${bg})`; // Set the background image
+            el.style.backgroundSize = "cover";    // Make the image fit inside the element
+            el.style.backgroundPosition = "center"; // Center the image within the element
+            el.style.backgroundRepeat = "no-repeat"; // Prevent tiling
+        });
+
+    </script>
 @endsection
