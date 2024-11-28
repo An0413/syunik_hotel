@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\admin\RoomsController;
+use App\Http\Controllers\admin\QuestionsController;
 use App\Http\Controllers\admin\RoomsGalleryController;
 use App\Http\Controllers\site;
 use App\Http\Controllers\site\AboutController;
@@ -102,4 +103,10 @@ Route::middleware('auth')->prefix('/admin')->namespace('App\Http\Controllers\Adm
     Route::get('/profile/edit/{id}', [admin\ProfileController::class, 'edit'])->where('id', '[0-9]+')->name('profile_edit');
     Route::post('/profile/update/{id}', [admin\ProfileController::class, 'update'])->where('id', '[0-9]+')->name('profile_update');
 
+    Route::get('/questions/show', [admin\QuestionsController::class, 'show'])->name('questions_show');
+    Route::get('/questions/create', [admin\QuestionsController::class, 'create'])->name('questions_create');
+    Route::post('/questions/store', [admin\QuestionsController::class, 'store'])->name('questions_store');
+    Route::get('/questions/edit/{id}', [admin\QuestionsController::class, 'edit'])->where('id', '[0-9]+')->name('questions_edit');
+    Route::post('/questions/update/{id}', [admin\QuestionsController::class, 'update'])->where('id', '[0-9]+')->name('questions_update');
+    Route::delete('/questions/delete/{id}', [admin\QuestionsController::class, 'destroy'])->where('id', '[0-9]+')->name('questions_delete');
 });
