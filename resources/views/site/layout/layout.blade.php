@@ -8,16 +8,19 @@
             </div>
             <div class="site-nav-ul-wrap text-center d-none d-lg-block">
                 <ul class="site-nav-ul js-clone-nav">
-                    <li class="active"><a href="{{route('site')}}">Home</a></li>
-                    <li class="">
+                    <li class="@if($active == 'home'){{'active'}} @endif "><a href="{{route('site')}}">Home</a>
+                    </li>
+                    <li class="@if($active == 'rooms'){{'active'}} @endif ">
                         <a href="{{route('site_rooms')}}">Rooms</a>
                     </li>
-                    <li class="">
+                    <li class="@if($active == 'service'){{'active'}} @endif ">
                         <a href="{{route('site_services')}}">Services</a>
                     </li>
-                    <li><a href="{{route('blog')}}">Blog</a></li>
-                    <li><a href="{{route('about')}}">About Us</a></li>
-                    <li><a href="{{route('site_contact')}}">Contact</a></li>
+                    <li class="@if($active == 'blog'){{'active'}} @endif "><a href="{{route('blog')}}">Blog</a></li>
+                    <li class="@if($active == 'about'){{'active'}} @endif "><a href="{{route('about')}}">About Us</a>
+                    </li>
+                    <li class="@if($active == 'contact'){{'active'}} @endif "><a
+                            href="{{route('site_contact')}}">Contact</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
