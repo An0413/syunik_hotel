@@ -9,7 +9,7 @@
                         <h2>Our Rooms</h2>
                         <div class="bt-option">
                             <a href="{{route('site')}}">Home</a>
-                            <span>Rooms</span>
+                            <span>{{__('messages.rooms')}}</span>
                         </div>
                     </div>
                 </div>

@@ -10,7 +10,7 @@
                             <div class="bt-option">
 
                                 <a href="{{route('site')}}">Home</a>
-                                <span>Blog Grid</span>
+                                <span>{{__('messages.blog')}}</span>
 
                             </div>
                         </div>

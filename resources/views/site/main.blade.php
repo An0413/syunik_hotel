@@ -97,7 +97,7 @@
                         @foreach($about as $value)
                             <div class="about-text">
                                 <div class="section-title">
-                                    <span>About Us</span>
+                                    <span>{{__('messages.about')}}</span>
                                     <h2>{{$value->title_en}}</h2>
                                 </div>
                                 <p class="f-para">{{$value->info_en}}</p>
@@ -128,7 +128,6 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title">
-                            <span>Proposed </span>
                             <h2>{{__('messages.rooms')}}</h2>
                         </div>
                     </div>
