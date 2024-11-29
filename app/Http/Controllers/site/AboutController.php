@@ -15,7 +15,8 @@ class AboutController
         $info = About::all();
         $about_image = AboutImages::orderBy('seq', 'ASC')->get();
         $detail = AboutDetail::all();
-        return view('site.about', compact('info', 'about_image', 'detail'));
+        $active = 'about';
+        return view('site.about', compact('info', 'about_image', 'detail','active'));
     }
 
 }

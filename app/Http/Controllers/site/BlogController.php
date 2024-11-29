@@ -16,14 +16,16 @@ class BlogController
     public function blog(){
 
         $blog = Blog::orderBy('seq', 'ASC')->get();
-        return view('site.blog', compact('blog'));
+        $active = 'blog';
+        return view('site.blog', compact('blog','active'));
     }
     public function blog_details($id){
 
         $comments = Comments::orderBy('seq', 'ASC')->get();
         $blog_details = Blog::where('id', $id)->get();
         $blog = Blog::orderBy('seq', 'DESC')->limit(3)->get();
-        return view('site.blog-details', compact('comments', 'blog_details', 'blog'));
+        $active = 'blog';
+        return view('site.blog-details', compact('comments', 'blog_details', 'blog','active'));
     }
 
     public function comment(CommentRequest $request){

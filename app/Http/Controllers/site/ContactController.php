@@ -12,7 +12,8 @@ class ContactController
     public function contact()
     {
         $contact = Contact::first();
-        return view('site.contact', compact('contact'));
+        $active = 'contact';
+        return view('site.contact', compact('contact','active'));
     }
 
     public function contact_message(ContactRequest $request)

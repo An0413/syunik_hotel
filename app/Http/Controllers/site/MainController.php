@@ -25,6 +25,7 @@ class MainController
         $about = About::all();
         $room_type = RoomType::all();
         $questions = Questions::orderBy('seq', 'DESC')->get();
-        return view('site.main', compact('blog', 'rooms', 'services', 'about', 'room_type', 'questions'));
+        $active = 'home';
+        return view('site.main', compact('blog', 'rooms', 'services', 'about', 'room_type', 'questions', 'active'));
     }
 }
