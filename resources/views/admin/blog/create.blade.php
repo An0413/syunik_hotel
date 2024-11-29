@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="mb-3 mt-3">
                                     <label for="seq" class="form-label">Հերթականություն</label>
-                                    <input class="form-control" type="number" name="seq" min="1">
+                                    <input class="form-control" type="number" name="seq" min="1" required>
                                     <small class="text-danger" id="nameError" style="display: none;">Հերթականության դաշտը պարտադիր է։</small>
                                 </div>
                                 <div class="mb-3">
@@ -193,61 +193,13 @@
             </div>
         </div>
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const forms = document.querySelectorAll("form");
-
-                forms.forEach((form) => {
-                    form.addEventListener("submit", function (event) {
-                        let isValid = true;
-                        const langId = form.querySelector('input[name="lang_id"]').value; // Լեզվի ID
-
-                        const seqField = form.querySelector('input[name="seq"]');
-                        const nameField = form.querySelector('input[name="name"]');
-                        const imageField = form.querySelector('input[name="image"]');
-
-                        if (seqField && seqField.value.trim() === "") {
-                            alert(`Պարտադիր է լրացնել "Հերթականություն" դաշտը (${getLang(langId)}):`);
-                            isValid = false;
-                        }
-
-                        if (nameField && nameField.value.trim() === "") {
-                            alert(`Պարտադիր է լրացնել "Անուն" դաշտը (${getLang(langId)}):`);
-                            isValid = false;
-                        }
-
-                        if (imageField && imageField.files.length === 0) {
-                            alert(`Պարտադիր է ավելացնել "Լուսանկար" (${getLang(langId)}):`);
-                            isValid = false;
-                        }
-
-                        if (!isValid) {
-                            event.preventDefault();
-                        }
-                    });
-                });
-
-                function getLang(langId) {
-                    switch (langId) {
-                        case "1":
-                            return "Հայերեն";
-                        case "2":
-                            return "Русский";
-                        case "3":
-                            return "English";
-                        default:
-                            return "Unknown";
-                    }
-                }
-            });
-
-
             let video_am = document.querySelector('#video_am');
             let mtVideo_am = document.querySelector('#blog_video_am');
             video_am.onchange = evt => {
                 const [file] = video_am.files
                 if (file) {
-                    video_am.src = URL.createObjectURL(file);
-                    video_am.style.visibility = 'visible';
+                    mtVideo_am.src = URL.createObjectURL(file); 
+                    mtVideo_am.style.visibility = 'visible';
                 }
             }
 

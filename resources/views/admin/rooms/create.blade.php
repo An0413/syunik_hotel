@@ -9,12 +9,12 @@
                         @csrf
                         <div class="mb-3">
                             <label for="seq" class="form-label">Հերթականություն</label>
-                            <input class="form-control" type="number" id="seq" name="seq" min="1">
+                            <input class="form-control" type="number" id="seq" name="seq" min="1" required>
                         </div>
                         <div class="mb-3">
                             <label for="image" class="form-label">Լուսանկար</label>
                             <input class="form-control" type="file" id="image" name="image"
-                                   accept="image/jpeg, image/jpg, image/png, image/gif">
+                                   accept="image/jpeg, image/jpg, image/png, image/gif" required>
                         </div>
                         <div class="mb-3">
                             <img src="" alt="" class="create_img" id="img">
@@ -36,16 +36,20 @@
                         </div>
                         <div class="mb-3">
                             <label for="price" class="form-label">Գին</label>
-                            <input type="number" class="form-control" id="price" name="price">
+                            <input type="number" class="form-control" id="price" name="price" required>
                         </div>
                         <div class="mb-3">
                             <label for="discount" class="form-label">Զաղչված արժեք</label>
-                            <input type="number" class="form-control" id="discount" name="discount">
+                            <input type="number" class="form-control" id="discount" name="discount" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="capacity" class="form-label">Մարդկանց քանակ</label>
+                            <input type="number" class="form-control" id="capacity" name="capacity" required>
                         </div>
                         <div class="mb-3">
                             <label for="childs" class="form-label">Երեխաներ</label>
                             <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example"
-                                    name="childs">
+                                    name="childs" required>
                                 <option selected="" value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -57,7 +61,7 @@
                         <div class="mb-3">
                             <label for="type_id" class="form-label">Սենյակի տիպ</label>
                             <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example"
-                                    name="type_id">
+                                    name="type_id" required>
                                 @foreach($roomtype as $item)
                                     <option value="{{$item->id}}">{{$item->type_am}}</option>
                                 @endforeach
@@ -65,15 +69,15 @@
                         </div>
                         <div class="mb-3">
                             <label for="stage" class="form-label">Հարկ</label>
-                            <input type="number" class="form-control" id="stage" name="stage" min="1" max="12">
+                            <input type="number" class="form-control" id="stage" name="stage" min="1" max="12" required>
                         </div>
                         <div class="mb-3">
                             <label for="number" class="form-label">Համար</label>
-                            <input type="number" class="form-control" id="number" name="number">
+                            <input type="number" class="form-control" id="number" name="number" required>
                         </div>
                         <div class="mb-3">
                             <label for="surface" class="form-label">Մակերես/մ<sup>2</sup></label>
-                            <input type="number" class="form-control" id="surface" name="surface">
+                            <input type="number" class="form-control" id="surface" name="surface" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Ավելացնել</button>
                     </form>

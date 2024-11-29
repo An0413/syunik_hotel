@@ -1,32 +1,32 @@
-.form_margin{
+.form_margin {
     margin: auto;
 }
 
-.create_img{
+.create_img {
     visibility: hidden;
     width: 200px;
     height: auto;
     object-fit: cover;
 }
 
-.show_img{
+.show_img {
     width: 120px;
     height: auto;
     object-fit: cover;
 }
 
-.create_button{
+.create_button {
     background-color: #67696a;
     color: white;
 }
 
-.blog_video{
+.blog_video {
     width: 300px;
     height: auto;
     visibility: hidden;
 }
 
-.blog_show_video{
+.blog_show_video {
     width: 300px;
     height: auto;
 }
@@ -83,7 +83,24 @@
     }
 }
 
-.bg-light.rounded-top {
-    margin-top: auto;
+.footer {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
 }
 
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.mt-80{
+    margin-top: 80px;
+}
+
+.pr-36 {
+    padding-right: 36px !important;
+}
