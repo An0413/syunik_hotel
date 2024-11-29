@@ -176,3 +176,7 @@ div.c input:checked ~ h4 ~ div.p {
 .b_name{
     font-size: 35px;
 }
+.breadcrumb_blog {
+    padding-top: 10px;
+    padding-bottom:45px;
+}

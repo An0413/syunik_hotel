@@ -2,15 +2,11 @@
 @section('content')
     <!-- Breadcrumb Section Begin -->
     <div class="breadcrumb-section">
-        <div class="container mt-4">
+        <div class="container mt-5">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text">
-                        <h2>Our Rooms</h2>
-                        <div class="bt-option">
-                            <a href="{{route('site')}}">Home</a>
-                            <span>{{__('messages.rooms')}}</span>
-                        </div>
+                        <h2>{{__('messages.rooms')}}</h2>
                     </div>
                 </div>
             </div>

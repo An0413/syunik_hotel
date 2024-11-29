@@ -28,6 +28,7 @@ return [
     'femail' => 'Your Email',
     'fmessage' => 'Your message',
     'submit' => 'Submit',
+    'connect' => 'Contact us',
 
 
 ];

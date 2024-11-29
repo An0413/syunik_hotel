@@ -989,8 +989,8 @@ ul, ol {
 -----------------------*/
 
 .breadcrumb-section {
-	padding-top: 70px;
-	padding-bottom: 80px;
+	padding-top: 60px;
+	padding-bottom:30px;
 }
 .breadcrumb-text {
 	text-align: center;
@@ -998,7 +998,7 @@ ul, ol {
 .breadcrumb-text h2 {
 	font-size: 44px;
 	color: #19191a;
-	margin-bottom: 12px;
+	margin-bottom: 15px;
 }
 .breadcrumb-text .bt-option a {
 	display: inline-block;
@@ -1027,7 +1027,7 @@ ul, ol {
 -------------------------*/
 
 .aboutus-page-section {
-	padding-top: 0;
+	padding-top: 15px;
 	padding-bottom: 70px;
 }
 .about-page-text {
@@ -1163,7 +1163,7 @@ ul, ol {
 -----------------------*/
 
 .rooms-section {
-	padding-top: 0;
+	padding-top: 15px;
 	padding-bottom: 80px;
 }
 .room-item {
@@ -1531,7 +1531,7 @@ ul, ol {
 -----------------------*/
 
 .blog-section.blog-page {
-	padding-top: 0;
+	padding-top: 15px;
 	padding-bottom: 68px;
 }
 .blog-item {
@@ -1866,7 +1866,7 @@ ul, ol {
 -----------------------*/
 
 .contact-section {
-	padding-top: 80px;
+	padding-top: 20px;
 	padding-bottom: 80px;
 }
 .contact-text h2 {

@@ -125,7 +125,7 @@
         <!-- Home Room Section Begin -->
         <section class="hp-room-section">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row pb-5">
                     <div class="col-lg-12">
                         <div class="section-title">
                             <h2>{{__('messages.rooms')}}</h2>
@@ -133,7 +133,7 @@
                     </div>
                 </div>
                 <div class="hp-room-items">
-                    <div class="row">
+                    <div class="row pt-3">
                         @foreach($rooms as $value)
                             <div class="col-lg-3 col-md-6">
                                 <div class="hp-room-item set-bg room_item"
@@ -179,7 +179,7 @@
         <!-- Home Room Section End -->
         <div class="untree_co--site-section">
             <div class="container">
-                <div class="container pt-0 pb-5">
+                <div class="container pt-3 pb-5">
                     <div class="row justify-content-center text-center">
                         <div class="col-lg-6 section-heading" data-aos="fade-up">
                             <h3 class="text-center">{{__('messages.amenities')}}</h3>
@@ -203,7 +203,7 @@
             </div>
         </div>
         <!-- Breadcrumb Section Begin -->
-        <div class="breadcrumb-section">
+        <div class="breadcrumb-section breadcrumb_blog">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
