@@ -38,12 +38,12 @@
                                         <tr>
                                             <th scope="row">{{$key+1}}</th>
                                             <td>{{$value->seq}}</td>
-                                            <td>{{$value->name_am}}</td>
-                                            <td>{{$value->name_ru}}</td>
-                                            <td>{{$value->name_en}}</td>
-                                            <td>{{$value->info_am}}</td>
-                                            <td>{{$value->info_ru}}</td>
-                                            <td>{{$value->info_en}}</td>
+                                            <td>{{Str::words($value->name_am, 5, '...')}}</td>
+                                            <td>{{Str::words($value->name_ru, 5, '...')}}</td>
+                                            <td>{{Str::words($value->name_en, 5, '...')}}</td>
+                                            <td>{{Str::words($value->info_am, 25, '...')}}</td>
+                                            <td>{{Str::words($value->info_ru, 25, '...')}}</td>
+                                            <td>{{Str::words($value->info_en, 25, '...')   }}</td>
                                             <td>
                                                 <img src="{{asset('images/services/'.$value->icon)}}" class="show_img">
                                             </td>

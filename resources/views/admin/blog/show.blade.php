@@ -1,6 +1,6 @@
 @extends('admin.layout.layout')
 @section('content')
-    <div class="container-fluid pt-4 px-4">
+    <div class="container-fluid pt-4 px-4" id="content">
         <div class="row g-4">
             <div class="col-sm-12 col-xl-12 col-lg-12 col-md-12">
                 <div class="bg-light rounded h-100 p-4">
@@ -57,10 +57,10 @@
                                                 <tr>
                                                     <th scope="row">{{$key+1}}</th>
                                                     <td>{{$value->seq}}</td>
-                                                    <td>{{$value->name}}</td>
-                                                    <td>{{$value->meta_keyword}}</td>
-                                                    <td>{{$value->meta_description}}</td>
-                                                    <td>{{$value->info}}</td>
+                                                    <td>{{Str::words($value->name, 5, '...')}}</td>
+                                                    <td>{{Str::words($value->meta_keyword, 5, '...')}}</td>
+                                                    <td>{{Str::words($value->meta_description, 15, '...')}}</td>
+                                                    <td>{{Str::words($value->info, 25, '...')}}</td>
                                                     <td>
                                                         <img src="{{asset('images/blog/'.$value->image)}}"
                                                              class="show_img">

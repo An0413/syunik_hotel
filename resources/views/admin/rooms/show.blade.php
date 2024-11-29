@@ -41,7 +41,7 @@
                                         <tr>
                                             <th scope="row">{{$key+1}}</th>
                                             <td>{{$value->seq}}</td>
-                                            <td>{{$value->info_am}}</td>
+                                            <td>{{Str::words($value->info_am, 25, '...')}}</td>
                                             <td>
                                                 <img src="{{asset('images/rooms/'.$value->image)}}" class="show_img">
                                             </td>

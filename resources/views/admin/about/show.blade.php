@@ -35,12 +35,12 @@
                                     @foreach($about as $key=>$value)
                                         <tr>
                                             <th scope="row">{{$key+1}}</th>
-                                            <td>{{$value->name_am}}</td>
-                                            <td>{{$value->name_ru}}</td>
-                                            <td>{{$value->name_en}}</td>
-                                            <td>{{$value->info_am}}</td>
-                                            <td>{{$value->info_ru}}</td>
-                                            <td>{{$value->info_en}}</td>
+                                            <td>{{Str::words($value->name_am, 5, '...')}}</td>
+                                            <td>{{Str::words($value->name_ru, 5, '...')}}</td>
+                                            <td>{{Str::words($value->name_en, 5, '...')}}</td>
+                                            <td>{{Str::words($value->info_am, 25, '...')}}</td>
+                                            <td>{{Str::words($value->info_ru, 25, '...')}}</td>
+                                            <td>{{Str::words($value->info_en, 25, '...')}}</td>
                                             <td>
                                                 <a href="{{route('about_edit', $value->id)}}">
                                                     <i class="nav-icon fas fa-edit text-primary"></i>
