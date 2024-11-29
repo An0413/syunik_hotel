@@ -1,10 +1,22 @@
 @extends('site.layout.layout')
 @section('content')
-
+    <!-- Breadcrumb Section Begin -->
+    <div class="breadcrumb-section">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>{{__('messages.connect')}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Section End -->
     <!-- Contact Section Begin -->
     <section class="contact-section spad">
-        <div class="container mt-5">
-            <div class="row mt-3">
+        <div class="container">
+            <div class="row">
                 <div class="col-lg-4">
                     <div class="contact-text">
                         <h2>{{__('messages.contact')}}</h2>
