@@ -198,7 +198,7 @@
             video_am.onchange = evt => {
                 const [file] = video_am.files
                 if (file) {
-                    mtVideo_am.src = URL.createObjectURL(file); 
+                    mtVideo_am.src = URL.createObjectURL(file);
                     mtVideo_am.style.visibility = 'visible';
                 }
             }

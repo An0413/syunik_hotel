@@ -92,6 +92,20 @@ Route::middleware('auth')->prefix('/admin')->namespace('App\Http\Controllers\Adm
     Route::post('/about/update/{id}', [admin\AboutController::class, 'update'])->where('id', '[0-9]+')->name('about_update');
     Route::delete('/about/delete/{id}', [admin\AboutController::class, 'destroy'])->where('id', '[0-9]+')->name('about_delete');
 
+    Route::get('/about/details/create', [admin\AboutController::class, 'create_details'])->name('about_details_create');
+    Route::post('/about/details/store', [admin\AboutController::class, 'store_details'])->name('about_details_store');
+    Route::get('/about/details/edit/{id}', [admin\AboutController::class, 'edit_details'])->where('id', '[0-9]+')->name('about_details_edit');
+    Route::post('/about/details/update/{id}', [admin\AboutController::class, 'update_details'])->where('id', '[0-9]+')->name('about_details_update');
+    Route::delete('/about/details/delete/{id}', [admin\AboutController::class, 'destroy_details'])->where('id', '[0-9]+')->name('about_details_delete');
+
+    Route::get('/about/images/create', [admin\AboutController::class, 'create_images'])->name('about_images_create');
+    Route::post('/about/images/store', [admin\AboutController::class, 'store_images'])->name('about_images_store');
+    Route::get('/about/images/edit/{id}', [admin\AboutController::class, 'edit_images'])->where('id', '[0-9]+')->name('about_images_edit');
+    Route::post('/about/images/update/{id}', [admin\AboutController::class, 'update_images'])->where('id', '[0-9]+')->name('about_images_update');
+    Route::delete('/about/images/delete/{id}', [admin\AboutController::class, 'destroy_images'])->where('id', '[0-9]+')->name('about_images_delete');
+
+
+
     Route::get('/services/show', [admin\ServicesController::class, 'show'])->name('services_show');
     Route::get('/services/create', [admin\ServicesController::class, 'create'])->name('services_create');
     Route::post('/services/store', [admin\ServicesController::class, 'store'])->name('services_store');
