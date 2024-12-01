@@ -9,7 +9,7 @@
                         @csrf
                         <div class="mb-3">
                             <label for="seq" class="form-label">Հերթականություն</label>
-                            <input class="form-control" type="text" name="seq" required value="{{$about_images->seq}}">
+                            <input class="form-control" type="text" name="seq" value="{{$about_images->seq}}">
                         </div>
                         <div class="mb-3">
                             <label for="title_am" class="form-label">Անուն հայերեն</label>

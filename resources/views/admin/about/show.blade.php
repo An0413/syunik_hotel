@@ -31,7 +31,7 @@
                                 <div class="col-10"></div>
                                 <div class="col-2">
                                     <a href="{{route('about_create')}}">
-                                        <button class="create_button">Ավելացնել</button>
+                                        <button class="btn bg-primary create_button">Ավելացնել</button>
                                     </a>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@
                                 <div class="col-10"></div>
                                 <div class="col-2">
                                     <a href="{{route('about_details_create')}}">
-                                        <button class="btn create_button">Ավելացնել</button>
+                                        <button class="btn bg-primary create_button">Ավելացնել</button>
                                     </a>
                                 </div>
                             </div>
@@ -151,7 +151,7 @@
                                 <div class="col-10"></div>
                                 <div class="col-2">
                                     <a href="{{route('about_images_create')}}">
-                                        <button class="btn create_button">Ավելացնել լուսանկար</button>
+                                        <button class="btn bg-primary create_button">Ավելացնել լուսանկար</button>
                                     </a>
                                 </div>
                             </div>

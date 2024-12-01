@@ -30,7 +30,7 @@
                                 <div class="col-10"></div>
                                 <div class="col-2">
                                     <a href="{{route('blog_create')}}">
-                                        <button class="create_button">Ավելացնել</button>
+                                        <button class="btn bg-primary create_button">Ավելացնել</button>
                                     </a>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@
                                 <div class="col-10"></div>
                                 <div class="col-2">
                                     <a href="{{route('blog_create')}}">
-                                        <button class="create_button">Добавлять</button>
+                                        <button class="btn bg-primary create_button">Добавлять</button>
                                     </a>
                                 </div>
                             </div>
@@ -162,7 +162,7 @@
                                 <div class="col-10"></div>
                                 <div class="col-2">
                                     <a href="{{route('blog_create')}}">
-                                        <button class="create_button">Add</button>
+                                        <button class="btn bg-primary create_button">Add</button>
                                     </a>
                                 </div>
                             </div>

@@ -9,12 +9,12 @@
                         @csrf
                         <div class="mb-3">
                             <label for="seq" class="form-label">Հերթականություն</label>
-                            <input class="form-control" type="number" id="seq" name="seq" min="1">
+                            <input class="form-control" type="number" id="seq" name="seq" min="1" required>
                         </div>
                         <div class="mb-3">
                             <label for="image" class="form-label">Լուսանկար</label>
                             <input class="form-control" type="file" id="image" name="image"
-                                   accept="image/jpeg, image/jpg, image/png, image/gif">
+                                   accept="image/jpeg, image/jpg, image/png, image/gif" required>
                         </div>
                         <div class="mb-3">
                             <img src="" alt="" class="create_img" id="img">

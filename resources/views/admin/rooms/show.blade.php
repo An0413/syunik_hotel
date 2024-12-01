@@ -9,7 +9,7 @@
                         <div class="col-10"></div>
                         <div class="col-2">
                             <a href="{{route('rooms_create')}}">
-                                <button class="create_button">Ավելացնել</button>
+                                <button class="btn bg-primary create_button">Ավելացնել</button>
                             </a>
                         </div>
                     </div>
@@ -24,6 +24,7 @@
                                         <th scope="col">Հերթականություն</th>
                                         <th scope="col">Ինֆո հայերեն</th>
                                         <th scope="col">Լուսանկար</th>
+                                        <th scope="col">Մարդիկ</th>
                                         <th scope="col">Երեխաներ</th>
                                         <th scope="col">Գին</th>
                                         <th scope="col">Զեղչված գին</th>
@@ -45,6 +46,7 @@
                                             <td>
                                                 <img src="{{asset('images/rooms/'.$value->image)}}" class="show_img">
                                             </td>
+                                            <td>{{$value->capacity}}</td>
                                             <td>{{$value->childs}}</td>
                                             <td>{{$value->price}}</td>
                                             <td>{{$value->discount}}</td>
