@@ -44,7 +44,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="capacity" class="form-label">Մարդկանց քանակ</label>
-                            <input type="number" class="form-control" id="capacity" name="capacity" required>
+                            <input type="number" class="form-control" id="capacity" name="capacity" min="0" required>
                         </div>
                         <div class="mb-3">
                             <label for="childs" class="form-label">Երեխաներ</label>

@@ -61,8 +61,7 @@
                                 <div class="mb-3">
                                     <label for="image" class="form-label">Լուսանկար</label>
                                     <input class="form-control" type="file" id="image_am" name="image"
-                                           accept="image/jpeg, image/jpg, image/png, image/gif">
-                                    <small class="text-danger" id="nameError" style="display: none;">Նկարի դաշտը պարտադիր է։</small>
+                                           accept="image/jpeg, image/jpg, image/png, image/gif" required>
                                 </div>
                                 <div class="mb-3">
                                     <img src="" alt="" class="create_img" id="img_am">
@@ -92,7 +91,7 @@
                                 </div>
                                 <div class="mb-3 mt-3">
                                     <label for="seq" class="form-label">Последовательность</label>
-                                    <input class="form-control" type="number" name="seq" min="1">
+                                    <input class="form-control" type="number" name="seq" min="1" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="meta_keyword" class="form-label">Ключевое слово</label>
@@ -115,7 +114,7 @@
                                 <div class="mb-3">
                                     <label for="image" class="form-label">Фото</label>
                                     <input class="form-control" type="file" id="image_ru" name="image"
-                                           accept="image/jpeg, image/jpg, image/png, image/gif">
+                                           accept="image/jpeg, image/jpg, image/png, image/gif" required>
                                 </div>
                                 <div class="mb-3">
                                     <img src="" alt="" class="create_img" id="img_ru">
@@ -145,7 +144,7 @@
                                 </div>
                                 <div class="mb-3 mt-3">
                                     <label for="seq" class="form-label">Sequence</label>
-                                    <input class="form-control" type="number" name="seq" min="1">
+                                    <input class="form-control" type="number" name="seq" min="1" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="meta_keyword" class="form-label">Keyword</label>
@@ -168,7 +167,7 @@
                                 <div class="mb-3">
                                     <label for="image" class="form-label">Photo</label>
                                     <input class="form-control" type="file" id="image_en" name="image"
-                                           accept="image/jpeg, image/jpg, image/png, image/gif">
+                                           accept="image/jpeg, image/jpg, image/png, image/gif" required>
                                 </div>
                                 <div class="mb-3">
                                     <img src="" alt="" class="create_img" id="img_en">

@@ -27,6 +27,7 @@ class StoreRequest extends FormRequest
             'info_am' => 'string|nullable',
             'info_ru' => 'string|nullable',
             'info_en' => 'string|nullable',
+            'capacity' => 'numeric|required',
             'childs' => 'numeric|required',
             'type_id' => 'numeric|required',
             'stage' => 'numeric|required',
