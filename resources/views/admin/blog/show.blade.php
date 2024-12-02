@@ -48,6 +48,7 @@
                                                 <th scope="col">Նկարագրություն</th>
                                                 <th scope="col">Ինֆո</th>
                                                 <th scope="col">Լուսանկար</th>
+                                                <th scope="col">Մեկնաբանություններ</th>
                                                 <th scope="col">Խմբագրել</th>
                                                 <th scope="col">Ջնջել</th>
                                             </tr>
@@ -66,6 +67,10 @@
                                                              class="show_img">
                                                     </td>
                                                     <td>
+                                                        <a href="{{route('blog_comments_show', $value->id)}}">
+                                                            <i class="nav-icon fas fa-solid fa-comment fs_icon"></i></i>
+                                                        </a>
+                                                    </td> <td>
                                                         <a href="{{route('blog_edit', $value->id)}}">
                                                             <i class="nav-icon fas fa-edit text-primary"></i>
                                                         </a>
