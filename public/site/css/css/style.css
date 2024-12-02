@@ -2020,3 +2020,8 @@ footer .form-subscribe .form-control:active, footer .form-subscribe .form-contro
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+.br-20 {
+    bottom: 20px!important;
+    right: 20px!important;
+}
