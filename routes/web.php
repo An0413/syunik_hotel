@@ -84,6 +84,11 @@ Route::middleware('auth')->prefix('/admin')->namespace('App\Http\Controllers\Adm
     Route::post('/blog/update/{id}', [admin\BlogController::class, 'update'])->where('id', '[0-9]+')->name('blog_update');
     Route::delete('/blog/delete/{id}', [admin\BlogController::class, 'destroy'])->where('id', '[0-9]+')->name('blog_delete');
 
+    Route::get('/blog/comments/show/{id}', [admin\BlogController::class, 'show_comments'])->where('id', '[0-9]+')->name('blog_comments_show');
+    Route::delete('/blog/comments/delete/{id}', [admin\BlogController::class, 'destroy_comment'])->where('id', '[0-9]+')->name('blog_comment_delete');
+
+
+
 
     Route::get('/about/show', [admin\AboutController::class, 'show'])->name('about_show');
     Route::get('/about/create', [admin\AboutController::class, 'create'])->name('about_create');

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Blog\StoreRequest;
 use App\Http\Requests\Admin\Blog\UpdateRequest;
 use App\Models\Blog;
+use App\Models\Comments;
 use App\Models\Rooms;
 use App\Models\RoomType;
 use http\Env\Request;
@@ -94,6 +95,22 @@ class BlogController extends Controller
             File::delete(public_path('video/blog') . '/' . $blog->videos);
         }
         Blog::where('id', $id)->delete();
+
+        return redirect()->route('blog_show');
+
+    }
+
+    public function show_comments($id)
+    {
+        $comments = Comments::where('blog_id', $id)->get();
+        return view('admin.blog.show_comments', compact('comments'));
+    }
+
+    public function destroy_comment($id)
+    {
+        $comment = Comments::find($id);
+
+        Comments::where('id', $id)->delete();
 
         return redirect()->route('blog_show');
 
