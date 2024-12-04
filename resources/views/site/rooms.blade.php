@@ -25,7 +25,7 @@
                                 <img src="{{asset('site/images/SonImg/room/'.$value->image)}}" alt="" class="imgResize">
                             </a>
                             <div class="ri-text">
-                                <h4>{{$value->roomType->type_en}}</h4>
+                                <h4>{{$value->roomType->{'type_' . app()->getLocale()} }}</h4>
                                 @if($value->discount > 0)
                                     <h3>
                                         <del style="color: red">{{$value->price}}AMD
@@ -38,7 +38,7 @@
 
                                 <table>
                                     <tbody>
-                                    <tr>
+                                    <tr>գիտ
                                         <td class="r-o">{{__('messages.size')}}:</td>
                                         <td>{{$value->surface}} ft</td>
                                     </tr>
