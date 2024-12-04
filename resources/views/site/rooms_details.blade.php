@@ -17,6 +17,7 @@
     <section class="room-details-section spad">
         <div class="container">
             <div class="row">
+                @if(1 == 2)
                 <div class="col-lg-8">
                     <div class="room-details-item">
                         <img src="{{asset('site/images/SonImg/room/'.$room->image)}}" alt="">
@@ -194,9 +195,26 @@
                         </form>
                     </div>
                 </div>
+                @else
+                    @if(1 == 1)
+                        <iframe id="dynamicIframe" src ="https://tatiosa.net/booking2.php?propid=244859&amp;numadult=2&amp;advancedays=-1&amp;referer=SyunikHotel.com" width="100%" style="max-width:100%;border:none;overflow:auto;"><p><a href="https://tatiosa.net/booking2.php?propid=244859&amp;referer=SyunikHotel.com" title="Book Now">Book Now</a></p></iframe>
+                    @else
+                        <iframe id="dynamicIframe" src ="https://tatiosa.net/booking2.php?propid=244859&roomid=515500&amp;numadult=2&amp;advancedays=-1&amp;referer=SyunikHotel.com" width="100%" style="max-width:100%;border:none;overflow:auto;"><p><a href="https://tatiosa.net/booking2.php?propid=244859&amp;referer=SyunikHotel.com" title="Book Now">Book Now</a></p></iframe>
+                    @endif
+                @endif
+
             </div>
         </div>
     </section>
     <!-- Room Details Section End -->
+    <script>
+        const iframe = document.getElementById('dynamicIframe');
+
+        iframe.onload = () => {
+            const iframeContentHeight = iframe.contentWindow.document.body.scrollHeight;
+            iframe.style.height = iframeContentHeight + 'px';
+        };
+
+    </script>
 @endsection
 

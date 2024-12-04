@@ -55,7 +55,9 @@
 </footer>
 <!-- JavaScript Libraries -->
 
-<script src="https://cdn.jsdelivr.net/npm/pusher-js@7.2/pusher.min.js"></script>
+{{--<script src="https://cdn.jsdelivr.net/npm/pusher-js@7.2/pusher.min.js"></script>--}}
+<script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+
 <script src="{{asset('/site/js/js/vendor/jquery-3.3.1.min.js')}}"></script>
 <script src="{{asset('/site/js/js/vendor/popper.min.js')}}"></script>
 <script src="{{asset('/site/js/js/vendor/bootstrap.min.js')}}"></script>
