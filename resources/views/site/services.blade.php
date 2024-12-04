@@ -29,8 +29,8 @@
                         <div class="media-29191-icon">
                             <img src="{{asset('site/images/images/svg/'.$value->icon)}}" alt="Image" class="img-fluid">
                         </div>
-                        <h3>{{$value->name_am}}</h3>
-                        <p>{{$value->info_am}}</p>
+                        <h3>{{$value->{'name_' . app()->getLocale()} }}</h3>
+                        <p>{{$value->{'info_' . app()->getLocale()} }}</p>
                     </div>
                 </div>
                 @endforeach
