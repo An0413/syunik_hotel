@@ -39,4 +39,6 @@ return [
     'child3' => 'children',
     'availability' => 'Check Availability',
     'room2' => 'Room',
+    'faq' => 'Frequently Asked Questions',
+
 ];

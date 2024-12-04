@@ -9,13 +9,14 @@ use App\Models\AboutDetail;
 use App\Models\AboutImages;
 use App\Models\Blog;
 use App\Models\Comments;
+use App\Models\Languages;
 
 
 class BlogController
 {
     public function blog(){
-
-        $blog = Blog::orderBy('seq', 'ASC')->get();
+        $lang_id = Languages::where('short_name', app()->getLocale())->first()->id;
+        $blog = Blog::where('lang_id', $lang_id)->orderBy('seq', 'ASC')->get();
         $active = 'blog';
         return view('site.blog', compact('blog','active'));
     }

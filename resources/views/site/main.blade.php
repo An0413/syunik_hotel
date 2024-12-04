@@ -44,7 +44,7 @@
                                                             </div>
                                                             <select name="type" id="type" class="form-control w-100">
                                                                 @foreach($room_type as $value)
-                                                                    <option value="">{{$value->type_en}}</option>
+                                                                    <option value="">{{$value->{'type_' . app()->getLocale()} }}</option>
                                                                 @endforeach
                                                             </select>
                                                         </div>
@@ -98,9 +98,9 @@
                             <div class="about-text">
                                 <div class="section-title">
                                     <span>{{__('messages.about')}}</span>
-                                    <h2>{{$value->title_en}}</h2>
+                                    <h2>{{$value->{'title_' . app()->getLocale()} }}</h2>
                                 </div>
-                                <p class="f-para">{{$value->info_en}}</p>
+                                <p class="f-para">{{$value->{'info_' . app()->getLocale()} }}</p>
 
                                 <a href="{{route('about')}}" class="primary-btn about-btn">{{__('messages.more')}}</a>
                             </div>
@@ -140,7 +140,7 @@
                                      data-href="{{route('site_rooms_details', $value->id)}}"
                                      data-setbg="{{asset('images/rooms/' . $value->image)}}">
                                     <div class="hr-text">
-                                        <h3>{{$value->roomType->type_en}}</h3>
+                                        <h3>{{$value->roomType->{'type_' . app()->getLocale()} }}</h3>
                                         <h2>{{$value->price . 'AMD'}}<span>/{{__('messages.pernight')}}</span></h2>
                                         <table>
                                             <tbody>
@@ -194,8 +194,8 @@
                                     <img src="{{asset('site/images/images/svg/'.$value->icon)}}" alt="Image"
                                          class="img-fluid">
                                 </div>
-                                <h3>{{$value->name_en}}</h3>
-                                <p>{{$value->info_en}}</p>
+                                <h3>{{$value->{'name_' . app()->getLocale()} }}</h3>
+                                <p>{{$value->{'info_' . app()->getLocale()} }}</p>
                             </div>
                         </div>
                     @endforeach
@@ -261,18 +261,18 @@
         <!-- FAQ begin -->
         <div class="card card_border">
             <div class="card-header text-center card_bg">
-                <h2>Frequently Asked Questions</h2>
+                <h2>{{__('messages.faq')}}</h2>
             </div>
             <div class="card-body">
                 <div class="accordion">
                     @foreach($questions as $value)
                         <div class="accordion-item">
                             <button class="accordion-header" data-toggle>
-                                <span>{{$value->question_en}}</span>
+                                <span>{{$value->{'question_' . app()->getLocale()} }}</span>
                                 <span class="icon">+</span>
                             </button>
                             <div class="accordion-content">
-                                <p class="content_p">{{$value->answer_en}}</p>
+                                <p class="content_p">{{$value->{'answer_' . app()->getLocale()} }}</p>
                             </div>
                         </div>
                     @endforeach
