@@ -11,4 +11,10 @@ class Comments extends Model
 
     protected $table = 'comments';
     protected $guarded = [];
+
+//    public function parent()
+//    {
+//        return $this->belongsTo(Blog::class, 'id','parent_id');
+//    }
+
 }

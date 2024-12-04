@@ -20,19 +20,40 @@ class BlogController
     }
     public function blog_details($id){
 
-        $comments = Comments::orderBy('seq', 'ASC')->get();
+        $comments = Comments::where('blog_id', $id)->orderBy('created_at', 'ASC')->get();
+        $nestedComments = $this->buildCommentTree($comments);
+        $comment_count = count($comments);
         $blog_details = Blog::where('id', $id)->get();
         $blog = Blog::orderBy('seq', 'DESC')->limit(3)->get();
-        return view('site.blog-details', compact('comments', 'blog_details', 'blog'));
+        return view('site.blog-details', compact('comments', 'blog_details', 'blog', 'id', 'comment_count', 'nestedComments'));
     }
 
-    public function comment(CommentRequest $request){
+    private function buildCommentTree($comments, $parentId = null)
+    {
+        $tree = [];
 
+        foreach ($comments as $comment) {
+            if ($comment->parent_id == $parentId) { // Use object property access
+                // Recursively find children
+                $children = $this->buildCommentTree($comments, $comment->id);
+                if ($children) {
+                    $comment->replies = $children; // Add children as 'replies'
+                }
+
+                $tree[] = $comment; // Add the comment to the tree
+            }
+        }
+
+        return $tree;
+    }
+
+
+    public function comment(CommentRequest $request, $id){
         $data = $request->validated();
-
+        $data['blog_id'] = $id;
         Comments::create($data);
 
-        return redirect()->back();
+        return redirect()->route('blog_details', $id);
 
     }
 }

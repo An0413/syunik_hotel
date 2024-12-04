@@ -176,3 +176,65 @@ div.c input:checked ~ h4 ~ div.p {
 .b_name{
     font-size: 35px;
 }
+.blog-details-text .comment-option .single-comment-item .sc-text button {
+    display: inline-block;
+    color: #19191a;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 24px;
+    border: 1px solid #F9EEE3;
+    border-radius: 50px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-right: 10px;
+}
+.blog-details-text .comment-option .single-comment-item .sc-text button:hover {
+    background: #dfa974;
+    color: #ffffff;
+    border-color: #dfa974;
+}
+.name_com{
+    width: 300px;
+    border-radius: 7px;
+    margin-bottom: 18px;
+    padding: 5px;
+}
+.com_message{
+    border-radius: 10px;
+    width: 300px;
+    height: 100px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+.close_btn{
+    background-color: #809296;
+    border-radius: 18px;
+    padding: 5px 24px;
+}
+.send_comment{
+    display: inline-block;
+    color: #19191a;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 24px;
+    border: 1px solid #F9EEE3;
+    border-radius: 50px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-right: 10px;
+}
+.send_comment:hover{
+    background: #dfa974;
+    color: #ffffff;
+    border-color: #dfa974;
+}
+.reply_text{
+    color: #ffa955;
+    font-size: 25px;
+}

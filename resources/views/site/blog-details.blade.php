@@ -44,86 +44,38 @@
                                     </div>
                                 </div>
                             @endforeach
-                            <div class="tag-share">
-                                <div class="tags">
-                                    <a href="#">Travel Trip</a>
-                                    <a href="#">Camping</a>
-                                    <a href="#">Event</a>
-                                </div>
-                                <div class="social-share">
-                                    <span>Share:</span>
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-tripadvisor"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                </div>
-                            </div>
                             <!-- Comments -->
-                            <div class="comment-option">
-                                <h4>2 Comments</h4>
-                                <div class="single-comment-item first-comment">
-                                    <div class="sc-author">
-                                        <img
-                                            src="{{asset('site/images/sonImg/blog/blog-details/avatar/avatar-1.jpg')}}"
-                                            alt="">
+                            <div class="comment-option mt-5">
+                                <h4>{{$comment_count}} Comments</h4>
+                                @foreach($nestedComments as $value)
+                                    <div class="single-comment-item first-comment">
+                                        <div class="sc-author">
+                                            <img
+                                                src="{{asset('site/images/sonImg/blog/blog-details/avatar/avatar-1.jpg')}}"
+                                                alt="">
+                                        </div>
+                                        <div class="sc-text">
+                                            <span>{{$value->created_at}}</span>
+                                            <h5>{{$value->name}}</h5>
+                                            <p>{{$value->comment}}</p>
+                                            <a href="#" class="comment-btn">Like</a>
+                                            {{--<a href="#" class="comment-btn">Reply</a>--}}
+                                            <button type="button" class="btn comment-btn reply-btn" data-toggle="modal"
+                                                    data-target="#replyModal" data-id="{{$value->id}}">
+                                                Reply
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div class="sc-text">
-                                        <span>27 Aug 2019</span>
-                                        <h5>Brandon Kelley</h5>
-                                        <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet,
-                                            consectetur,
-                                            adipisci velit, sed quia non numquam eius modi tempora. incidunt ut
-                                            labore
-                                            et
-                                            dolore magnam.</p>
-                                        <a href="#" class="comment-btn">Like</a>
-                                        <a href="#" class="comment-btn">Reply</a>
-                                    </div>
-                                </div>
-                                <div class="single-comment-item reply-comment">
-                                    <div class="sc-author">
-                                        <img
-                                            src="{{asset('site/images/sonImg/blog/blog-details/avatar/avatar-2.jpg')}}"
-                                            alt="">
-                                    </div>
-                                    <div class="sc-text">
-                                        <span>27 Aug 2019</span>
-                                        <h5>Brandon Kelley</h5>
-                                        <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet,
-                                            consectetur,
-                                            adipisci velit, sed quia non numquam eius modi tempora. incidunt ut
-                                            labore
-                                            et
-                                            dolore magnam.</p>
-                                        <a href="#" class="comment-btn like-btn">Like</a>
-                                        <a href="#" class="comment-btn reply-btn">Reply</a>
-                                    </div>
-                                </div>
-                                <div class="single-comment-item second-comment ">
-                                    <div class="sc-author">
-                                        <img
-                                            src="{{asset('site/images/sonImg/blog/blog-details/avatar/avatar-3.jpg')}}"
-                                            alt="">
-                                    </div>
-                                    <div class="sc-text">
-                                        <span>27 Aug 2019</span>
-                                        <h5>Brandon Kelley</h5>
-                                        <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet,
-                                            consectetur,
-                                            adipisci velit, sed quia non numquam eius modi tempora. incidunt ut
-                                            labore
-                                            et
-                                            dolore magnam.</p>
-                                        <a href="#" class="comment-btn">Like</a>
-                                        <a href="#" class="comment-btn">Reply</a>
-                                    </div>
-                                </div>
+                                    @if (isset($value->replies) && count($value->replies) > 0)
+                                            @include('site.comment_array', ['comments' => $value->replies])
+                                    @endif
+                                @endforeach
                             </div>
                             <div class="leave-comment">
                                 <h4>Leave A Comment</h4>
-                                <form action="{{route('comment')}}" method="post" role="form" class="comment-form">
+                                <form action="{{route('comment', $id)}}" method="post" role="form" class="comment-form">
                                     @csrf
+                                    <input type="hidden" name="parent_id" value="0">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <input type="text" placeholder="Name" name="name" id="name">
@@ -132,15 +84,10 @@
                                             <input type="text" placeholder="Email" name="email" id="comment">
                                         </div>
                                         <div class="col-lg-12 text-center">
-                                            <textarea placeholder="Messages" name="comment" id="comment"></textarea>
+                                            <textarea placeholder="Comment" name="comment" id="comment"></textarea>
                                         </div>
-                                        {{--                                    <div class="my-3">--}}
-                                        {{--                                        <div class="loading">Loading</div>--}}
-                                        {{--                                        <div class="error-message"></div>--}}
-                                        {{--                                        <div class="sent-message">Ձեր հաղորդագրությունն ուղարկված է։ Շնորհակալություն։</div>--}}
-                                        {{--                                    </div>--}}
                                         <div class="col-lg-12 text-center">
-                                            <button type="submit" class="site-btn">Send Message</button>
+                                            <button type="submit" class="site-btn">Send Comment</button>
                                         </div>
                                     </div>
                                 </form>
@@ -183,6 +130,40 @@
         <!-- Recommend Blog Section End -->
 
     </div>
+    <div class="modal fade" id="replyModal" tabindex="-1" role="dialog" aria-labelledby="replyModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h5 class="modal-title text-center reply_text" id="replyModalLabel"><b>Leave your reply comment
+                            here</b></h5>
+                    <form action="{{route('comment', $id)}}" method="post" role="form" class="comment-form">
+                        @csrf
+                        <input type="hidden" name="parent_id" value="0" id="parent_id">
+                        <div class="row mt-4">
+                            <div class="col-lg-12 text-center">
+                                <input type="text" placeholder="Name" name="name" id="name" class="name_com">
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <input type="text" placeholder="Email" name="email" id="comment" class="name_com">
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <textarea placeholder="Comment reply" name="comment" id="comment"
+                                          class="com_message"></textarea>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <button type="submit" class="site-btn send_comment">Send Comment</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn close_btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script>
         document.querySelectorAll('[data-setbg]').forEach(function (el) {
@@ -192,6 +173,5 @@
             el.style.backgroundPosition = "center"; // Center the image within the element
             el.style.backgroundRepeat = "no-repeat"; // Prevent tiling
         });
-
     </script>
 @endsection
