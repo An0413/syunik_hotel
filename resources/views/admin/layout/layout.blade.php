@@ -47,7 +47,7 @@
 
     <div class="content">
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+        <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0" id="my_main_nav">
             {{--            <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">--}}
             {{--                <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>--}}
             {{--            </a>--}}
@@ -61,7 +61,7 @@
                         <span class="d-none d-lg-inline-flex">Նամակներ</span>
                     </a>
                     @php
-                        $messages = \App\Models\Messages::orderBy('id', 'desc')->get();
+                        $messages = \App\Models\MessagesToAdmin::orderBy('id', 'desc')->get();
                     @endphp
                     <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                         @foreach($messages as $key=>$value)
@@ -71,7 +71,7 @@
                                         <h4 class="fw-normal mb-0">{{$value->name}}</h4>
                                         <small>{{$value->email}}</small>
                                         <hr class="dropdown-divider">
-                                        <p  class="message-content">{{$value->message}}</p>
+                                        <p class="message-content">{{$value->message}}</p>
                                     </div>
                                 </div>
                             </a>
@@ -85,14 +85,15 @@
                         @endphp
                         <img class="rounded-circle me-lg-2" src="{{asset('images/profile/'. $admin->image)}}" alt=""
                              style="width: 40px; height: 40px;">
-                        <span class="d-none d-lg-inline-flex">Hotel admin</span>
+                        <span class="d-none d-lg-inline-flex">{{$admin->name}}</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                         <a href="{{route('profile')}}" class="dropdown-item">Իմ պրոֆիլը</a>
                         <form id="logoutForm" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
-                        <a href="#" class="dropdown-item" onclick="document.getElementById('logoutForm').submit();">Դուրս գալ</a>
+                        <a href="#" class="dropdown-item" onclick="document.getElementById('logoutForm').submit();">Դուրս
+                            գալ</a>
                     </div>
                 </div>
             </div>

@@ -101,7 +101,7 @@
         <!-- Blog Details Section End -->
 
         <!-- Recommend Blog Section Begin -->
-        <section class="recommend-blog-section spad">
+        <section class="recommend-blog-section spad" id="spad">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">

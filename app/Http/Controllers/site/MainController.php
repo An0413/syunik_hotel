@@ -9,6 +9,7 @@ use App\Models\AboutDetail;
 use App\Models\AboutImages;
 use App\Models\Blog;
 use App\Models\Comments;
+use App\Models\Languages;
 use App\Models\Questions;
 use App\Models\Rooms;
 use App\Models\RoomType;
@@ -19,12 +20,14 @@ class MainController
 {
     public function main()
     {
-        $blog = Blog::all();
-        $rooms = Rooms::all();
+        $lang_id = Languages::where('short_name', app()->getLocale())->first()->id;
+        $blog = Blog::where('lang_id', $lang_id)->orderBy('seq', 'ASC')->limit(3)->get();
+        $rooms = Rooms::orderBy('seq','ASC')->limit(4)->get();
         $services = Services::orderBy('seq', 'ASC')->get();
         $about = About::all();
         $room_type = RoomType::all();
         $questions = Questions::orderBy('seq', 'DESC')->get();
-        return view('site.main', compact('blog', 'rooms', 'services', 'about', 'room_type', 'questions'));
+        $active = 'home';
+        return view('site.main', compact('blog', 'rooms', 'services', 'about', 'room_type', 'questions', 'active'));
     }
 }

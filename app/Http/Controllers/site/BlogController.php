@@ -9,14 +9,16 @@ use App\Models\AboutDetail;
 use App\Models\AboutImages;
 use App\Models\Blog;
 use App\Models\Comments;
+use App\Models\Languages;
 
 
 class BlogController
 {
     public function blog(){
-
-        $blog = Blog::orderBy('seq', 'ASC')->get();
-        return view('site.blog', compact('blog'));
+        $lang_id = Languages::where('short_name', app()->getLocale())->first()->id;
+        $blog = Blog::where('lang_id', $lang_id)->orderBy('seq', 'ASC')->get();
+        $active = 'blog';
+        return view('site.blog', compact('blog','active'));
     }
     public function blog_details($id){
 
@@ -25,7 +27,8 @@ class BlogController
         $comment_count = count($comments);
         $blog_details = Blog::where('id', $id)->get();
         $blog = Blog::orderBy('seq', 'DESC')->limit(3)->get();
-        return view('site.blog-details', compact('comments', 'blog_details', 'blog', 'id', 'comment_count', 'nestedComments'));
+        $active = 'blog';
+        return view('site.blog-details', compact('comments', 'blog_details', 'blog', 'id', 'comment_count', 'nestedComments','active'));
     }
 
     private function buildCommentTree($comments, $parentId = null)

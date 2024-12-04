@@ -1,6 +1,6 @@
 @extends('admin.layout.layout')
 @section('content')
-    <div class="container-fluid pt-4 px-4">
+    <div class="container-fluid pt-4 px-4" id="content">
         <div class="row g-4">
             <div class="col-sm-12 col-xl-12 col-lg-12 col-md-12">
                 <div class="bg-light rounded h-100 p-4">
@@ -27,10 +27,10 @@
                              aria-labelledby="armenian-tab">
                             <h6 class="mb-4 mt-3">Բլոգ</h6>
                             <div class="row">
-                                <div class="col-10"></div>
-                                <div class="col-2">
+                                <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10"></div>
+                                <div class="col-lg-12 col-xl-2 col-sm-2 col-md-2">
                                     <a href="{{route('blog_create')}}">
-                                        <button class="create_button">Ավելացնել</button>
+                                        <button class="btn bg-primary create_button">Ավելացնել</button>
                                     </a>
                                 </div>
                             </div>
@@ -48,6 +48,7 @@
                                                 <th scope="col">Նկարագրություն</th>
                                                 <th scope="col">Ինֆո</th>
                                                 <th scope="col">Լուսանկար</th>
+                                                <th scope="col">Մեկնաբանություններ</th>
                                                 <th scope="col">Խմբագրել</th>
                                                 <th scope="col">Ջնջել</th>
                                             </tr>
@@ -57,15 +58,19 @@
                                                 <tr>
                                                     <th scope="row">{{$key+1}}</th>
                                                     <td>{{$value->seq}}</td>
-                                                    <td>{{$value->name}}</td>
-                                                    <td>{{$value->meta_keyword}}</td>
-                                                    <td>{{$value->meta_description}}</td>
-                                                    <td>{{$value->info}}</td>
+                                                    <td>{{Str::words($value->name, 5, '...')}}</td>
+                                                    <td>{{Str::words($value->meta_keyword, 5, '...')}}</td>
+                                                    <td>{{Str::words($value->meta_description, 15, '...')}}</td>
+                                                    <td>{{Str::words($value->info, 25, '...')}}</td>
                                                     <td>
                                                         <img src="{{asset('images/blog/'.$value->image)}}"
                                                              class="show_img">
                                                     </td>
                                                     <td>
+                                                        <a href="{{route('blog_comments_show', $value->id)}}">
+                                                            <i class="nav-icon fas fa-solid fa-comment fs_icon"></i></i>
+                                                        </a>
+                                                    </td> <td>
                                                         <a href="{{route('blog_edit', $value->id)}}">
                                                             <i class="nav-icon fas fa-edit text-primary"></i>
                                                         </a>
@@ -93,10 +98,10 @@
                         <div class="tab-pane fade" id="russian" role="tabpanel" aria-labelledby="russian-tab">
                             <h6 class="mb-4 mt-3">Блог</h6>
                             <div class="row">
-                                <div class="col-10"></div>
-                                <div class="col-2">
+                                <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10"></div>
+                                <div class="col-lg-12 col-xl-2 col-sm-2 col-md-2">
                                     <a href="{{route('blog_create')}}">
-                                        <button class="create_button">Добавлять</button>
+                                        <button class="btn bg-primary create_button">Добавлять</button>
                                     </a>
                                 </div>
                             </div>
@@ -159,10 +164,10 @@
                         <div class="tab-pane fade" id="english" role="tabpanel" aria-labelledby="english-tab">
                             <h6 class="mb-4 mt-3">Blog</h6>
                             <div class="row">
-                                <div class="col-10"></div>
-                                <div class="col-2">
+                                <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10"></div>
+                                <div class="col-lg-12 col-xl-2 col-sm-2 col-md-2">
                                     <a href="{{route('blog_create')}}">
-                                        <button class="create_button">Add</button>
+                                        <button class="btn bg-primary create_button">Add</button>
                                     </a>
                                 </div>
                             </div>

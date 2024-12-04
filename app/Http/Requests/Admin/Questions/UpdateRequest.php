@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Admin\About;
+namespace App\Http\Requests\Admin\Questions;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -22,12 +22,13 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name_am' => 'string|nullable',
-            'name_ru' => 'string|nullable',
-            'name_en' => 'string|nullable',
-            'info_am' => 'string|nullable',
-            'info_ru' => 'string|nullable',
-            'info_en' => 'string|nullable',
+            'seq' => 'numeric|nullable',
+            'question_am' => 'string|nullable',
+            'question_ru' => 'string|nullable',
+            'question_en' => 'string|nullable',
+            'answer_am' => 'string|nullable',
+            'answer_ru' => 'string|nullable',
+            'answer_en' => 'string|nullable',
         ];
     }
 }

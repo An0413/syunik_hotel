@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\Admin\NotificationController;
@@ -27,6 +28,8 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', [MainController::class, 'main'])->name('site');
 
+Route::post('/send-message', [ChatController::class, 'sendMessage']);
+Route::get('/messages', [ChatController::class, 'getMessages']);
 
 Route::get('login', [AuthController::class, 'showLogin'])->name('login');
 Route::get('register', [AuthController::class, 'showRegister'])->middleware('auth')->name('register');
@@ -84,6 +87,11 @@ Route::middleware('auth')->prefix('/admin')->namespace('App\Http\Controllers\Adm
     Route::post('/blog/update/{id}', [admin\BlogController::class, 'update'])->where('id', '[0-9]+')->name('blog_update');
     Route::delete('/blog/delete/{id}', [admin\BlogController::class, 'destroy'])->where('id', '[0-9]+')->name('blog_delete');
 
+    Route::get('/blog/comments/show/{id}', [admin\BlogController::class, 'show_comments'])->where('id', '[0-9]+')->name('blog_comments_show');
+    Route::delete('/blog/comments/delete/{id}', [admin\BlogController::class, 'destroy_comment'])->where('id', '[0-9]+')->name('blog_comment_delete');
+
+
+
 
     Route::get('/about/show', [admin\AboutController::class, 'show'])->name('about_show');
     Route::get('/about/create', [admin\AboutController::class, 'create'])->name('about_create');
@@ -91,6 +99,20 @@ Route::middleware('auth')->prefix('/admin')->namespace('App\Http\Controllers\Adm
     Route::get('/about/edit/{id}', [admin\AboutController::class, 'edit'])->where('id', '[0-9]+')->name('about_edit');
     Route::post('/about/update/{id}', [admin\AboutController::class, 'update'])->where('id', '[0-9]+')->name('about_update');
     Route::delete('/about/delete/{id}', [admin\AboutController::class, 'destroy'])->where('id', '[0-9]+')->name('about_delete');
+
+    Route::get('/about/details/create', [admin\AboutController::class, 'create_details'])->name('about_details_create');
+    Route::post('/about/details/store', [admin\AboutController::class, 'store_details'])->name('about_details_store');
+    Route::get('/about/details/edit/{id}', [admin\AboutController::class, 'edit_details'])->where('id', '[0-9]+')->name('about_details_edit');
+    Route::post('/about/details/update/{id}', [admin\AboutController::class, 'update_details'])->where('id', '[0-9]+')->name('about_details_update');
+    Route::delete('/about/details/delete/{id}', [admin\AboutController::class, 'destroy_details'])->where('id', '[0-9]+')->name('about_details_delete');
+
+    Route::get('/about/images/create', [admin\AboutController::class, 'create_images'])->name('about_images_create');
+    Route::post('/about/images/store', [admin\AboutController::class, 'store_images'])->name('about_images_store');
+    Route::get('/about/images/edit/{id}', [admin\AboutController::class, 'edit_images'])->where('id', '[0-9]+')->name('about_images_edit');
+    Route::post('/about/images/update/{id}', [admin\AboutController::class, 'update_images'])->where('id', '[0-9]+')->name('about_images_update');
+    Route::delete('/about/images/delete/{id}', [admin\AboutController::class, 'destroy_images'])->where('id', '[0-9]+')->name('about_images_delete');
+
+
 
     Route::get('/services/show', [admin\ServicesController::class, 'show'])->name('services_show');
     Route::get('/services/create', [admin\ServicesController::class, 'create'])->name('services_create');

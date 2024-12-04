@@ -9,7 +9,7 @@
                         @csrf
                         <div class="mb-3">
                             <label for="seq" class="form-label">Հերթականություն</label>
-                            <input class="form-control" type="number" name="seq" min="1">
+                            <input class="form-control" type="number" name="seq" min="1" required>
                         </div>
                         <div class="mb-3">
                             <label for="name_am" class="form-label">Անուն հայերեն</label>

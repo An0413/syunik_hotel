@@ -28,6 +28,17 @@ return [
     'femail' => 'Your Email',
     'fmessage' => 'Your message',
     'submit' => 'Submit',
-
+    'connect' => 'Contact us',
+    'reservation' => 'Your Reservation',
+    'check_in' => 'check_in։',
+    'check_out' => 'check_out:',
+    'guests' => 'Guests:',
+    'adult' => 'Adult',
+    'adults' => 'Adults',
+    'child2' => 'child',
+    'child3' => 'children',
+    'availability' => 'Check Availability',
+    'room2' => 'Room',
+    'faq' => 'Frequently Asked Questions',
 
 ];

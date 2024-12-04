@@ -6,10 +6,10 @@
                 <div class="bg-light rounded h-100 p-4">
                     <h6 class="mb-4">Սենյակներ</h6>
                     <div class="row">
-                        <div class="col-10"></div>
-                        <div class="col-2">
+                        <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10"></div>
+                        <div class="col-lg-12 col-xl-2 col-sm-2 col-md-2">
                             <a href="{{route('rooms_create')}}">
-                                <button class="create_button">Ավելացնել</button>
+                                <button class="btn bg-primary create_button">Ավելացնել</button>
                             </a>
                         </div>
                     </div>
@@ -24,6 +24,7 @@
                                         <th scope="col">Հերթականություն</th>
                                         <th scope="col">Ինֆո հայերեն</th>
                                         <th scope="col">Լուսանկար</th>
+                                        <th scope="col">Մարդիկ</th>
                                         <th scope="col">Երեխաներ</th>
                                         <th scope="col">Գին</th>
                                         <th scope="col">Զեղչված գին</th>
@@ -41,14 +42,15 @@
                                         <tr>
                                             <th scope="row">{{$key+1}}</th>
                                             <td>{{$value->seq}}</td>
-                                            <td>{{$value->info_am}}</td>
+                                            <td>{{Str::words($value->info_am, 25, '...')}}</td>
                                             <td>
                                                 <img src="{{asset('images/rooms/'.$value->image)}}" class="show_img">
                                             </td>
+                                            <td>{{$value->capacity}}</td>
                                             <td>{{$value->childs}}</td>
                                             <td>{{$value->price}}</td>
                                             <td>{{$value->discount}}</td>
-                                            <td>{{$value->stage}}</td>
+                                            <td>{{$value->floor}}</td>
                                             <td>{{$value->number}}</td>
                                             <td>{{$value->roomType->type_am}}</td>
                                             <td>{{$value->surface}}</td>

@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Messages extends Model
+class MessagesToAdmin extends Model
 {
     use HasFactory;
 
-    protected $table = 'messages';
+    protected $table = 'messages_to_admin';
     protected $guarded = [];
 }

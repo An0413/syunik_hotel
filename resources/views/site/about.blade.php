@@ -3,15 +3,11 @@
 
     <!-- Breadcrumb Section Begin -->
     <div class="breadcrumb-section">
-        <div class="container">
+        <div class="container mt-5">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text">
                         <h2>{{__('messages.about')}}</h2>
-                        <div class="bt-option">
-                            <a href="{{route('site')}}">Home</a>
-                            <span>{{__('messages.about')}}</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -27,15 +23,15 @@
                     <div class="col-lg-6">
                         @foreach($info as $value)
                             <div class="ap-title">
-                                <h2>{{$value->title_en}}</h2>
-                                <p>{{$value->info_en}}</p>
+                                <h2>{{$value->{'title_' . app()->getLocale()} }}</h2>
+                                <p>{{$value->{'info_' . app()->getLocale()} }}</p>
                             </div>
                         @endforeach
                     </div>
                     <div class="col-lg-5 offset-lg-1">
                         <ul class="ap-services">
                             @foreach($detail as $value)
-                                <li><i class="icon_check"></i>{{$value->detail_en}}</li>
+                                <li><i class="icon_check"></i>{{$value->{'detail_' . app()->getLocale()} }}</li>
                             @endforeach
                         </ul>
                     </div>
@@ -48,7 +44,7 @@
                             <div class="ap-service-item set-bg"
                                  data-setbg="{{asset('site/images/sonImg/about/'. $value->image)}}">
                                 <div class="api-text">
-                                    <h3>{{$value->title_en}}</h3>
+                                    <h3>{{$value->{'title_' . app()->getLocale()} }}</h3>
                                 </div>
                             </div>
                         </div>

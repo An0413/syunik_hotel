@@ -2,17 +2,11 @@
 @section('content')
         <!-- Breadcrumb Section Begin -->
         <div class="breadcrumb-section">
-            <div class="container">
+            <div class="container mt-5">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="breadcrumb-text">
                             <h2>{{__('messages.travel')}}</h2>
-                            <div class="bt-option">
-
-                                <a href="{{route('site')}}">Home</a>
-                                <span>Blog Grid</span>
-
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -21,7 +15,7 @@
         <!-- Breadcrumb Section End -->
 
         <!-- Blog Section Begin -->
-        <section class="blog-section blog-page spad">
+        <section class="blog-section blog-page spad" id="spad">
             <div class="container">
                 <div class="row">
                     @foreach($blog as $value)

@@ -44,7 +44,7 @@
                                                             </div>
                                                             <select name="type" id="type" class="form-control w-100">
                                                                 @foreach($room_type as $value)
-                                                                    <option value="">{{$value->type_en}}</option>
+                                                                    <option value="">{{$value->{'type_' . app()->getLocale()} }}</option>
                                                                 @endforeach
                                                             </select>
                                                         </div>
@@ -97,10 +97,10 @@
                         @foreach($about as $value)
                             <div class="about-text">
                                 <div class="section-title">
-                                    <span>About Us</span>
-                                    <h2>{{$value->title_en}}</h2>
+                                    <span>{{__('messages.about')}}</span>
+                                    <h2>{{$value->{'title_' . app()->getLocale()} }}</h2>
                                 </div>
-                                <p class="f-para">{{$value->info_en}}</p>
+                                <p class="f-para">{{$value->{'info_' . app()->getLocale()} }}</p>
 
                                 <a href="{{route('about')}}" class="primary-btn about-btn">{{__('messages.more')}}</a>
                             </div>
@@ -125,23 +125,22 @@
         <!-- Home Room Section Begin -->
         <section class="hp-room-section">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row pb-5">
                     <div class="col-lg-12">
                         <div class="section-title">
-                            <span>Proposed </span>
                             <h2>{{__('messages.rooms')}}</h2>
                         </div>
                     </div>
                 </div>
-                <div class="hp-room-items">
+                <div class="hp-room-items  pt-3">
                     <div class="row">
                         @foreach($rooms as $value)
-                            <div class="col-lg-3 col-md-6">
+                            <div class="col-lg-3 col-md-4 col-sm-6 mt-2">
                                 <div class="hp-room-item set-bg room_item"
                                      data-href="{{route('site_rooms_details', $value->id)}}"
                                      data-setbg="{{asset('images/rooms/' . $value->image)}}">
                                     <div class="hr-text">
-                                        <h3>{{$value->roomType->type_en}}</h3>
+                                        <h3>{{$value->roomType->{'type_' . app()->getLocale()} }}</h3>
                                         <h2>{{$value->price . 'AMD'}}<span>/{{__('messages.pernight')}}</span></h2>
                                         <table>
                                             <tbody>
@@ -180,7 +179,7 @@
         <!-- Home Room Section End -->
         <div class="untree_co--site-section">
             <div class="container">
-                <div class="container pt-0 pb-5">
+                <div class="container pt-3 pb-5">
                     <div class="row justify-content-center text-center">
                         <div class="col-lg-6 section-heading" data-aos="fade-up">
                             <h3 class="text-center">{{__('messages.amenities')}}</h3>
@@ -195,8 +194,8 @@
                                     <img src="{{asset('site/images/images/svg/'.$value->icon)}}" alt="Image"
                                          class="img-fluid">
                                 </div>
-                                <h3>{{$value->name_en}}</h3>
-                                <p>{{$value->info_en}}</p>
+                                <h3>{{$value->{'name_' . app()->getLocale()} }}</h3>
+                                <p>{{$value->{'info_' . app()->getLocale()} }}</p>
                             </div>
                         </div>
                     @endforeach
@@ -204,7 +203,7 @@
             </div>
         </div>
         <!-- Breadcrumb Section Begin -->
-        <div class="breadcrumb-section">
+        <div class="breadcrumb-section breadcrumb_blog">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -262,18 +261,18 @@
         <!-- FAQ begin -->
         <div class="card card_border">
             <div class="card-header text-center card_bg">
-                <h2>Frequently Asked Questions</h2>
+                <h2>{{__('messages.faq')}}</h2>
             </div>
             <div class="card-body">
                 <div class="accordion">
                     @foreach($questions as $value)
                         <div class="accordion-item">
                             <button class="accordion-header" data-toggle>
-                                <span>{{$value->question_en}}</span>
+                                <span>{{$value->{'question_' . app()->getLocale()} }}</span>
                                 <span class="icon">+</span>
                             </button>
                             <div class="accordion-content">
-                                <p class="content_p">{{$value->answer_en}}</p>
+                                <p class="content_p">{{$value->{'answer_' . app()->getLocale()} }}</p>
                             </div>
                         </div>
                     @endforeach

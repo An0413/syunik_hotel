@@ -45,6 +45,11 @@
                                    value="{{$rooms->discount}}">
                         </div>
                         <div class="mb-3">
+                            <label for="capacity" class="form-label">Մարդիկ</label>
+                            <input type="number" class="form-control" id="capacity" name="capacity"
+                                   value="{{$rooms->capacity}}">
+                        </div>
+                        <div class="mb-3">
                             <label for="childs" class="form-label">Երեխաներ</label>
                             <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example"
                                     name="childs">
@@ -65,9 +70,9 @@
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="stage" class="form-label">Հարկ</label>
-                            <input type="number" class="form-control" id="stage" name="stage" min="1" max="12"
-                                   value="{{$rooms->stage}}">
+                            <label for="floor" class="form-label">Հարկ</label>
+                            <input type="number" class="form-control" id="floor" name="floor" min="1" max="12"
+                                   value="{{$rooms->floor}}">
                         </div>
                         <div class="mb-3">
                             <label for="number" class="form-label">Համար</label>

@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="mb-3 mt-3">
                                     <label for="seq" class="form-label">Հերթականություն</label>
-                                    <input class="form-control" type="number" name="seq" min="1">
+                                    <input class="form-control" type="number" name="seq" min="1" required>
                                     <small class="text-danger" id="nameError" style="display: none;">Հերթականության դաշտը պարտադիր է։</small>
                                 </div>
                                 <div class="mb-3">
@@ -61,8 +61,7 @@
                                 <div class="mb-3">
                                     <label for="image" class="form-label">Լուսանկար</label>
                                     <input class="form-control" type="file" id="image_am" name="image"
-                                           accept="image/jpeg, image/jpg, image/png, image/gif">
-                                    <small class="text-danger" id="nameError" style="display: none;">Նկարի դաշտը պարտադիր է։</small>
+                                           accept="image/jpeg, image/jpg, image/png, image/gif" required>
                                 </div>
                                 <div class="mb-3">
                                     <img src="" alt="" class="create_img" id="img_am">
@@ -92,7 +91,7 @@
                                 </div>
                                 <div class="mb-3 mt-3">
                                     <label for="seq" class="form-label">Последовательность</label>
-                                    <input class="form-control" type="number" name="seq" min="1">
+                                    <input class="form-control" type="number" name="seq" min="1" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="meta_keyword" class="form-label">Ключевое слово</label>
@@ -115,7 +114,7 @@
                                 <div class="mb-3">
                                     <label for="image" class="form-label">Фото</label>
                                     <input class="form-control" type="file" id="image_ru" name="image"
-                                           accept="image/jpeg, image/jpg, image/png, image/gif">
+                                           accept="image/jpeg, image/jpg, image/png, image/gif" required>
                                 </div>
                                 <div class="mb-3">
                                     <img src="" alt="" class="create_img" id="img_ru">
@@ -145,7 +144,7 @@
                                 </div>
                                 <div class="mb-3 mt-3">
                                     <label for="seq" class="form-label">Sequence</label>
-                                    <input class="form-control" type="number" name="seq" min="1">
+                                    <input class="form-control" type="number" name="seq" min="1" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="meta_keyword" class="form-label">Keyword</label>
@@ -168,7 +167,7 @@
                                 <div class="mb-3">
                                     <label for="image" class="form-label">Photo</label>
                                     <input class="form-control" type="file" id="image_en" name="image"
-                                           accept="image/jpeg, image/jpg, image/png, image/gif">
+                                           accept="image/jpeg, image/jpg, image/png, image/gif" required>
                                 </div>
                                 <div class="mb-3">
                                     <img src="" alt="" class="create_img" id="img_en">
@@ -193,61 +192,13 @@
             </div>
         </div>
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const forms = document.querySelectorAll("form");
-
-                forms.forEach((form) => {
-                    form.addEventListener("submit", function (event) {
-                        let isValid = true;
-                        const langId = form.querySelector('input[name="lang_id"]').value; // Լեզվի ID
-
-                        const seqField = form.querySelector('input[name="seq"]');
-                        const nameField = form.querySelector('input[name="name"]');
-                        const imageField = form.querySelector('input[name="image"]');
-
-                        if (seqField && seqField.value.trim() === "") {
-                            alert(`Պարտադիր է լրացնել "Հերթականություն" դաշտը (${getLang(langId)}):`);
-                            isValid = false;
-                        }
-
-                        if (nameField && nameField.value.trim() === "") {
-                            alert(`Պարտադիր է լրացնել "Անուն" դաշտը (${getLang(langId)}):`);
-                            isValid = false;
-                        }
-
-                        if (imageField && imageField.files.length === 0) {
-                            alert(`Պարտադիր է ավելացնել "Լուսանկար" (${getLang(langId)}):`);
-                            isValid = false;
-                        }
-
-                        if (!isValid) {
-                            event.preventDefault();
-                        }
-                    });
-                });
-
-                function getLang(langId) {
-                    switch (langId) {
-                        case "1":
-                            return "Հայերեն";
-                        case "2":
-                            return "Русский";
-                        case "3":
-                            return "English";
-                        default:
-                            return "Unknown";
-                    }
-                }
-            });
-
-
             let video_am = document.querySelector('#video_am');
             let mtVideo_am = document.querySelector('#blog_video_am');
             video_am.onchange = evt => {
                 const [file] = video_am.files
                 if (file) {
-                    video_am.src = URL.createObjectURL(file);
-                    video_am.style.visibility = 'visible';
+                    mtVideo_am.src = URL.createObjectURL(file);
+                    mtVideo_am.style.visibility = 'visible';
                 }
             }
 
