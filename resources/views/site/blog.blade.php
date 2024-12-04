@@ -15,7 +15,7 @@
         <!-- Breadcrumb Section End -->
 
         <!-- Blog Section Begin -->
-        <section class="blog-section blog-page spad">
+        <section class="blog-section blog-page spad" id="spad">
             <div class="container">
                 <div class="row">
                     @foreach($blog as $value)

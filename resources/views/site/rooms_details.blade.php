@@ -14,7 +14,7 @@
     </div>
     <!-- Breadcrumb Section End -->
     <!-- Room Details Section Begin -->
-    <section class="room-details-section spad">
+    <section class="room-details-section spad" id="spad">
         <div class="container">
             <div class="row">
                 @if(1 == 2)
@@ -38,7 +38,7 @@
                             @if($room->discount > 0)
                                 <h3>
                                     <del style="color: red">{{$room->price}} AMD
-                                    </del> &nbsp;&nbsp;{{ $room->price - $room->price * $room->discount/100}}AMD<span>/{{__('messages.pernight')}}</span>
+                                    </del> &nbsp;&nbsp;{{ $room->discount}}AMD<span>/{{__('messages.pernight')}}</span>
                                 </h3>
                             @else
                                 <h3>{{$room->price}} AMD<span>/{{__('messages.pernight')}}</span></h3>
