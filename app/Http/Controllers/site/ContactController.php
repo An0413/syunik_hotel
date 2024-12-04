@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\site;
 
 use App\Http\Requests\Site\ContactRequest;
+use App\Mail\MyTestEmail;
 use App\Models\Contact;
 use http\Env\Request;
 use Illuminate\Support\Facades\DB;
@@ -26,9 +27,17 @@ class ContactController
         $data["status"] = 1;
 
         $result = DB::table('messages_to_admin')->insert([
-            'name' => $data["user_name"], 'email' => $data["user_email"], 'message' => $data["user_message"],
+            'name' => $data["user_name"],
+            'email' => $data["user_email"],
+            'message' => $data["user_message"],
             'status' => $data["status"]
         ]);
+        Mail::to(['hayk.margaryan.1982@gmail.com'])->send(new MyTestEmail([
+            'name' => $data["user_name"],
+            'mail' => $data["user_email"],
+            'content' => $data["user_message"],
+        ]));
+
 
         if ($result) {
             return redirect()->back()->with('success', 'Ձեր հաղորդագրությունը հաջողությամբ ուղարկվել է !');

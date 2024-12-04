@@ -36,11 +36,11 @@
                             </div>
                             @if($room->discount > 0)
                                 <h3>
-                                    <del style="color: red">{{$room->price}}AMD
-                                    </del> &nbsp;&nbsp;{{ $room->price - $room->price * $room->discount/100}}$<span>/{{__('messages.pernight')}}</span>
+                                    <del style="color: red">{{$room->price}} AMD
+                                    </del> &nbsp;&nbsp;{{ $room->price - $room->price * $room->discount/100}}AMD<span>/{{__('messages.pernight')}}</span>
                                 </h3>
                             @else
-                                <h3>{{$room->price}}$<span>/{{__('messages.pernight')}}</span></h3>
+                                <h3>{{$room->price}} AMD<span>/{{__('messages.pernight')}}</span></h3>
                             @endif
                             <table>
                                 <tbody>
@@ -147,7 +147,7 @@
                                         </div>
                                     </div>
                                     <textarea placeholder="Your Review"></textarea>
-                                    <button type="submit">Submit Now</button>
+                                    <button type="submit">{{__('messages.submit')}}</button>
                                 </div>
                             </div>
                         </form>
@@ -155,42 +155,42 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="room-booking">
-                        <h3>Your Reservation</h3>
+                        <h3>{{__('messages.reservation')}}</h3>
                         <form action="#" method="post">
                             <div class="check-date">
-                                <label for="date-in">Check In:</label>
+                                <label for="date-in">{{__('messages.check_in')}}</label>
                                 <input type="text" class="date-input" id="date-in">
                                 <i class="icon_calendar"></i>
                             </div>
                             <div class="check-date">
-                                <label for="date-out">Check Out:</label>
+                                <label for="date-out">{{__('messages.check_out')}}</label>
                                 <input type="text" class="date-input" id="date-out">
                                 <i class="icon_calendar"></i>
                             </div>
                             <div class="select-option">
-                                <label for="guest">Guests:</label>
+                                <label for="guest">{{__('messages.guests')}}</label>
                                 <select id="guest" name="adults">
-                                    <option value="1">1 Adults</option>
-                                    <option value="2">2 Adults</option>
-                                    <option value="3">3 Adults</option>
-                                    <option value="4">4 Adults</option>
+                                    <option value="1">1 {{__('messages.adult')}}</option>
+                                    <option value="2">2 {{__('messages.adults')}}</option>
+                                    <option value="3">3 {{__('messages.adults')}}</option>
+                                    <option value="4">4 {{__('messages.adults')}}</option>
                                 </select>
-                                <label for="guest">childs:</label>
+                                <label for="guest">{{__('messages.child')}}:</label>
                                 <select id="childs" name="childs">
                                     <option value=""></option>
-                                    <option value="1">1 childs</option>
-                                    <option value="2">2 childs</option>
-                                    <option value="3">3 childs</option>
-                                    <option value="4">4 childs</option>
+                                    <option value="1">1 {{__('messages.child2')}}</option>
+                                    <option value="2">2 {{__('messages.child3')}}</option>
+                                    <option value="3">3 {{__('messages.child3')}}</option>
+                                    <option value="4">4 {{__('messages.child3')}}</option>
                                 </select>
                             </div>
                             <div class="select-option">
-                                <label for="room">Room:</label>
+                                <label for="room">{{__('messages.rooms')}}:</label>
                                 <select id="room">
-                                    <option value="">1 Room</option>
+                                    <option value="">1 {{__('messages.room2')}}</option>
                                 </select>
                             </div>
-                            <button type="submit">Check Availability</button>
+                            <button type="submit">{{__('messages.availability')}}</button>
                         </form>
                     </div>
                 </div>
