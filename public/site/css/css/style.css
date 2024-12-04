@@ -2025,3 +2025,7 @@ footer .form-subscribe .form-control:active, footer .form-subscribe .form-contro
     bottom: 20px!important;
     right: 20px!important;
 }
+
+.dropdown-menu {
+    margin: 0;
+}
