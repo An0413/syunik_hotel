@@ -38,6 +38,7 @@
 
 .message-container {
     max-height: 150px;
+    width: 200px;
     overflow: auto;
     padding: 5px;
     background-color: #f8f9fa;
