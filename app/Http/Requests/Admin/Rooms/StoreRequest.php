@@ -30,7 +30,7 @@ class StoreRequest extends FormRequest
             'capacity' => 'numeric|required',
             'childs' => 'numeric|required',
             'type_id' => 'numeric|required',
-            'stage' => 'numeric|required',
+            'floor' => 'numeric|required',
             'price' => 'numeric|required',
             'discount' => 'numeric|required',
             'number' => 'numeric|required',

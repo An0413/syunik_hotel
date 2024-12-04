@@ -28,8 +28,8 @@
                              aria-labelledby="armenian-tab">
                             <h6 class="mt-4 mb-4">Մեր մասին</h6>
                             <div class="row">
-                                <div class="col-10"></div>
-                                <div class="col-2">
+                                <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10"></div>
+                                <div class="col-lg-12 col-xl-2 col-sm-2 col-md-2">
                                     <a href="{{route('about_create')}}">
                                         <button class="btn bg-primary create_button">Ավելացնել</button>
                                     </a>
@@ -91,8 +91,8 @@
                         <div class="tab-pane fade" id="russian" role="tabpanel" aria-labelledby="russian-tab">
                             <h6 class="mt-4 mb-4">Մեր առավելությունները</h6>
                             <div class="row">
-                                <div class="col-10"></div>
-                                <div class="col-2">
+                                <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10"></div>
+                                <div class="col-lg-12 col-xl-2 col-sm-2 col-md-2">
                                     <a href="{{route('about_details_create')}}">
                                         <button class="btn bg-primary create_button">Ավելացնել</button>
                                     </a>
@@ -148,8 +148,8 @@
                         <div class="tab-pane fade" id="english" role="tabpanel" aria-labelledby="english-tab">
                             <h6 class="mt-4 mb-4">Լուսանկարներ</h6>
                             <div class="row">
-                                <div class="col-10"></div>
-                                <div class="col-2">
+                                <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10"></div>
+                                <div class="col-lg-12 col-xl-2 col-sm-2 col-md-2">
                                     <a href="{{route('about_images_create')}}">
                                         <button class="btn bg-primary create_button">Ավելացնել լուսանկար</button>
                                     </a>

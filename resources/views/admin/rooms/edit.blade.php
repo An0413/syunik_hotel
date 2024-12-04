@@ -70,9 +70,9 @@
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="stage" class="form-label">Հարկ</label>
-                            <input type="number" class="form-control" id="stage" name="stage" min="1" max="12"
-                                   value="{{$rooms->stage}}">
+                            <label for="floor" class="form-label">Հարկ</label>
+                            <input type="number" class="form-control" id="floor" name="floor" min="1" max="12"
+                                   value="{{$rooms->floor}}">
                         </div>
                         <div class="mb-3">
                             <label for="number" class="form-label">Համար</label>

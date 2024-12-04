@@ -61,7 +61,7 @@
                         <span class="d-none d-lg-inline-flex">Նամակներ</span>
                     </a>
                     @php
-                        $messages = \App\Models\Messages::orderBy('id', 'desc')->get();
+                        $messages = \App\Models\MessagesToAdmin::orderBy('id', 'desc')->get();
                     @endphp
                     <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                         @foreach($messages as $key=>$value)
@@ -71,7 +71,7 @@
                                         <h4 class="fw-normal mb-0">{{$value->name}}</h4>
                                         <small>{{$value->email}}</small>
                                         <hr class="dropdown-divider">
-                                        <p  class="message-content">{{$value->message}}</p>
+                                        <p class="message-content">{{$value->message}}</p>
                                     </div>
                                 </div>
                             </a>
@@ -92,7 +92,8 @@
                         <form id="logoutForm" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
-                        <a href="#" class="dropdown-item" onclick="document.getElementById('logoutForm').submit();">Դուրս գալ</a>
+                        <a href="#" class="dropdown-item" onclick="document.getElementById('logoutForm').submit();">Դուրս
+                            գալ</a>
                     </div>
                 </div>
             </div>

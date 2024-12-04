@@ -6,8 +6,8 @@
                 <div class="bg-light rounded h-100 p-4">
                     <h6 class="mb-4">Սենյակի Լուսանկարներ</h6>
                     <div class="row">
-                        <div class="col-10"></div>
-                        <div class="col-2">
+                        <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10"></div>
+                        <div class="col-lg-12 col-xl-2 col-sm-2 col-md-2">
                             <a href="{{route('rooms_images_create', $id)}}">
                                 <button class="btn bg-primary create_button">Ավելացնել</button>
                             </a>

@@ -6,6 +6,7 @@ use App\Http\Requests\Site\ContactRequest;
 use App\Models\Contact;
 use http\Env\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController
 {
@@ -24,7 +25,7 @@ class ContactController
         $data["user_message"] = $request->user_message;
         $data["status"] = 1;
 
-        $result = DB::table('messages')->insert([
+        $result = DB::table('messages_to_admin')->insert([
             'name' => $data["user_name"], 'email' => $data["user_email"], 'message' => $data["user_message"],
             'status' => $data["status"]
         ]);

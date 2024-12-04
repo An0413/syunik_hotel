@@ -27,8 +27,8 @@
                              aria-labelledby="armenian-tab">
                             <h6 class="mb-4 mt-3">Բլոգ</h6>
                             <div class="row">
-                                <div class="col-10"></div>
-                                <div class="col-2">
+                                <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10"></div>
+                                <div class="col-lg-12 col-xl-2 col-sm-2 col-md-2">
                                     <a href="{{route('blog_create')}}">
                                         <button class="btn bg-primary create_button">Ավելացնել</button>
                                     </a>
@@ -98,8 +98,8 @@
                         <div class="tab-pane fade" id="russian" role="tabpanel" aria-labelledby="russian-tab">
                             <h6 class="mb-4 mt-3">Блог</h6>
                             <div class="row">
-                                <div class="col-10"></div>
-                                <div class="col-2">
+                                <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10"></div>
+                                <div class="col-lg-12 col-xl-2 col-sm-2 col-md-2">
                                     <a href="{{route('blog_create')}}">
                                         <button class="btn bg-primary create_button">Добавлять</button>
                                     </a>
@@ -164,8 +164,8 @@
                         <div class="tab-pane fade" id="english" role="tabpanel" aria-labelledby="english-tab">
                             <h6 class="mb-4 mt-3">Blog</h6>
                             <div class="row">
-                                <div class="col-10"></div>
-                                <div class="col-2">
+                                <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10"></div>
+                                <div class="col-lg-12 col-xl-2 col-sm-2 col-md-2">
                                     <a href="{{route('blog_create')}}">
                                         <button class="btn bg-primary create_button">Add</button>
                                     </a>
