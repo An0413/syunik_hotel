@@ -61,7 +61,7 @@
                         <span class="d-none d-lg-inline-flex">Նամակներ</span>
                     </a>
                     @php
-                        $messages = \App\Models\Messages::orderBy('id', 'desc')->get();
+                        $messages = \App\Models\MessagesToAdmin::orderBy('id', 'desc')->get();
                     @endphp
                     <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                         @foreach($messages as $key=>$value)

@@ -132,10 +132,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="hp-room-items">
-                    <div class="row pt-3">
+                <div class="hp-room-items  pt-3">
+                    <div class="row">
                         @foreach($rooms as $value)
-                            <div class="col-lg-3 col-md-6">
+                            <div class="col-lg-3 col-md-4 col-sm-6 mt-2">
                                 <div class="hp-room-item set-bg room_item"
                                      data-href="{{route('site_rooms_details', $value->id)}}"
                                      data-setbg="{{asset('images/rooms/' . $value->image)}}">

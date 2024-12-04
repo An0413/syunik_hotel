@@ -5,7 +5,7 @@ use App\Models\Rooms;
 class RoomsController
 {
     public function rooms() {
-        $rooms = Rooms::where('status', 1)->orderBy('seq', 'ASC')->get();
+        $rooms = Rooms::where('status', 1)->orderBy('seq', 'ASC')->paginate(6);
         $active = 'rooms';
         return view('site.rooms', compact('rooms','active'));
     }
