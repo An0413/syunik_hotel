@@ -12,7 +12,7 @@
 
         <!-- About Us Section Begin -->
         <section class="aboutus-section spad ">
-            <div class="container ">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6">
                         @foreach($about as $value)
@@ -99,7 +99,7 @@
         </section>
         <!-- Home Room Section End -->
         <div class="untree_co--site-section">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="container pt-3 pb-5">
                     <div class="row justify-content-center text-center">
                         <div class="col-lg-6 section-heading" data-aos="fade-up">
@@ -125,7 +125,7 @@
         </div>
         <!-- Breadcrumb Section Begin -->
         <div class="breadcrumb-section breadcrumb_blog">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="breadcrumb-text">
@@ -142,7 +142,7 @@
         <!-- Breadcrumb Section End -->
         <!-- Blog Section Begin -->
         <section class="blog-section blog-page spad">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     @foreach($blog as $value)
                         <div class="col-lg-4 col-md-6">
@@ -167,7 +167,7 @@
         <!-- Blog Section End -->
         <!-- Map Section Begin -->
         <section class="contact-section spad">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98576.22921549056!2d46.22282235250755!3d39.457869848898824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403e00e3af71aded%3A0x126cd3448dc8c82c!2sSyunik%20Hotel!5e0!3m2!1shy!2sam!4v1732196431786!5m2!1shy!2sam"
@@ -178,7 +178,7 @@
         <!-- Map Section End -->
     </div>
     <!-- FAQ begin -->
-    <section class="container">
+    <section class="container-fluid">
         <!-- FAQ begin -->
         <div class="card card_border">
             <div class="card-header text-center card_bg">
