@@ -40,5 +40,9 @@ return [
     'availability' => 'Check Availability',
     'room2' => 'Room',
     'faq' => 'Frequently Asked Questions',
+    'comments'=>'Comments',
+    'send_comment'=>'Send comment',
+    'recommended'=>'Recommended',
+
 
 ];
