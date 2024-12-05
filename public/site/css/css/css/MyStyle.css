@@ -59,7 +59,7 @@ div.c input {
     height: 100%;
     width: 100%;
     opacity: 0;
-    visibility: 0;
+    visibility: hidden;
 }
 
 div.c h4 {
