@@ -16,7 +16,7 @@
     <!-- Breadcrumb Section End -->
 
     <!-- About Us Page Section Begin -->
-    <section class="aboutus-page-section spad">
+    <section class="aboutus-page-section spad" id="spad">
         <div class="container">
             <div class="about-page-text">
                 <div class="row">

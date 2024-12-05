@@ -273,5 +273,33 @@ div.c input:checked ~ h4 ~ div.p {
 @media screen and (max-width: 680px) {
     #spad {
         margin-top: 10px;
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .breadcrumb-section {
+        padding-top: 35px;
+        padding-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .contact-text h2 {
+        font-size: 30px;
+        color: #19191a;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .section-heading h3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .about-page-text .ap-title h2 {
+        font-size: 30px;
     }
 }
