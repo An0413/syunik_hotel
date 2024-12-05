@@ -7,10 +7,10 @@
             <span>{{ $comment->created_at->format('F j, Y') }}</span>
             <h5>{{ $comment->name }}</h5>
             <p>{{ $comment->comment }}</p>
-            <a href="#" class="comment-btn">Like</a>
+            <a href="#" class="comment-btn">{{__('messages.like')}}</a>
             <button type="button" class="btn comment-btn reply-btn" data-toggle="modal"
                     data-target="#replyModal" data-id="{{ $comment->id }}">
-                Reply
+                {{__('messages.reply')}}
             </button>
         </div>
 
