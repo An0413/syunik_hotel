@@ -79,6 +79,10 @@
                             <label for="surface" class="form-label">Մակերես/մ<sup>2</sup></label>
                             <input type="number" class="form-control" id="surface" name="surface" required>
                         </div>
+                        <div class="mb-3">
+                            <label for="booking" class="form-label">Ամրագրման կոդ</label>
+                            <input type="text" class="form-control" id="booking" name="booking">
+                        </div>
                         <button type="submit" class="btn btn-primary">Ավելացնել</button>
                     </form>
                 </div>

@@ -15,4 +15,8 @@ class Rooms extends Model
     public function roomType(){
         return $this->hasOne(RoomType::class,  'id', 'type_id');
     }
+
+    public function bookings(){
+        return $this->hasOne(Book::class,  'room_id', 'id');
+    }
 }
