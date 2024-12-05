@@ -17,23 +17,19 @@
     <section class="room-details-section spad" id="spad">
         <div class="container">
             <div class="row">
-                @if(1 == 2)
-                <div class="col-lg-8">
+                <div class="col-md-8">
                     <div class="room-details-item">
                         <img src="{{asset('site/images/SonImg/room/'.$room->image)}}" alt="">
+                        <p class="f-para">
+                            {{$room->{'info_' . App::getLocale()} }}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="room-details-item">
                         <div class="rd-text">
                             <div class="rd-title">
                                 <h3>{{$room->roomType->type_en}}</h3>
-                                <div class="rdt-right">
-                                    <div class="rating">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star-half_alt"></i>
-                                    </div>
-                                    <a href="#">{{__('messages.booking')}}</a>
-                                </div>
                             </div>
                             @if($room->discount > 0)
                                 <h3>
@@ -71,20 +67,17 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <p class="f-para">Motorhome or Trailer that is the question for you. Here are some of the
-                                advantages and disadvantages of both, so you will be confident when purchasing an RV.
-                                When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
-                                wheeler? The advantages and disadvantages of both are studied so that you can make your
-                                choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
-                                achievement of a lifetime. It can be similar to sojourning with your residence as you
-                                search the various sites of our great land, America.</p>
-                            <p>The two commonly known recreational vehicle classes are the motorized and towable.
-                                Towable rvs are the travel trailers and the fifth wheel. The rv travel trailer or fifth
-                                wheel has the attraction of getting towed by a pickup or a car, thus giving the
-                                adaptability of possessing transportation for you when you are parked at your campsite.
-                            </p>
+                            <div class="rd-title">
+                                <div class="rdt-right">
+                                    <a href="{{route('book', $room->id)}}">{{__('messages.booking')}}</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
                     <div class="rd-reviews">
                         <h4>Reviews</h4>
                         <div class="review-item">
@@ -195,26 +188,9 @@
                         </form>
                     </div>
                 </div>
-                @else
-                    @if(1 == 1)
-                        <iframe id="dynamicIframe" src ="https://tatiosa.net/booking2.php?propid=244859&amp;numadult=2&amp;advancedays=-1&amp;referer=SyunikHotel.com" width="100%" style="max-width:100%;border:none;overflow:auto;"><p><a href="https://tatiosa.net/booking2.php?propid=244859&amp;referer=SyunikHotel.com" title="Book Now">Book Now</a></p></iframe>
-                    @else
-                        <iframe id="dynamicIframe" src ="https://tatiosa.net/booking2.php?propid=244859&roomid=515500&amp;numadult=2&amp;advancedays=-1&amp;referer=SyunikHotel.com" width="100%" style="max-width:100%;border:none;overflow:auto;"><p><a href="https://tatiosa.net/booking2.php?propid=244859&amp;referer=SyunikHotel.com" title="Book Now">Book Now</a></p></iframe>
-                    @endif
-                @endif
-
             </div>
         </div>
     </section>
     <!-- Room Details Section End -->
-    <script>
-        const iframe = document.getElementById('dynamicIframe');
-
-        iframe.onload = () => {
-            const iframeContentHeight = iframe.contentWindow.document.body.scrollHeight;
-            iframe.style.height = iframeContentHeight + 'px';
-        };
-
-    </script>
 @endsection
 
