@@ -29,7 +29,7 @@
                     <div class="room-details-item">
                         <div class="rd-text">
                             <div class="rd-title">
-                                <h3>{{$room->roomType->type_en}}</h3>
+                                <h3>{{$room->roomType->{'type_' . app()->getLocale()} }}</h3>
                             </div>
                             @if($room->discount > 0)
                                 <h3>
@@ -67,6 +67,7 @@
                                 </tr>
                                 </tbody>
                             </table>
+
                             <div class="rd-title">
                                 <div class="rdt-right">
                                     <a href="{{route('book', $room->id)}}">{{__('messages.booking')}}</a>

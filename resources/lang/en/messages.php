@@ -43,6 +43,15 @@ return [
     'comments'=>'Comments',
     'send_comment'=>'Send comment',
     'recommended'=>'Recommended',
+    'leave_comment'=>'Leave A Comment',
+    'like'=>'Like',
+    'reply'=>'Reply',
+    'cname'=>'Name',
+    'cemail'=>'Email',
+    'comment'=>'Comment',
+    'close'=>'Close',
+    'replyText'=>'Leave Your Reply Comment Here'
+
 
 
 ];

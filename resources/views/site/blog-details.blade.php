@@ -1,27 +1,6 @@
 @extends('site.layout.layout')
 @section('content')
     <div class="untree_co--site-wrap">
-
-
-        <!-- Blog Details Hero Section Begin -->
-    {{--        <div class="bd-hero-text">--}}
-    {{--            @foreach($blog_details as $value)--}}
-    {{--                <section class="blog-details-hero set-bg"--}}
-    {{--                         data-setbg="{{asset('/images/blog/' . $value->image)}}">--}}
-    {{--                    <div class="container">--}}
-    {{--                        <div class="row">--}}
-    {{--                            <div class="col-lg-10 offset-lg-1">--}}
-
-    {{--                                --}}{{--                                <span>Travel Trip & Camping</span>--}}
-    {{--                                <h2>{{$value->name}}</h2>--}}
-    {{--                            </div>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                </section>--}}
-    {{--            @endforeach--}}
-    {{--        </div>--}}
-    <!-- Blog Details Hero End -->
-
         <!-- Blog Details Section Begin -->
         <section class="blog-details-section details_section">
             <div class="container">
@@ -53,14 +32,14 @@
                                                 alt="">
                                         </div>
                                         <div class="sc-text">
-                                            <span>{{$value->created_at->format('F j, Y')}}</span>
+                                            <span>{{$value->created_at->format('d/m/Y')}}</span>
                                             <h5>{{$value->name}}</h5>
                                             <p>{{$value->comment}}</p>
-                                            <a href="#" class="comment-btn">Like</a>
+                                            <a href="#" class="comment-btn">{{__('messages.like')}}</a>
                                             {{--<a href="#" class="comment-btn">Reply</a>--}}
                                             <button type="button" class="btn comment-btn reply-btn" data-toggle="modal"
                                                     data-target="#replyModal" data-id="{{$value->id}}">
-                                                Reply
+                                                {{__('messages.reply')}}
                                             </button>
                                         </div>
                                     </div>
@@ -70,22 +49,26 @@
                                 @endforeach
                             </div>
                             <div class="leave-comment">
-                                <h4>Leave A Comment</h4>
+                                <h4>{{__('messages.leave_comment')}}</h4>
                                 <form action="{{route('comment', $id)}}" method="post" role="form" class="comment-form">
                                     @csrf
                                     <input type="hidden" name="parent_id" value="0">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <input type="text" placeholder="Name" name="name" id="name">
+                                            <input type="text" placeholder="{{__('messages.cname')}}" name="name"
+                                                   id="name">
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="text" placeholder="Email" name="email" id="comment">
+                                            <input type="text" placeholder="{{__('messages.cemail')}}" name="email"
+                                                   id="comment">
                                         </div>
                                         <div class="col-lg-12 text-center">
-                                            <textarea placeholder="Comment" name="comment" id="comment"></textarea>
+                                            <textarea placeholder="{{__('messages.comment')}}" name="comment"
+                                                      id="comment"></textarea>
                                         </div>
                                         <div class="col-lg-12 text-center">
-                                            <button type="submit" class="site-btn">{{__('messages.send_comment')}}</button>
+                                            <button type="submit"
+                                                    class="site-btn">{{__('messages.send_comment')}}</button>
                                         </div>
                                     </div>
                                 </form>
@@ -133,30 +116,33 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <h5 class="modal-title text-center reply_text" id="replyModalLabel"><b>Leave your reply comment
-                            here</b></h5>
+                    <h5 class="modal-title text-center reply_text" id="replyModalLabel">
+                        <b>{{__('messages.replyText')}}</b></h5>
                     <form action="{{route('comment', $id)}}" method="post" role="form" class="comment-form">
                         @csrf
                         <input type="hidden" name="parent_id" value="0" id="parent_id">
                         <div class="row mt-4">
                             <div class="col-lg-12 text-center">
-                                <input type="text" placeholder="Name" name="name" id="name" class="name_com">
+                                <input type="text" placeholder="{{__('messages.cname')}}" name="name" id="name"
+                                       class="name_com">
                             </div>
                             <div class="col-lg-12 text-center">
-                                <input type="text" placeholder="Email" name="email" id="comment" class="name_com">
+                                <input type="text" placeholder="{{__('messages.cemail')}}" name="email" id="comment"
+                                       class="name_com">
                             </div>
                             <div class="col-lg-12 text-center">
-                                <textarea placeholder="Comment reply" name="comment" id="comment"
+                                <textarea placeholder="{{__('messages.comment')}}" name="comment" id="comment"
                                           class="com_message"></textarea>
                             </div>
                             <div class="col-lg-12 text-center">
-                                <button type="submit" class="site-btn send_comment">Send Comment</button>
+                                <button type="submit"
+                                        class="site-btn send_comment">{{__('messages.send_comment')}}</button>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn close_btn" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn close_btn" data-dismiss="modal">{{__('messages.close')}}</button>
                 </div>
             </div>
         </div>
