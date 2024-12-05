@@ -28,25 +28,23 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="blog-details-text">
-                            @foreach($blog_details as $value)
-                                <div class="blog_name">
-                                    <p class="b_name">{{$value->name}}</p>
+                            <div class="blog_name">
+                                <p class="b_name">{{$blog_detail->name}}</p>
+                            </div>
+                            <div class="row">
+                                <div class="bd-title col-12 col-md-6 mb-4">
+                                    <p>{{$blog_detail->info}}</p>
                                 </div>
-                                <div class="row">
-                                    <div class="bd-title col-12 col-md-6 mb-4">
-                                        <p>{{$value->info}}</p>
-                                    </div>
-                                    <div class="col-12 col-md-6 mb-4">
-                                        <video controls autoplay muted class="w-100">
-                                            <source src="{{asset('/video/blog/'. $value->video)}}"
-                                                    type="video/{{ pathinfo($value->video, PATHINFO_EXTENSION) }}">
-                                        </video>
-                                    </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                    <video controls autoplay muted class="w-100">
+                                        <source src="{{asset('/video/blog/'. $blog_detail->video)}}"
+                                                type="video/{{ pathinfo($blog_detail->video, PATHINFO_EXTENSION) }}">
+                                    </video>
                                 </div>
-                            @endforeach
+                            </div>
                             <!-- Comments -->
                             <div class="comment-option mt-5">
-                                <h4>{{$comment_count}} Comments</h4>
+                                <h4>{{$comment_count}} {{__('messages.comments')}}</h4>
                                 @foreach($nestedComments as $value)
                                     <div class="single-comment-item first-comment">
                                         <div class="sc-author">
@@ -55,7 +53,7 @@
                                                 alt="">
                                         </div>
                                         <div class="sc-text">
-                                            <span>{{$value->created_at}}</span>
+                                            <span>{{$value->created_at->format('F j, Y')}}</span>
                                             <h5>{{$value->name}}</h5>
                                             <p>{{$value->comment}}</p>
                                             <a href="#" class="comment-btn">Like</a>
@@ -67,7 +65,7 @@
                                         </div>
                                     </div>
                                     @if (isset($value->replies) && count($value->replies) > 0)
-                                            @include('site.comment_array', ['comments' => $value->replies])
+                                        @include('site.comment_array', ['comments' => $value->replies])
                                     @endif
                                 @endforeach
                             </div>
@@ -87,7 +85,7 @@
                                             <textarea placeholder="Comment" name="comment" id="comment"></textarea>
                                         </div>
                                         <div class="col-lg-12 text-center">
-                                            <button type="submit" class="site-btn">Send Comment</button>
+                                            <button type="submit" class="site-btn">{{__('messages.send_comment')}}</button>
                                         </div>
                                     </div>
                                 </form>
@@ -106,7 +104,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title">
-                            <h2>Recommended</h2>
+                            <h2>{{__('messages.recommended')}}</h2>
                         </div>
                     </div>
                 </div>
