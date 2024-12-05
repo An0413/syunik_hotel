@@ -35,6 +35,7 @@ class StoreRequest extends FormRequest
             'discount' => 'numeric|required',
             'number' => 'numeric|required',
             'surface' => 'numeric|required',
+            'booking' => 'string|nullable',
             'image' => 'required|image|mimes:jpeg,jpg,png,gif',
         ];
     }
