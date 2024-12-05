@@ -17,22 +17,19 @@
     <section class="room-details-section spad" id="spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-md-8">
                     <div class="room-details-item">
                         <img src="{{asset('site/images/SonImg/room/'.$room->image)}}" alt="">
+                        <p class="f-para">
+                            {{$room->{'info_' . App::getLocale()} }}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="room-details-item">
                         <div class="rd-text">
                             <div class="rd-title">
                                 <h3>{{$room->roomType->{'type_' . app()->getLocale()} }}</h3>
-                                <div class="rdt-right">
-                                    <div class="rating">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star-half_alt"></i>
-                                    </div>
-                                    <a href="#">{{__('messages.booking')}}</a>
-                                </div>
                             </div>
                             @if($room->discount > 0)
                                 <h3>
@@ -70,9 +67,18 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <p class="f-para">{{$room->{'info_' . app()->getLocale()} }}</p>
+
+                            <div class="rd-title">
+                                <div class="rdt-right">
+                                    <a href="{{route('book', $room->id)}}">{{__('messages.booking')}}</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
                     <div class="rd-reviews">
                         <h4>Reviews</h4>
                         <div class="review-item">
@@ -187,14 +193,5 @@
         </div>
     </section>
     <!-- Room Details Section End -->
-    <script>
-        const iframe = document.getElementById('dynamicIframe');
-
-        iframe.onload = () => {
-            const iframeContentHeight = iframe.contentWindow.document.body.scrollHeight;
-            iframe.style.height = iframeContentHeight + 'px';
-        };
-
-    </script>
 @endsection
 

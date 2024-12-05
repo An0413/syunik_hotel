@@ -14,7 +14,7 @@
     </div>
     <!-- Breadcrumb Section End -->
     <!-- Contact Section Begin -->
-    <section class="contact-section spad">
+    <section class="contact-section spad" id="spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">

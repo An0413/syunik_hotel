@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\Admin;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\admin\RoomsController;
@@ -31,6 +32,7 @@ Route::get('/', [MainController::class, 'main'])->name('site');
 Route::post('/send-message', [ChatController::class, 'sendMessage']);
 Route::get('/messages', [ChatController::class, 'getMessages']);
 
+Route::get('book/{id}', [BookController::class, 'book'])->where('id', '[0-9]+')->name('book');
 Route::get('login', [AuthController::class, 'showLogin'])->name('login');
 Route::get('register', [AuthController::class, 'showRegister'])->middleware('auth')->name('register');
 

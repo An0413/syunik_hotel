@@ -1,23 +1,23 @@
 <body>
-<div class="position-fixed bottom-0 end-0 me-3 mb-3 br-20">
-    <button class="btn btn-primary rounded-circle" onclick="toggleChat()" id="chat-toggle-btn">💬</button>
+{{--<div class="position-fixed bottom-0 end-0 me-3 mb-3 br-20">--}}
+{{--    <button class="btn btn-primary rounded-circle" onclick="toggleChat()" id="chat-toggle-btn">💬</button>--}}
 
-    <div id="chat-window" class="card shadow-lg" style="width: 300px; display: none;">
-        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-            <h6 class="mb-0">Live Chat</h6>
-            <button class="btn-close btn-close-white" onclick="toggleChat()"></button>
-        </div>
-        <div class="card-body" style="height: 300px; overflow-y: auto;" id="messages">
-            <div class="text-muted small text-center">Loading...</div>
-        </div>
-        <div class="card-footer">
-            <div class="input-group">
-                <input id="chat-input" type="text" class="form-control" placeholder="Type your message...">
-                <button class="btn btn-primary" onclick="sendMessage()">Send</button>
-            </div>
-        </div>
-    </div>
-</div>
+{{--    <div id="chat-window" class="card shadow-lg" style="width: 300px; display: none;">--}}
+{{--        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">--}}
+{{--            <h6 class="mb-0">Live Chat</h6>--}}
+{{--            <button class="btn-close btn-close-white" onclick="toggleChat()"></button>--}}
+{{--        </div>--}}
+{{--        <div class="card-body" style="height: 300px; overflow-y: auto;" id="messages">--}}
+{{--            <div class="text-muted small text-center">Loading...</div>--}}
+{{--        </div>--}}
+{{--        <div class="card-footer">--}}
+{{--            <div class="input-group">--}}
+{{--                <input id="chat-input" type="text" class="form-control" placeholder="Type your message...">--}}
+{{--                <button class="btn btn-primary" onclick="sendMessage()">Send</button>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
 
 <footer class="untree_co--site-footer">
 
