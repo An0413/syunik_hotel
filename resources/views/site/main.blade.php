@@ -31,10 +31,10 @@
                         <div class="about-pic">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <img src="{{asset('site/images/sonImg/about/about-1.jpg')}}" alt="">
+                                    <img src="{{asset('images/about/about-1.jpg')}}" alt="">
                                 </div>
                                 <div class="col-sm-6">
-                                    <img src="{{asset('site/images/sonImg/about/about-2.jpg')}}" alt="">
+                                    <img src="{{asset('images/about/about-2.jpg')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -112,7 +112,7 @@
                         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
                             <div class="media-29191 text-center h-100">
                                 <div class="media-29191-icon">
-                                    <img src="{{asset('site/images/images/svg/'.$value->icon)}}" alt="Image"
+                                    <img src="{{asset('images/services/'.$value->icon)}}" alt="Image"
                                          class="img-fluid">
                                 </div>
                                 <h3>{{$value->{'name_' . app()->getLocale()} }}</h3>
