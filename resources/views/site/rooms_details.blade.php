@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="room-details-item">
-                        <img src="{{asset('site/images/SonImg/room/'.$room->image)}}" alt="">
+                        <img src="{{asset('images/rooms/'.$room->image)}}" alt="">
                         <p class="f-para">
                             {{$room->{'info_' . App::getLocale()} }}
                         </p>
@@ -83,7 +83,7 @@
                         <h4>Reviews</h4>
                         <div class="review-item">
                             <div class="ri-pic">
-                                <img src="{{asset('site/images/sonImg/room/avatar/avatar-1.jpg')}}" alt="">
+                                <img src="{{asset('images/rooms/avatar/avatar-1.jpg')}}" alt="">
                             </div>
                             <div class="ri-text">
                                 <span>27 Aug 2019</span>
@@ -102,7 +102,7 @@
                         </div>
                         <div class="review-item">
                             <div class="ri-pic">
-                                <img src="{{asset('site/images/sonImg/room/avatar/avatar-2.jpg')}}" alt="">
+                                <img src="{{asset('images/rooms/avatar/avatar-2.jpg')}}" alt="">
                             </div>
                             <div class="ri-text">
                                 <span>27 Aug 2019</span>
