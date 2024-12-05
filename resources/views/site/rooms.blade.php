@@ -22,7 +22,7 @@
                         <div class="room-item">
                             <a href="{{asset('/rooms_details/'.$value->id)}}"
                                class="">
-                                <img src="{{asset('site/images/SonImg/room/'.$value->image)}}" alt="" class="imgResize">
+                                <img src="{{asset('images/rooms/'.$value->image)}}" alt="" class="imgResize">
                             </a>
                             <div class="ri-text">
                                 <h4>{{$value->roomType->{'type_' . app()->getLocale()} }}</h4>
