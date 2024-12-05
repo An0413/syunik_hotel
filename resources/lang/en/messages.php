@@ -12,7 +12,7 @@ return [
     'bed' => 'Bed',
     'floor' => 'Floor',
     'services' => 'Wifi, Television, Bathroom,...',
-    'booking' =>'Booking Now',
+    'booking' =>'Book Now',
     'king' => 'King Beds',
     'more' => 'More Details',
     'travel' => 'Travel Trip',

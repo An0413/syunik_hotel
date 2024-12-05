@@ -49,15 +49,9 @@
             </div>
             <div class="icons-wrap text-md-right">
                 <ul class="icons-top d-none d-lg-block">
-                    {{--                    <li class="mr-4">--}}
-                    {{--                        <a href="#" class="js-search-toggle"><span class="icon-search2"></span></a>--}}
-                    {{--                    </li>--}}
                     <li>
                         <a href="https://www.facebook.com/Syunikhotel" target="_blank"><span
                                 class="icon-facebook"></span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="icon-twitter" target="_blank"></span></a>
                     </li>
                     <li>
                         <a href="https://www.instagram.com/syunikhotel/?hl=am-et" target="_blank"><span
