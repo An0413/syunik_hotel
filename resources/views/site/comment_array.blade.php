@@ -4,7 +4,7 @@
             <img src="{{ asset('site/images/sonImg/blog/blog-details/avatar/avatar-1.jpg') }}" alt="">
         </div>
         <div class="sc-text">
-            <span>{{ $comment->created_at }}</span>
+            <span>{{ $comment->created_at->format('F j, Y') }}</span>
             <h5>{{ $comment->name }}</h5>
             <p>{{ $comment->comment }}</p>
             <a href="#" class="comment-btn">Like</a>
