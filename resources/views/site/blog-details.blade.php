@@ -28,14 +28,13 @@
                                     <div class="single-comment-item first-comment">
                                         <div class="sc-author">
                                             <img
-                                                src="{{asset('site/images/sonImg/blog/blog-details/avatar/avatar-1.jpg')}}"
+                                                src="{{asset('site/images/sonImg/com-user.jpg')}}"
                                                 alt="">
                                         </div>
                                         <div class="sc-text">
                                             <span>{{$value->created_at->format('d/m/Y')}}</span>
                                             <h5>{{$value->name}}</h5>
                                             <p>{{$value->comment}}</p>
-                                            <a href="#" class="comment-btn">{{__('messages.like')}}</a>
                                             {{--<a href="#" class="comment-btn">Reply</a>--}}
                                             <button type="button" class="btn comment-btn reply-btn" data-toggle="modal"
                                                     data-target="#replyModal" data-id="{{$value->id}}">
