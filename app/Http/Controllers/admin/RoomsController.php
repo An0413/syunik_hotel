@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Rooms\StoreRequest;
 use App\Http\Requests\Admin\Rooms\UpdateRequest;
+use App\Models\Book;
 use App\Models\Rooms;
 use App\Models\RoomType;
 use http\Env\Request;
@@ -31,7 +32,6 @@ class RoomsController extends Controller
     {
         $data = $request->validated();
         $data['user_id'] = 1;
-
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $image = $request->file('image');
             $ext = explode('.', $image->getClientOriginalName());
@@ -40,15 +40,25 @@ class RoomsController extends Controller
             $data['image'] = $imageName;
             $data['status'] = 1;
         }
-        Rooms::create($data);
+        $data_book = [
+            'book_iframe' => $data['booking']
+        ];
+        unset($data['booking']);
+        $room = Rooms::create($data);
+        $data_book['room_id'] = $room->id;
+
+        if (!empty($data_book['book_iframe'])) {
+            Book::create($data_book);
+        }
         return redirect()->route('rooms_show');
     }
 
     public function edit($id)
     {
         $rooms = Rooms::where('id', $id)->first();
+        $book = Book::where('room_id', $id)->first();
         $roomtype = RoomType::OrderBy('id', 'asc')->get();
-        return view('admin.rooms.edit', compact('rooms', 'roomtype'));
+        return view('admin.rooms.edit', compact('rooms', 'roomtype', 'book'));
     }
 
     public function update(UpdateRequest $request, $id)
@@ -67,7 +77,18 @@ class RoomsController extends Controller
             File::delete(public_path('images/rooms') . '/' . $room->image);
         }
 
+        $data_book = [
+            'book_iframe' => $data['booking']
+        ];
+        unset($up_data['booking']);
         Rooms::where('id', $id)->update($up_data);
+        $data_book['room_id'] = $room->id;
+
+        if (empty($data_book['book_iframe'])) {
+            Book::where('room_id', $id)->delete();
+        }else{
+            Book::where('room_id', $id)->update($data_book);
+        }
 
         return redirect()->route('rooms_show');
     }
@@ -79,6 +100,7 @@ class RoomsController extends Controller
             File::delete(public_path('images/rooms') . '/' . $room->image);
         }
         Rooms::where('id', $id)->delete();
+        Book::where('room_id', $id)->delete();
 
         return redirect()->route('rooms_show');
 

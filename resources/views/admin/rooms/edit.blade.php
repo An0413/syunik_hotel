@@ -84,6 +84,11 @@
                             <input type="number" class="form-control" id="surface" name="surface"
                                    value="{{$rooms->surface}}">
                         </div>
+                        <div class="mb-3">
+                            <label for="booking" class="form-label">Ամրագրման կոդ</label>
+                            <input type="text" class="form-control" id="booking" name="booking"
+                                   value="{{$rooms->bookings->book_iframe}}">
+                        </div>
                         <button type="submit" class="btn btn-primary">Խմբագրել</button>
                     </form>
                 </div>

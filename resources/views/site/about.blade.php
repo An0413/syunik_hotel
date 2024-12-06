@@ -42,7 +42,7 @@
                     @foreach($about_image as $value)
                         <div class="col-md-4">
                             <div class="ap-service-item set-bg"
-                                 data-setbg="{{asset('site/images/sonImg/about/'. $value->image)}}">
+                                 data-setbg="{{asset('images/about/'. $value->image)}}">
                                 <div class="api-text">
                                     <h3>{{$value->{'title_' . app()->getLocale()} }}</h3>
                                 </div>

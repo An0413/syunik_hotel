@@ -1,4 +1,3 @@
-<body>
 {{--<div class="position-fixed bottom-0 end-0 me-3 mb-3 br-20">--}}
 {{--    <button class="btn btn-primary rounded-circle" onclick="toggleChat()" id="chat-toggle-btn">💬</button>--}}
 
@@ -21,7 +20,7 @@
 
 <footer class="untree_co--site-footer">
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row mt-5 pt-5 align-items-center">
             <div class="col-md-6 text-md-left">
                 <!-- Link back to Untree.co can't be removed. Template is licensed under CC BY 3.0. If you purchased a license you can remove this. -->

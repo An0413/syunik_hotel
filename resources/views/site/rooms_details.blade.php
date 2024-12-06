@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="room-details-item">
-                        <img src="{{asset('site/images/SonImg/room/'.$room->image)}}" alt="">
+                        <img src="{{asset('images/rooms/'.$room->image)}}" alt="">
                         <p class="f-para">
                             {{$room->{'info_' . App::getLocale()} }}
                         </p>
@@ -80,6 +80,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="rd-reviews">
+
                         <h4>{{$comment_count}} {{__('messages.comments')}}</h4>
                         @foreach($nestedComments as $value)
                             <div class="review-item">

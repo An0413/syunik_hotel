@@ -27,7 +27,7 @@
                 <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
                     <div class="media-29191 text-center h-100">
                         <div class="media-29191-icon">
-                            <img src="{{asset('site/images/images/svg/'.$value->icon)}}" alt="Image" class="img-fluid">
+                            <img src="{{asset('images/services/'.$value->icon)}}" alt="Image" class="img-fluid">
                         </div>
                         <h3>{{$value->{'name_' . app()->getLocale()} }}</h3>
                         <p>{{$value->{'info_' . app()->getLocale()} }}</p>
