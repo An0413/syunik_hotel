@@ -11,7 +11,7 @@
         </div>
 
         <!-- About Us Section Begin -->
-        <section class="aboutus-section spad ">
+        <section class="aboutus-section spad " id="spad">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6">
@@ -141,7 +141,7 @@
         </div>
         <!-- Breadcrumb Section End -->
         <!-- Blog Section Begin -->
-        <section class="blog-section blog-page spad">
+        <section class="blog-section blog-page spad" id="spad">
             <div class="container-fluid">
                 <div class="row">
                     @foreach($blog as $value)
@@ -166,7 +166,7 @@
         </section>
         <!-- Blog Section End -->
         <!-- Map Section Begin -->
-        <section class="contact-section spad">
+        <section class="contact-section spad" id="spad">
             <div class="container-fluid">
                 <div class="map">
                     <iframe
