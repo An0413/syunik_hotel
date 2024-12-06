@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('room_comments', function (Blueprint $table) {
             $table->id();
-            $table->integer('blog_id');
+            $table->integer('room_id');
             $table->integer('parent_id');
             $table->string('name');
             $table->string('email');
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('room_comments');
     }
 };

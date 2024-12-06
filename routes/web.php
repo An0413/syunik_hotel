@@ -44,6 +44,7 @@ Route::get('/about', [AboutController::class, 'about'])->name('about');
 Route::get('/blog', [BlogController::class, 'blog'])->name('blog');
 Route::get('/blog_details/{id}', [BlogController::class, 'blog_details'])->where('id', '[0-9]+')->name('blog_details');
 Route::post('/comment/{id}', [BlogController::class, 'comment'])->where('id', '[0-9]+')->name('comment');
+Route::post('/room_comment/{id}', [site\RoomsController::class, 'room_comment'])->where('id', '[0-9]+')->name('room_comment');
 
 //Route::get('/about', [AboutController::class, 'about'])->name('site_about');
 

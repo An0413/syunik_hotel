@@ -80,75 +80,51 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="rd-reviews">
-                        <h4>Reviews</h4>
-                        <div class="review-item">
-                            <div class="ri-pic">
-                                <img src="{{asset('images/rooms/avatar/avatar-1.jpg')}}" alt="">
-                            </div>
-                            <div class="ri-text">
-                                <span>27 Aug 2019</span>
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star-half_alt"></i>
+
+                        <h4>{{$comment_count}} {{__('messages.comments')}}</h4>
+                        @foreach($nestedComments as $value)
+                            <div class="review-item">
+                                <div class="ri-pic">
+                                    <img src="{{asset('site/images/sonImg/com-user.jpg')}}" alt="">
                                 </div>
-                                <h5>Brandon Kelley</h5>
-                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                    adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
-                                    magnam.</p>
-                            </div>
-                        </div>
-                        <div class="review-item">
-                            <div class="ri-pic">
-                                <img src="{{asset('images/rooms/avatar/avatar-2.jpg')}}" alt="">
-                            </div>
-                            <div class="ri-text">
-                                <span>27 Aug 2019</span>
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star-half_alt"></i>
+                                <div class="ri-text">
+                                    <span>{{$value->created_at->format('d/m/Y') }}</span>
+                                    <h5>{{$value->name}}</h5>
+                                    <p>{{$value->comment}}</p>
+                                    {{--<a href="#" class="comment-btn">Reply</a>--}}
+                                    <button type="button" class="btn comment-btn reply-btn" data-toggle="modal"
+                                            data-target="#replyModal" data-id="{{$value->id}}">
+                                        {{__('messages.reply')}}
+                                    </button>
                                 </div>
-                                <h5>Brandon Kelley</h5>
-                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                    adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
-                                    magnam.</p>
                             </div>
-                        </div>
+                            @if (isset($value->replies) && count($value->replies) > 0)
+                                @include('site.comment_room', ['comments' => $value->replies])
+                            @endif
+                        @endforeach
+
                     </div>
                     <div class="review-add">
-                        <h4>Add Review</h4>
-                        <form action="#" class="ra-form">
+                        <h4>{{__('messages.leave_comment')}}</h4>
+                        <form action="{{route('room_comment', $id)}}" class="ra-form" method="post" role="form">
+                            @csrf
+                            <input type="hidden" name="parent_id" value="0">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Name*">
+                                    <input type="text" placeholder="{{__('messages.cname')}}" name="name" id="name">
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Email*">
+                                    <input type="text" placeholder="{{__('messages.cemail')}}" name="email" id="comment">
                                 </div>
                                 <div class="col-lg-12">
-                                    <div>
-                                        <h5>You Rating:</h5>
-                                        <div class="rating">
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star-half_alt"></i>
-                                        </div>
-                                    </div>
-                                    <textarea placeholder="Your Review"></textarea>
-                                    <button type="submit">{{__('messages.submit')}}</button>
+                                    <textarea placeholder="{{__('messages.comment')}}" name="comment" id="comment"></textarea>
+                                    <button type="submit">{{__('messages.send_comment')}}</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 mt-4">
                     <div class="room-booking">
                         <h3>{{__('messages.reservation')}}</h3>
                         <form action="#" method="post">
@@ -191,6 +167,44 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="replyModal" tabindex="-1" role="dialog" aria-labelledby="replyModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h5 class="modal-title text-center reply_text" id="replyModalLabel">
+                            <b>{{__('messages.replyText')}}</b></h5>
+                        <form action="{{route('room_comment', $id)}}" method="post" role="form" class="comment-form">
+                            @csrf
+                            <input type="hidden" name="parent_id" value="0" id="parent_id">
+                            <div class="row mt-4">
+                                <div class="col-lg-12 text-center">
+                                    <input type="text" placeholder="{{__('messages.cname')}}" name="name" id="name"
+                                           class="name_com">
+                                </div>
+                                <div class="col-lg-12 text-center">
+                                    <input type="text" placeholder="{{__('messages.cemail')}}" name="email" id="comment"
+                                           class="name_com">
+                                </div>
+                                <div class="col-lg-12 text-center">
+                                <textarea placeholder="{{__('messages.comment')}}" name="comment" id="comment"
+                                          class="com_message"></textarea>
+                                </div>
+                                <div class="col-lg-12 text-center">
+                                    <button type="submit"
+                                            class="site-btn send_comment">{{__('messages.send_comment')}}</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn close_btn"
+                                data-dismiss="modal">{{__('messages.close')}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
     <!-- Room Details Section End -->
 @endsection
