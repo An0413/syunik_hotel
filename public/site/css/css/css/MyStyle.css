@@ -383,4 +383,7 @@ div.c input:checked ~ h4 ~ div.p {
     margin-top: 4px;
     margin-bottom: 8px;
 }
+.room_page{
+    float: right;
+}
 

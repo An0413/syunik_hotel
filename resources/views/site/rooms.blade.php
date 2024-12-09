@@ -70,11 +70,13 @@
                         </div>
                     </div>
                 @endforeach
-                <div class="col-lg-12 text-center">
-                    <div class="room-pagination justify-content-center">
-                        {{ $rooms->links('pagination::bootstrap-5') }}
-                    </div>
-                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10"></div>
+            <div class="col-lg-2">
+            {{ $rooms->links('pagination::bootstrap-4') }} <!-- Use this for Bootstrap styling -->
             </div>
         </div>
     </section>
