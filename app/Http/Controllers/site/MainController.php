@@ -25,9 +25,10 @@ class MainController
         $rooms = Rooms::orderBy('seq','ASC')->limit(4)->get();
         $services = Services::orderBy('seq', 'ASC')->get();
         $about = About::all();
+        $about_images = AboutImages::orderBy('id', 'ASC')->limit(2)->get();
         $room_type = RoomType::all();
         $questions = Questions::orderBy('seq', 'DESC')->get();
         $active = 'home';
-        return view('site.main', compact('blog', 'rooms', 'services', 'about', 'room_type', 'questions', 'active'));
+        return view('site.main', compact('blog', 'rooms', 'services', 'about', 'room_type', 'questions', 'active','about_images'));
     }
 }

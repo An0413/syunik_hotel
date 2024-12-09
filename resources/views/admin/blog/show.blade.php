@@ -175,7 +175,7 @@
                                 <div class="bg-light rounded h-100 p-4">
                                     <h6 class="mb-4"></h6>
                                     <div class="table-responsive">
-                                        <table class="table">
+                                        <table class="table" id="data-table">
                                             <thead>
                                             <tr>
                                                 <th scope="col">R/n</th>

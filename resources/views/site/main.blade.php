@@ -14,7 +14,7 @@
         <section class="aboutus-section spad " id="spad">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         @foreach($about as $value)
                             <div class="about-text">
                                 <div class="section-title">
@@ -27,15 +27,14 @@
                             </div>
                         @endforeach
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="about-pic">
                             <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="{{asset('images/about/about-1.jpg')}}" alt="">
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="{{asset('images/about/about-2.jpg')}}" alt="">
-                                </div>
+                                @foreach($about_images as $value)
+                                    <div class="col-sm-6">
+                                        <img src="{{asset('images/about/' . $value->image)}}" alt="" class="m_about_image">
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
