@@ -37,13 +37,7 @@
                         <a href="https://www.facebook.com/Syunikhotel" target="_blank"><span class="icon-facebook"></span></a>
                     </li>
                     <li>
-                        <a href="#"><span class="icon-twitter" target="_blank"></span></a>
-                    </li>
-                    <li>
                         <a href="https://www.instagram.com/syunikhotel/?hl=am-et" target="_blank"><span class="icon-instagram"></span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="icon-tripadvisor"></span></a>
                     </li>
                 </ul>
 
@@ -53,9 +47,6 @@
 
 </footer>
 <!-- JavaScript Libraries -->
-
-{{--<script src="https://cdn.jsdelivr.net/npm/pusher-js@7.2/pusher.min.js"></script>--}}
-<script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
 
 <script src="{{asset('/site/js/js/vendor/jquery-3.3.1.min.js')}}"></script>
 <script src="{{asset('/site/js/js/vendor/popper.min.js')}}"></script>
@@ -107,51 +98,3 @@
 <script src="{{asset('/site/js/deluxejs/google-map.js')}}"></script>
 <script src="{{asset('/site/js/deluxejs/main.js')}}"></script>
 <script src="{{asset('/site/js/js/custom.js')}}"></script>
-<script>
-    const messagesDiv = document.getElementById("messages");
-
-    // Load messages
-    fetch('/messages')
-        .then(response => response.json())
-        .then(messages => {
-            messagesDiv.innerHTML = messages.map(msg =>
-                `<div class="${msg.sender_type === 'guest' ? 'text-end' : ''}">
-            <span class="badge bg-${msg.sender_type === 'guest' ? 'primary' : 'secondary'}">${msg.message}</span>
-          </div>`
-            ).join('');
-        });
-
-    // Setup Pusher
-    const pusher = new Pusher('{{config('broadcasting.connections.pusher.key')}}', { cluster: 'ap2' });
-    const channel = pusher.subscribe('chat-channel');
-    channel.bind('message-sent', data => {
-        const newMessage = `<div class="${data.message.sender_type === 'guest' ? 'text-end' : ''}">
-        <span class="badge bg-${data.message.sender_type === 'guest' ? 'primary' : 'secondary'}">${data.message.message}</span>
-      </div>`;
-        messagesDiv.innerHTML += newMessage;
-    });
-
-    // Toggle chat window
-    function toggleChat() {
-        const chatWindow = document.getElementById("chat-window");
-        chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
-    }
-
-    // Send message
-    function sendMessage() {
-        const input = document.getElementById("chat-input");
-        const message = input.value.trim();
-        if (message) {
-            fetch('/send-message', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    sender_type: 'guest',
-                    _token: '{{ csrf_token() }}',
-                    lang_id: '{{$app->getLocale()}}',
-                    message }),
-            });
-            input.value = "";
-        }
-    }
-</script>

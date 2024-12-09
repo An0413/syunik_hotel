@@ -33,9 +33,10 @@ class BlogController
         $nestedComments = $this->buildCommentTree($comments);
         $comment_count = count($comments);
         $blog = Blog::orderBy('seq', 'DESC')->limit(3)->get();
-
+        $meta_desc = $blog_detail->meta_description;
+        $meta_keys = $blog_detail->meta_keyword;
         $active = 'blog';
-        return view('site.blog-details', compact('comments', 'blog_detail', 'blog', 'id', 'comment_count', 'nestedComments', 'active'));
+        return view('site.blog-details', compact('comments', 'blog_detail', 'blog', 'id', 'comment_count', 'nestedComments', 'active', 'meta_desc', 'meta_keys'));
     }
 
     private function buildCommentTree($comments, $parentId = null)

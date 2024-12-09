@@ -7,8 +7,8 @@
     <meta name="author" content="Untree.co">
 
 
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
+    <meta name="description" content="@if(isset($meta_desc)) {{$meta_desc}} @endif"/>
+    <meta name="keywords" content="@if(isset($meta_keys)) {{$meta_keys}} @endif"/>
 
     <link href="{{asset('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i,700|Roboto:300,400,500,700&display=swap')}}"
           rel="stylesheet">
