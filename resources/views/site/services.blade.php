@@ -2,7 +2,7 @@
 @section('content')
 
 <main class="site-untree_co--main">
-    <div class="untree_co--site-hero inner-page" style="background-image: url({{'site/images/images/slider_2.jpg'}})">
+    <div class="untree_co--site-hero inner-page" style="background-image: url({{'images/services/services.JPG'}})">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-7 text-center">
