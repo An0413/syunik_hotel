@@ -39,6 +39,21 @@
                             <label for="linkedin" class="form-label">Լինկեդին</label>
                             <input class="form-control" type="text" name="linkedin" value="{{$contact->linkedin}}">
                         </div>
+                        <div class="mb-3">
+                            <label for="linkedin" class="form-label">Ինֆո հայերեն</label>
+                            <textarea class="form-control" placeholder="Ինֆո հայերեն"
+                                      style="height: 150px;" name="contact_info_am">{{$contact->contact_info_am}}</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="linkedin" class="form-label">Ինֆո ռուսերեն</label>
+                            <textarea class="form-control" placeholder="Ինֆո ռուսերեն"
+                                      style="height: 150px;" name="contact_info_ru">{{$contact->contact_info_ru}}</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="linkedin" class="form-label">Ինֆո անգլերեն</label>
+                            <textarea class="form-control" placeholder="Ինֆո անգլերեն"
+                                      style="height: 150px;" name="contact_info_en">{{$contact->contact_info_en}}</textarea>
+                        </div>
                         <button type="submit" class="btn btn-primary">Խմբագրել</button>
                     </form>
                 </div>

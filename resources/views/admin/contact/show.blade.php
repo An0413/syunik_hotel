@@ -21,6 +21,9 @@
                                         <th scope="col">Ֆեյսբուք</th>
                                         <th scope="col">Ինսագրամ</th>
                                         <th scope="col">Լինկեդին</th>
+                                        <th scope="col">Ինֆո հայերեն</th>
+                                        <th scope="col">Ինֆո ռուսերեն</th>
+                                        <th scope="col">Ինֆո անգլերեն</th>
                                         <th scope="col">Խմբագրել</th>
                                     </tr>
                                     </thead>
@@ -36,6 +39,9 @@
                                             <td>{{Str::words($value->facebook, 25, '...')   }}</td>
                                             <td>{{Str::words($value->instagram, 25, '...')   }}</td>
                                             <td>{{Str::words($value->linkedin, 25, '...')   }}</td>
+                                            <td>{{Str::words($value->contact_info_am, 25, '...')   }}</td>
+                                            <td>{{Str::words($value->contact_info_ru, 25, '...')   }}</td>
+                                            <td>{{Str::words($value->contact_info_en, 25, '...')   }}</td>
                                             <td>
                                                 <a href="{{route('contact_edit', $value->id)}}">
                                                     <i class="nav-icon fas fa-edit text-primary"></i>

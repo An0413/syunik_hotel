@@ -30,6 +30,9 @@ class UpdateRequest extends FormRequest
             'facebook' => 'string|nullable',
             'linkedin' => 'string|nullable',
             'instagram' => 'string|nullable',
+            'contact_info_am' => 'string|nullable',
+            'contact_info_ru' => 'string|nullable',
+            'contact_info_en' => 'string|nullable',
         ];
     }
 }
