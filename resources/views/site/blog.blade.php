@@ -23,10 +23,10 @@
                             <div class="blog-item set-bg blog_item" data-setbg="{{asset('images/blog/'. $value->image)}}"
                                  data-href="{{route('blog_details', $value->id)}}">
                                 <div class="bi-text">
-                                    <span class="b-tag">Travel Trip</span>
-                                    <h4><a href="javascript:void(0)">{{$value->name}}</a></h4>
+                                    <span class="b-tag">Syunik hotel</span>
+                                    <h4 ><a href="javascript:void(0)">{{$value->name}}</a></h4>
 
-                                    <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                                    <div class="b-time"><i class="icon_clock_alt"></i>{{$value->created_at->format('Y/m/d')}}</div>
                                 </div>
                             </div>
                         </div>

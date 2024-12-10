@@ -50,7 +50,13 @@ return [
     'cemail'=>'Email',
     'comment'=>'Comment',
     'close'=>'Close',
-    'replyText'=>'Leave Your Reply Comment Here'
+    'replyText'=>'Leave Your Reply Comment Here',
+    'home'=>'HOME',
+    'mrooms'=>'ROOMS',
+    'service'=>'SERVICES',
+    'mblog'=>'BLOG',
+    'mabout'=>'ABOUT US',
+    'mcontact'=>'CONTACT'
 
 
 

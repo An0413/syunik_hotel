@@ -32,7 +32,7 @@
                                                 alt="">
                                         </div>
                                         <div class="sc-text">
-                                            <span>{{$value->created_at->format('d/m/Y')}}</span>
+                                            <span>{{$value->created_at->format('Y/m/d')}}</span>
                                             <h5>{{$value->name}}</h5>
                                             <p>{{$value->comment}}</p>
                                             {{--<a href="#" class="comment-btn">Reply</a>--}}
