@@ -34,6 +34,9 @@
             <a href="{{route('questions_show')}}"
                class="nav-item nav-link {{ Request::routeIs('questions_show') || Request::routeIs('questions_create') || Request::routeIs('questions_edit') ? 'active' : '' }}"><i
                     class="fa fa-solid fa-question"></i> FAC</a>
+            <a href="{{route('contact_show')}}"
+               class="nav-item nav-link {{ Request::routeIs('contact_show')  || Request::routeIs('contact_edit') ? 'active' : '' }}">
+                <i class="fa fa-regular fa-address-card"></i>Կապ</a>
         </div>
     </nav>
 </div>

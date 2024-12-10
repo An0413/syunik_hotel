@@ -387,3 +387,12 @@ div.c input:checked ~ h4 ~ div.p {
     float: right;
 }
 
+@media (max-width: 768px) {
+    .untree_co--site-hero {
+        height: 0px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
