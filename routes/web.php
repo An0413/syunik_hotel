@@ -134,4 +134,8 @@ Route::middleware('auth')->prefix('/admin')->namespace('App\Http\Controllers\Adm
     Route::get('/questions/edit/{id}', [admin\QuestionsController::class, 'edit'])->where('id', '[0-9]+')->name('questions_edit');
     Route::post('/questions/update/{id}', [admin\QuestionsController::class, 'update'])->where('id', '[0-9]+')->name('questions_update');
     Route::delete('/questions/delete/{id}', [admin\QuestionsController::class, 'destroy'])->where('id', '[0-9]+')->name('questions_delete');
+
+    Route::get('/contact/show', [admin\ContactController::class, 'show'])->name('contact_show');
+    Route::get('/contact/edit/{id}', [admin\ContactController::class, 'edit'])->where('id', '[0-9]+')->name('contact_edit');
+    Route::post('/contact/update/{id}', [admin\ContactController::class, 'update'])->where('id', '[0-9]+')->name('contact_update');
 });
