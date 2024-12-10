@@ -9,7 +9,7 @@
                         <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10"></div>
                         <div class="col-lg-12 col-xl-2 col-sm-2 col-md-2">
                             <a href="{{route('questions_create')}}">
-                                <button class="btn bg-primary create_button">Ավելացնել</button>
+                                <button class="btn bg-primary create_button float-end">Ավելացնել</button>
                             </a>
                         </div>
                     </div>
