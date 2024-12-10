@@ -26,7 +26,7 @@
                             <tbody>
                             <tr>
                                 <td class="c-o">{{__('messages.address')}}: </td>
-                                <td>{{$contact->location}}</td>
+                                <td>{{$contact->{'location_'  . app()->getLocale()} }}</td>
                             </tr>
                             <tr>
                                 <td class="c-o">{{__('messages.phone')}}: </td>
