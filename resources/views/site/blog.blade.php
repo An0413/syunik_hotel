@@ -32,10 +32,11 @@
                         </div>
                     @endforeach
 
-                    <div class="col-lg-12">
-                        <div class="load-more">
-                            <a href="#" class="primary-btn">{{__('messages.more')}}</a>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10"></div>
+                    <div class="col-lg-2">
+                    {{ $blog->links('pagination::bootstrap-4') }} <!-- Use this for Bootstrap styling -->
                     </div>
                 </div>
             </div>
