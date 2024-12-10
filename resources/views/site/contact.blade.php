@@ -20,8 +20,7 @@
                 <div class="col-lg-4">
                     <div class="contact-text">
                         <h2>{{__('messages.contact')}}</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
+                        <p>{{$contact->{'contact_info_'  . app()->getLocale()} }}</p>
                         <table>
                             <tbody>
                             <tr>
