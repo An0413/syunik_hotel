@@ -17,7 +17,7 @@ class BlogController
     public function blog()
     {
         $lang_id = Languages::where('short_name', app()->getLocale())->first()->id;
-        $blog = Blog::where('lang_id', $lang_id)->orderBy('seq', 'ASC')->get();
+        $blog = Blog::where('lang_id', $lang_id)->orderBy('seq', 'ASC')->paginate(6);
         $active = 'blog';
         return view('site.blog', compact('blog', 'active'));
     }
@@ -32,7 +32,7 @@ class BlogController
         $comments = Comments::where('blog_id', $id)->orderBy('created_at', 'ASC')->get();
         $nestedComments = $this->buildCommentTree($comments);
         $comment_count = count($comments);
-        $blog = Blog::orderBy('seq', 'DESC')->limit(3)->get();
+        $blog = Blog::orderBy('seq', 'DESC')->where('id', '!=', $id)->limit(3)->get();
         $meta_desc = $blog_detail->meta_description;
         $meta_keys = $blog_detail->meta_keyword;
         $active = 'blog';
