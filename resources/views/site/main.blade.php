@@ -3,11 +3,13 @@
     <!-- Navbar End -->
     <div class="untree_co--site-main">
         <div class="container-fluid">
-            <video width="100%" height="auto" autoplay muted loop=1>
-                <source src="{{asset('site/video/hotel.mp4')}}" type="video/mp4">
-                {{--                        <source src="hotel.ogg" type="video/ogg">--}}
-                Your browser does not support the video tag.
-            </video>
+            <div class="row">
+                <video width="100%" height="auto" autoplay muted loop=1>
+                    <source src="{{asset('site/video/hotel.mp4')}}" type="video/mp4">
+                    {{--                        <source src="hotel.ogg" type="video/ogg">--}}
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
 
         <!-- About Us Section Begin -->
@@ -32,7 +34,8 @@
                             <div class="row">
                                 @foreach($about_images as $value)
                                     <div class="col-sm-6">
-                                        <img src="{{asset('images/about/' . $value->image)}}" alt="" class="m_about_image">
+                                        <img src="{{asset('images/about/' . $value->image)}}" alt=""
+                                             class="m_about_image">
                                     </div>
                                 @endforeach
                             </div>
@@ -148,9 +151,10 @@
                             <div class="blog-item set-bg blog_item" data-href="{{route('blog_details', $value->id)}}"
                                  data-setbg="{{asset('/images/blog/'. $value->image)}}">
                                 <div class="bi-text">
-                                    <span class="b-tag">Travel Trip</span>
+                                    <span class="b-tag">Syunik hotel</span>
                                     <h4><a href="javascript:void(0)">{{$value->name}}</a></h4>
-                                    <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                                    <div class="b-time"><i
+                                            class="icon_clock_alt"></i> {{$value->created_at->format('Y/m/d')}}</div>
                                 </div>
                             </div>
                         </div>

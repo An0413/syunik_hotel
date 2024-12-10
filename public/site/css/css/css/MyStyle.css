@@ -386,4 +386,11 @@ div.c input:checked ~ h4 ~ div.p {
 .room_page{
     float: right;
 }
+.blog_item {
+    opacity: 1; /* Default state */
+    transition: opacity 0.5s ease; /* Smooth fading transition */
+}
 
+.blog-item:hover {
+    opacity: 0.6; /* Faded state on hover */
+}

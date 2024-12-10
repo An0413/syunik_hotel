@@ -8,19 +8,19 @@
             </div>
             <div class="site-nav-ul-wrap text-center d-none d-lg-block">
                 <ul class="site-nav-ul js-clone-nav">
-                    <li class="@if($active == 'home'){{'active'}} @endif "><a href="{{route('site')}}">Home</a>
+                    <li class="@if($active == 'home'){{'active'}} @endif "><a href="{{route('site')}}">{{__('messages.home')}}</a>
                     </li>
                     <li class="@if($active == 'rooms'){{'active'}} @endif ">
-                        <a href="{{route('site_rooms')}}">Rooms</a>
+                        <a href="{{route('site_rooms')}}">{{__('messages.mrooms')}}</a>
                     </li>
                     <li class="@if($active == 'service'){{'active'}} @endif ">
-                        <a href="{{route('site_services')}}">Services</a>
+                        <a href="{{route('site_services')}}">{{__('messages.service')}}</a>
                     </li>
-                    <li class="@if($active == 'blog'){{'active'}} @endif "><a href="{{route('blog')}}">Blog</a></li>
-                    <li class="@if($active == 'about'){{'active'}} @endif "><a href="{{route('about')}}">About Us</a>
+                    <li class="@if($active == 'blog'){{'active'}} @endif "><a href="{{route('blog')}}">{{__('messages.mblog')}}</a></li>
+                    <li class="@if($active == 'about'){{'active'}} @endif "><a href="{{route('about')}}">{{__('messages.mabout')}}</a>
                     </li>
                     <li class="@if($active == 'contact'){{'active'}} @endif "><a
-                            href="{{route('site_contact')}}">Contact</a></li>
+                            href="{{route('site_contact')}}">{{__('messages.mcontact')}}</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
