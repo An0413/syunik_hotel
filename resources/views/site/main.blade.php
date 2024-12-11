@@ -154,7 +154,13 @@
                                     <span class="b-tag">Syunik hotel</span>
                                     <h4><a href="javascript:void(0)">{{$value->name}}</a></h4>
                                     <div class="b-time"><i
-                                            class="icon_clock_alt"></i> {{$value->created_at->format('Y/m/d')}}</div>
+                                            class="icon_clock_alt"></i>
+                                        @if(!is_null($value->created_at))
+                                            {
+                                            {{$value->created_at->format('Y/m/d')}}
+                                            }
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
                         </div>
