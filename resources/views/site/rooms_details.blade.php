@@ -124,47 +124,6 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="room-booking">
-                        <h3>{{__('messages.reservation')}}</h3>
-                        <form action="#" method="post">
-                            <div class="check-date">
-                                <label for="date-in">{{__('messages.check_in')}}</label>
-                                <input type="text" class="date-input" id="date-in">
-                                <i class="icon_calendar"></i>
-                            </div>
-                            <div class="check-date">
-                                <label for="date-out">{{__('messages.check_out')}}</label>
-                                <input type="text" class="date-input" id="date-out">
-                                <i class="icon_calendar"></i>
-                            </div>
-                            <div class="select-option">
-                                <label for="guest">{{__('messages.guests')}}</label>
-                                <select id="guest" name="adults">
-                                    <option value="1">1 {{__('messages.adult')}}</option>
-                                    <option value="2">2 {{__('messages.adults')}}</option>
-                                    <option value="3">3 {{__('messages.adults')}}</option>
-                                    <option value="4">4 {{__('messages.adults')}}</option>
-                                </select>
-                                <label for="guest">{{__('messages.child')}}:</label>
-                                <select id="childs" name="childs">
-                                    <option value=""></option>
-                                    <option value="1">1 {{__('messages.child2')}}</option>
-                                    <option value="2">2 {{__('messages.child3')}}</option>
-                                    <option value="3">3 {{__('messages.child3')}}</option>
-                                    <option value="4">4 {{__('messages.child3')}}</option>
-                                </select>
-                            </div>
-                            <div class="select-option">
-                                <label for="room">{{__('messages.rooms')}}:</label>
-                                <select id="room">
-                                    <option value="">1 {{__('messages.room2')}}</option>
-                                </select>
-                            </div>
-                            <button type="submit">{{__('messages.availability')}}</button>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="modal fade" id="replyModal" tabindex="-1" role="dialog" aria-labelledby="replyModalLabel"
